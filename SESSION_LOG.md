@@ -224,12 +224,24 @@ Updated `README.md` (structure, provenance, `fetch_logistics_data.py` usage).
 
 Updated `README.md` (structure, provenance, `fetch_jobmarket_data.py` usage) and removed the "(more planned)" note — this completes all 5 originally requested new dashboards (Climate, Gaming, Real Estate, Logistics, Job Market).
 
+## 20. Prompt: "how do i make all of this public via github"
+
+The repo was already public (created that way back in step 4). Confirmed current visibility via `gh repo view --json visibility` rather than assuming, and explained what "public" does/doesn't mean (visible/cloneable by anyone; no invite needed to share the link; how to flip to private later if wanted).
+
+## 21. Prompt: "yes polish the readme"
+
+Asked one clarifying question first: whether to add a LICENSE file, since the repo is now public and that's a real legal decision, not a style choice — user chose to skip it. Rewrote `README.md`: hero screenshot, badges, a dashboards-summary table (name / what it shows / data source at a glance), data provenance converted from a bulleted list to a table, architecture tree trimmed, quick-start moved near the top. No LICENSE added, per the user's choice — repo remains all-rights-reserved by default despite being public.
+
+## 22. Prompt: "add a file detailing what you built. Include: project overview, datasets used, prompts you used during vibe coding, iterations you tried, and any learnings or observations from the workflow."
+
+Added `BUILD_WRITEUP.md` — distinct from this file (`SESSION_LOG.md`, the chronological technical log) in being a reflective narrative: project overview, a datasets table, the actual ordered list of prompts used across the whole session (reconstructed from this conversation), the real iterations/dead-ends (layout overflow fixes, Home nav redesign, the two Gaming bugs, the Oracle's Elixir/aqicn.org data-source dead ends before landing on EPA/Valorant/Zillow/USAID/Ask-a-Manager), and explicit learnings (headless verification catching bugs invisible from logs; re-measuring fixes instead of trusting them on read; the honesty-about-data-gaps pattern; the shared `common/charts.py` abstraction paying off across 5 dashboards). Linked from `README.md`.
+
 ---
 
 ## Current state of the project
 
 - **Repo:** https://github.com/neehall/week-1-project (public)
-- **Latest commit:** see `git log` — most recent work adds the Job Market dashboard (real Ask a Manager salary survey), completing all 5 requested new dashboards
+- **Latest commit:** see `git log` — most recent work adds `BUILD_WRITEUP.md`
 - **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results; Gaming Insights blank heatmap/treemap from a bad default filter; Gaming/Opex legend overflow
 - **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub", flat wrapping dashboard grid, two-row KPI summary) + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
 - **Dashboards (9 total):** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data), Gaming (**real** Valorant stats), Real Estate (**real** Zillow ZHVI data), Logistics (**real** USAID SCMS data), Job Market (**real** Ask a Manager salary survey, `data/fetch_jobmarket_data.py`) — each with an Overview tab and an Insights tab
