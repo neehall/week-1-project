@@ -236,6 +236,10 @@ Asked one clarifying question first: whether to add a LICENSE file, since the re
 
 Added `BUILD_WRITEUP.md` — distinct from this file (`SESSION_LOG.md`, the chronological technical log) in being a reflective narrative: project overview, a datasets table, the actual ordered list of prompts used across the whole session (reconstructed from this conversation), the real iterations/dead-ends (layout overflow fixes, Home nav redesign, the two Gaming bugs, the Oracle's Elixir/aqicn.org data-source dead ends before landing on EPA/Valorant/Zillow/USAID/Ask-a-Manager), and explicit learnings (headless verification catching bugs invisible from logs; re-measuring fixes instead of trusting them on read; the honesty-about-data-gaps pattern; the shared `common/charts.py` abstraction paying off across 5 dashboards). Linked from `README.md`.
 
+## 23. Prompt: "remove the build writeup.md file and just give me the file in text - do not link it to github"
+
+Removed `BUILD_WRITEUP.md` from the repo and removed its link from `README.md`. Its content was delivered directly in the chat response instead of as a repo file.
+
 ---
 
 ## Current state of the project

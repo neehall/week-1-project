@@ -127,10 +127,6 @@ python3 data/fetch_jobmarket_data.py     # raw.githubusercontent.com
 
 ## More
 
-See [`BUILD_WRITEUP.md`](BUILD_WRITEUP.md) for a reflective write-up —
-project overview, datasets, the actual prompts used to build this end
-to end, iterations tried, and what stood out about the workflow.
-
 See [`SESSION_LOG.md`](SESSION_LOG.md) for the full build history —
 every prompt, decision, bug found and fixed, and verification step
 across all 9 dashboards, with screenshots in [`screenshots/`](screenshots/).
