@@ -1,0 +1,91 @@
+date,region,asset_category,project_name,amount
+2023-01-01,North America,IT Equipment,Server Refresh #58,129501.0
+2023-01-22,Asia Pacific,Machinery,Plant Upgrade #59,110675.12
+2023-02-04,Europe,Vehicles,Fleet Renewal #53,32342.09
+2023-02-05,Asia Pacific,Machinery,Plant Upgrade #64,117888.55
+2023-02-07,North America,Machinery,Plant Upgrade #51,21054.96
+2023-02-24,Asia Pacific,Machinery,Plant Upgrade #11,25780.72
+2023-02-27,Middle East,Buildings,Facility Expansion #78,12309.52
+2023-03-03,Latin America,Software Licenses,Platform Modernization #26,88772.1
+2023-03-06,Europe,Buildings,Facility Expansion #69,149597.87
+2023-03-08,Middle East,Buildings,Facility Expansion #87,136369.1
+2023-03-22,North America,IT Equipment,Server Refresh #68,156936.58
+2023-03-29,North America,Buildings,Facility Expansion #29,249407.11
+2023-04-01,North America,Vehicles,Fleet Renewal #8,15032.01
+2023-04-09,Europe,Software Licenses,Platform Modernization #32,94517.72
+2023-04-12,Europe,IT Equipment,Server Refresh #66,230111.68
+2023-05-06,North America,Buildings,Facility Expansion #47,29964.07
+2023-05-20,Latin America,Software Licenses,Platform Modernization #65,16606.63
+2023-06-17,Europe,Buildings,Facility Expansion #61,64408.3
+2023-06-21,Middle East,Software Licenses,Platform Modernization #18,157364.95
+2023-06-23,Europe,Software Licenses,Platform Modernization #22,213931.38
+2023-07-01,Europe,Machinery,Plant Upgrade #73,116342.07
+2023-07-03,Asia Pacific,IT Equipment,Server Refresh #43,197036.91
+2023-07-31,North America,IT Equipment,Server Refresh #57,216377.32
+2023-08-05,Latin America,Software Licenses,Platform Modernization #28,104945.78
+2023-08-08,Europe,Software Licenses,Platform Modernization #41,43083.18
+2023-08-26,Asia Pacific,Software Licenses,Platform Modernization #38,227720.88
+2023-09-11,Europe,Software Licenses,Platform Modernization #37,62598.79
+2023-09-14,North America,IT Equipment,Server Refresh #33,9328.85
+2023-09-30,North America,Software Licenses,Platform Modernization #14,16931.13
+2023-10-08,Europe,Vehicles,Fleet Renewal #79,45544.5
+2023-10-09,Latin America,IT Equipment,Server Refresh #54,19829.47
+2023-10-15,Latin America,Vehicles,Fleet Renewal #17,16996.11
+2023-10-16,Asia Pacific,Machinery,Plant Upgrade #56,107069.36
+2023-11-07,Latin America,Buildings,Facility Expansion #27,249692.13
+2023-11-17,Latin America,Vehicles,Fleet Renewal #44,121683.04
+2023-11-21,Middle East,Machinery,Plant Upgrade #13,14057.83
+2023-11-21,Middle East,Machinery,Plant Upgrade #19,131084.19
+2023-11-23,North America,Vehicles,Fleet Renewal #89,77215.02
+2023-11-25,Latin America,Software Licenses,Platform Modernization #55,79007.53
+2023-11-25,Europe,Software Licenses,Platform Modernization #35,240006.27
+2023-11-28,Europe,Machinery,Plant Upgrade #34,160462.36
+2023-11-29,Middle East,Machinery,Plant Upgrade #52,131441.51
+2023-12-03,Latin America,Vehicles,Fleet Renewal #3,32955.5
+2023-12-06,Middle East,Buildings,Facility Expansion #10,244589.66
+2023-12-17,Middle East,Machinery,Plant Upgrade #62,172398.3
+2023-12-29,Europe,IT Equipment,Server Refresh #31,126744.57
+2024-01-06,Latin America,Vehicles,Fleet Renewal #84,247984.75
+2024-01-12,Europe,Machinery,Plant Upgrade #77,82820.73
+2024-01-25,Middle East,Machinery,Plant Upgrade #71,44872.15
+2024-02-06,Europe,IT Equipment,Server Refresh #25,50960.45
+2024-02-11,Europe,Vehicles,Fleet Renewal #12,201504.65
+2024-03-03,Asia Pacific,IT Equipment,Server Refresh #86,36092.94
+2024-03-06,Middle East,Software Licenses,Platform Modernization #45,204586.42
+2024-03-07,Latin America,Software Licenses,Platform Modernization #24,102250.32
+2024-03-10,North America,Machinery,Plant Upgrade #82,35876.45
+2024-03-17,Middle East,Software Licenses,Platform Modernization #74,246239.14
+2024-03-30,North America,Software Licenses,Platform Modernization #88,71930.86
+2024-04-22,Asia Pacific,Buildings,Facility Expansion #48,239060.61
+2024-04-22,Latin America,Vehicles,Fleet Renewal #40,78348.91
+2024-04-30,Europe,Buildings,Facility Expansion #90,209880.07
+2024-05-04,North America,Vehicles,Fleet Renewal #83,47371.26
+2024-05-10,Europe,IT Equipment,Server Refresh #20,12253.79
+2024-05-26,Asia Pacific,Vehicles,Fleet Renewal #21,169545.14
+2024-05-27,Middle East,Buildings,Facility Expansion #30,150827.15
+2024-06-10,Asia Pacific,Vehicles,Fleet Renewal #2,240986.75
+2024-06-14,Latin America,IT Equipment,Server Refresh #80,178482.35
+2024-06-19,Asia Pacific,Software Licenses,Platform Modernization #4,112821.73
+2024-06-20,Europe,IT Equipment,Server Refresh #75,83007.78
+2024-06-27,Europe,Machinery,Plant Upgrade #63,232944.23
+2024-07-03,Middle East,Buildings,Facility Expansion #36,137509.88
+2024-07-19,Latin America,Vehicles,Fleet Renewal #16,217036.85
+2024-07-19,Middle East,Vehicles,Fleet Renewal #72,214595.43
+2024-07-23,Europe,Buildings,Facility Expansion #23,78241.19
+2024-07-24,Asia Pacific,Machinery,Plant Upgrade #60,211094.91
+2024-08-07,Asia Pacific,Software Licenses,Platform Modernization #76,152179.81
+2024-08-26,Latin America,Machinery,Plant Upgrade #81,223054.77
+2024-09-12,Latin America,Buildings,Facility Expansion #70,6161.64
+2024-10-01,Europe,Machinery,Plant Upgrade #42,74395.5
+2024-10-21,Latin America,Vehicles,Fleet Renewal #46,197959.51
+2024-11-06,North America,Machinery,Plant Upgrade #85,248305.72
+2024-11-11,North America,Machinery,Plant Upgrade #15,179748.26
+2024-11-12,North America,IT Equipment,Server Refresh #67,12664.46
+2024-11-14,Asia Pacific,Vehicles,Fleet Renewal #49,13781.47
+2024-12-02,Middle East,Buildings,Facility Expansion #50,30235.66
+2024-12-03,Asia Pacific,Vehicles,Fleet Renewal #5,242604.7
+2024-12-05,Latin America,Buildings,Facility Expansion #9,246457.34
+2024-12-10,Latin America,Software Licenses,Platform Modernization #7,89890.75
+2024-12-20,Asia Pacific,Machinery,Plant Upgrade #39,149732.47
+2024-12-20,North America,Vehicles,Fleet Renewal #6,75615.92
+2024-12-20,Asia Pacific,Software Licenses,Platform Modernization #1,226315.33

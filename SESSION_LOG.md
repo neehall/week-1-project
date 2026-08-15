@@ -98,13 +98,39 @@ Redesigned `app.py`'s chart layout:
 
 Going forward, every layout/feature iteration will get: (a) an entry in this log describing what changed and why, and (b) a screenshot in `screenshots/` proving the result, named to reflect the iteration.
 
+## 13. Prompt: "i want to create multiple dashboards now ie revenue, cost, capex, opex. go through the same process and use microservices and modular architecture"
+
+Asked two clarifying questions before building, since "microservices" is ambiguous and the answer changes the whole architecture:
+
+1. **What should "microservices" mean here?** User chose **modular monolith** — one Streamlit multipage app with each dashboard as its own page/module and shared common utilities, over true networked microservices (separate FastAPI services per domain + HTTP calls) — simpler to run/debug locally while still cleanly separated by domain.
+2. **Where should Cost/Capex/Opex data come from**, since only `sales_data.csv` (revenue-shaped) existed? User chose **generate synthetic data**, aligned to the same date range/regions as `sales_data.csv`.
+
+**Restructured the project into a modular monolith:**
+- `data/` — all CSVs moved here (`sales_data.csv` relocated from repo root), plus `generate_synthetic_data.py` (deterministic, fixed seed) which produces `cost_data.csv`, `capex_data.csv`, `opex_data.csv`.
+- `app/services/` — one module per domain (`revenue_service.py`, `cost_service.py`, `capex_service.py`, `opex_service.py`), each owning that domain's data loading (`@st.cache_data`), filtering, and KPI/aggregation logic. Pages never read a CSV directly.
+- `app/common/styling.py` — extracted the one-screen CSS/chart-height helpers from the original `app.py` so every page shares them instead of duplicating.
+- `app/pages/1_Revenue.py` … `4_Opex.py` — Streamlit's native multipage convention; each is presentation-only, calling its service module and rendering the same proven 2×2 one-screen chart-grid layout.
+- `app/Home.py` — new landing page: combined KPIs across all four domains, navigation cards (`st.page_link`) to each dashboard, and an "About this app" note on the architecture.
+- Deleted the old root `app.py` (superseded by `app/Home.py` + pages). Updated `run.sh` to launch `app/Home.py`, and `requirements.txt` to add `numpy` (used by the data generator).
+
+**Verified, not just launched:**
+- Syntax-checked all 12 new/changed Python files (`py_compile`).
+- Launched via `./run.sh`, confirmed clean startup (no errors in server log).
+- Used the same one-screen-fit check as the earlier iteration (`stMain` `scrollHeight` vs `clientHeight`) plus real headless-browser screenshots at 1440×900 for all 5 pages: Home, Revenue, Cost, Capex, Opex. All five: zero overflow, and visually confirmed nothing is clipped except a minor legend-label crop on the Opex "Expense Type by Department" chart (cosmetic, doesn't cause page-level scrolling).
+- Checked browser console on each dashboard page: the only errors were `_stcore/health` / `_stcore/host-config` 404s, which are Streamlit's own internal requests mis-resolving against the sub-page path on direct navigation — a known framework quirk unrelated to this app's code, confirmed benign.
+- Screenshots: `screenshots/04_home.png`, `05_revenue.png`, `06_cost.png`, `07_capex.png`, `08_opex.png`.
+
+Updated `README.md` to document the new structure, why it's a modular monolith rather than networked microservices, and how to regenerate the synthetic data.
+
 ---
 
 ## Current state of the project
 
 - **Repo:** https://github.com/neehall/week-1-project (public)
-- **Latest commit:** see `git log` — most recent work is the one-screen dashboard layout
+- **Latest commit:** see `git log` — most recent work is the multi-dashboard modular-monolith restructure
 - **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results
-- **Layout:** all 4 charts + KPIs fit on one screen (1440×900) with no scrolling; filtered data table tucked into a collapsed expander
-- **To run locally:** `./run.sh` from the project folder
+- **Architecture:** modular monolith — `app/Home.py` + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/` (shared styling)
+- **Dashboards:** Revenue (real data, `sales_data.csv`), Cost/Capex/Opex (synthetic data, `data/generate_synthetic_data.py`)
+- **Layout:** every dashboard's charts + KPIs fit on one screen (1440×900) with no scrolling
+- **To run locally:** `./run.sh` from the project folder (launches `app/Home.py`)
 - **Screenshots:** `screenshots/` — numbered in iteration order, each mapped to a log entry above

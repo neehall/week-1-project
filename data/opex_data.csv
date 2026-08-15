@@ -1,0 +1,2655 @@
+date,region,department,expense_type,amount
+2023-01-01,North America,Sales,Rent,2050.7
+2023-01-01,North America,Sales,Utilities,599.98
+2023-01-01,North America,Sales,Travel,466.47
+2023-01-01,North America,Sales,Software,752.94
+2023-01-01,North America,Sales,Professional Services,1014.19
+2023-01-01,North America,Marketing,Salaries,7047.88
+2023-01-01,North America,Marketing,Rent,2076.35
+2023-01-01,North America,Marketing,Utilities,483.33
+2023-01-01,North America,Marketing,Travel,399.76
+2023-01-01,North America,Marketing,Software,615.58
+2023-01-01,North America,Marketing,Professional Services,745.89
+2023-01-01,North America,R&D,Salaries,8434.49
+2023-01-01,North America,R&D,Utilities,535.42
+2023-01-01,North America,R&D,Travel,361.66
+2023-01-01,North America,R&D,Software,670.81
+2023-01-01,North America,R&D,Professional Services,814.26
+2023-01-01,North America,Admin,Rent,2432.79
+2023-01-01,North America,Admin,Utilities,514.45
+2023-01-01,North America,Admin,Software,626.24
+2023-01-01,North America,Admin,Professional Services,844.62
+2023-01-01,North America,Operations,Salaries,8985.79
+2023-01-01,North America,Operations,Rent,2395.46
+2023-01-01,North America,Operations,Utilities,601.75
+2023-01-01,North America,Operations,Travel,524.56
+2023-01-01,North America,Operations,Software,702.91
+2023-01-01,North America,Operations,Professional Services,898.43
+2023-01-01,Europe,Sales,Salaries,7694.64
+2023-01-01,Europe,Sales,Rent,1865.53
+2023-01-01,Europe,Sales,Travel,450.4
+2023-01-01,Europe,Sales,Software,613.45
+2023-01-01,Europe,Marketing,Salaries,8745.98
+2023-01-01,Europe,Marketing,Utilities,715.01
+2023-01-01,Europe,Marketing,Travel,470.68
+2023-01-01,Europe,Marketing,Professional Services,884.59
+2023-01-01,Europe,R&D,Salaries,11578.85
+2023-01-01,Europe,R&D,Rent,2957.28
+2023-01-01,Europe,R&D,Utilities,600.42
+2023-01-01,Europe,R&D,Software,874.81
+2023-01-01,Europe,Admin,Salaries,10771.61
+2023-01-01,Europe,Admin,Utilities,636.83
+2023-01-01,Europe,Admin,Travel,545.26
+2023-01-01,Europe,Admin,Software,832.13
+2023-01-01,Europe,Admin,Professional Services,1033.28
+2023-01-01,Europe,Operations,Salaries,9408.48
+2023-01-01,Europe,Operations,Rent,2285.46
+2023-01-01,Europe,Operations,Utilities,605.28
+2023-01-01,Europe,Operations,Travel,569.4
+2023-01-01,Europe,Operations,Professional Services,1016.06
+2023-01-01,Asia Pacific,Sales,Salaries,12259.23
+2023-01-01,Asia Pacific,Sales,Rent,2780.7
+2023-01-01,Asia Pacific,Sales,Professional Services,1230.36
+2023-01-01,Asia Pacific,Marketing,Salaries,11261.88
+2023-01-01,Asia Pacific,Marketing,Rent,2854.4
+2023-01-01,Asia Pacific,Marketing,Utilities,669.74
+2023-01-01,Asia Pacific,Marketing,Software,936.07
+2023-01-01,Asia Pacific,Marketing,Professional Services,1015.39
+2023-01-01,Asia Pacific,R&D,Rent,2230.68
+2023-01-01,Asia Pacific,R&D,Travel,491.55
+2023-01-01,Asia Pacific,R&D,Software,856.51
+2023-01-01,Asia Pacific,R&D,Professional Services,1048.65
+2023-01-01,Asia Pacific,Admin,Salaries,9743.39
+2023-01-01,Asia Pacific,Admin,Rent,2202.68
+2023-01-01,Asia Pacific,Admin,Travel,423.54
+2023-01-01,Asia Pacific,Admin,Professional Services,967.97
+2023-01-01,Asia Pacific,Operations,Salaries,11604.31
+2023-01-01,Asia Pacific,Operations,Utilities,697.76
+2023-01-01,Asia Pacific,Operations,Travel,453.63
+2023-01-01,Asia Pacific,Operations,Software,830.32
+2023-01-01,Latin America,Sales,Rent,2410.85
+2023-01-01,Latin America,Sales,Utilities,628.19
+2023-01-01,Latin America,Sales,Travel,492.36
+2023-01-01,Latin America,Sales,Software,855.12
+2023-01-01,Latin America,Sales,Professional Services,1130.87
+2023-01-01,Latin America,Marketing,Rent,3025.36
+2023-01-01,Latin America,Marketing,Travel,612.72
+2023-01-01,Latin America,Marketing,Software,1048.42
+2023-01-01,Latin America,Marketing,Professional Services,1148.96
+2023-01-01,Latin America,R&D,Salaries,10343.06
+2023-01-01,Latin America,R&D,Rent,2615.51
+2023-01-01,Latin America,R&D,Utilities,765.71
+2023-01-01,Latin America,R&D,Travel,604.55
+2023-01-01,Latin America,R&D,Software,937.55
+2023-01-01,Latin America,R&D,Professional Services,1047.82
+2023-01-01,Latin America,Admin,Utilities,796.78
+2023-01-01,Latin America,Admin,Travel,488.69
+2023-01-01,Latin America,Admin,Software,865.31
+2023-01-01,Latin America,Admin,Professional Services,1265.43
+2023-01-01,Latin America,Operations,Salaries,9344.94
+2023-01-01,Latin America,Operations,Rent,2343.56
+2023-01-01,Latin America,Operations,Utilities,737.68
+2023-01-01,Latin America,Operations,Travel,478.78
+2023-01-01,Latin America,Operations,Software,929.1
+2023-01-01,Latin America,Operations,Professional Services,1086.12
+2023-01-01,Middle East,Sales,Salaries,12286.16
+2023-01-01,Middle East,Sales,Rent,2837.15
+2023-01-01,Middle East,Sales,Travel,598.02
+2023-01-01,Middle East,Sales,Software,880.81
+2023-01-01,Middle East,Sales,Professional Services,1189.22
+2023-01-01,Middle East,Marketing,Salaries,9479.77
+2023-01-01,Middle East,Marketing,Rent,2258.89
+2023-01-01,Middle East,Marketing,Travel,535.9
+2023-01-01,Middle East,Marketing,Software,906.08
+2023-01-01,Middle East,Marketing,Professional Services,1026.38
+2023-01-01,Middle East,R&D,Salaries,11164.22
+2023-01-01,Middle East,R&D,Utilities,706.47
+2023-01-01,Middle East,R&D,Travel,580.19
+2023-01-01,Middle East,R&D,Software,863.16
+2023-01-01,Middle East,R&D,Professional Services,1253.56
+2023-01-01,Middle East,Admin,Rent,2417.08
+2023-01-01,Middle East,Admin,Utilities,527.54
+2023-01-01,Middle East,Admin,Travel,392.64
+2023-01-01,Middle East,Admin,Software,850.32
+2023-01-01,Middle East,Operations,Salaries,9136.49
+2023-01-01,Middle East,Operations,Rent,2523.02
+2023-01-01,Middle East,Operations,Software,684.41
+2023-01-01,Middle East,Operations,Professional Services,925.23
+2023-02-01,North America,Sales,Rent,2648.24
+2023-02-01,North America,Sales,Utilities,734.15
+2023-02-01,North America,Sales,Travel,598.46
+2023-02-01,North America,Sales,Software,873.43
+2023-02-01,North America,Marketing,Salaries,9496.8
+2023-02-01,North America,Marketing,Rent,2454.39
+2023-02-01,North America,Marketing,Travel,480.11
+2023-02-01,North America,Marketing,Software,920.42
+2023-02-01,North America,Marketing,Professional Services,979.31
+2023-02-01,North America,R&D,Salaries,9321.09
+2023-02-01,North America,R&D,Rent,2389.03
+2023-02-01,North America,R&D,Travel,375.62
+2023-02-01,North America,R&D,Professional Services,743.91
+2023-02-01,North America,Admin,Rent,2045.35
+2023-02-01,North America,Admin,Travel,414.57
+2023-02-01,North America,Operations,Salaries,10656.85
+2023-02-01,North America,Operations,Rent,2311.71
+2023-02-01,North America,Operations,Utilities,752.35
+2023-02-01,North America,Operations,Travel,566.56
+2023-02-01,North America,Operations,Software,943.72
+2023-02-01,North America,Operations,Professional Services,1011.64
+2023-02-01,Europe,Sales,Salaries,7806.52
+2023-02-01,Europe,Sales,Software,712.15
+2023-02-01,Europe,Sales,Professional Services,785.49
+2023-02-01,Europe,Marketing,Salaries,10250.75
+2023-02-01,Europe,Marketing,Rent,3025.52
+2023-02-01,Europe,Marketing,Utilities,640.89
+2023-02-01,Europe,Marketing,Software,826.74
+2023-02-01,Europe,Marketing,Professional Services,1080.2
+2023-02-01,Europe,R&D,Salaries,10824.41
+2023-02-01,Europe,R&D,Travel,506.96
+2023-02-01,Europe,R&D,Software,827.74
+2023-02-01,Europe,R&D,Professional Services,1117.9
+2023-02-01,Europe,Admin,Salaries,9519.3
+2023-02-01,Europe,Admin,Rent,2413.6
+2023-02-01,Europe,Admin,Utilities,717.62
+2023-02-01,Europe,Operations,Salaries,10415.83
+2023-02-01,Europe,Operations,Rent,2862.16
+2023-02-01,Europe,Operations,Utilities,870.82
+2023-02-01,Europe,Operations,Professional Services,1049.74
+2023-02-01,Asia Pacific,Sales,Utilities,708.57
+2023-02-01,Asia Pacific,Sales,Software,928.18
+2023-02-01,Asia Pacific,Sales,Professional Services,1020.18
+2023-02-01,Asia Pacific,Marketing,Salaries,12949.68
+2023-02-01,Asia Pacific,Marketing,Utilities,943.33
+2023-02-01,Asia Pacific,R&D,Rent,3747.71
+2023-02-01,Asia Pacific,R&D,Utilities,935.82
+2023-02-01,Asia Pacific,R&D,Travel,601.18
+2023-02-01,Asia Pacific,R&D,Software,1099.39
+2023-02-01,Asia Pacific,R&D,Professional Services,1424.95
+2023-02-01,Asia Pacific,Admin,Rent,3728.63
+2023-02-01,Asia Pacific,Admin,Utilities,1135.23
+2023-02-01,Asia Pacific,Admin,Travel,723.1
+2023-02-01,Asia Pacific,Admin,Software,1104.64
+2023-02-01,Asia Pacific,Admin,Professional Services,1354.74
+2023-02-01,Asia Pacific,Operations,Salaries,11482.94
+2023-02-01,Asia Pacific,Operations,Rent,2719.21
+2023-02-01,Asia Pacific,Operations,Utilities,775.33
+2023-02-01,Asia Pacific,Operations,Travel,631.76
+2023-02-01,Asia Pacific,Operations,Software,884.2
+2023-02-01,Asia Pacific,Operations,Professional Services,1141.12
+2023-02-01,Latin America,Sales,Salaries,11798.96
+2023-02-01,Latin America,Sales,Rent,3003.87
+2023-02-01,Latin America,Sales,Software,1004.56
+2023-02-01,Latin America,Marketing,Salaries,11144.36
+2023-02-01,Latin America,Marketing,Rent,3390.12
+2023-02-01,Latin America,Marketing,Utilities,841.88
+2023-02-01,Latin America,Marketing,Software,969.28
+2023-02-01,Latin America,Marketing,Professional Services,1230.38
+2023-02-01,Latin America,R&D,Rent,2394.62
+2023-02-01,Latin America,R&D,Travel,519.75
+2023-02-01,Latin America,R&D,Software,775.43
+2023-02-01,Latin America,Admin,Salaries,14554.56
+2023-02-01,Latin America,Admin,Rent,3331.16
+2023-02-01,Latin America,Admin,Utilities,782.58
+2023-02-01,Latin America,Admin,Travel,652.81
+2023-02-01,Latin America,Admin,Software,1241.19
+2023-02-01,Latin America,Admin,Professional Services,1446.39
+2023-02-01,Latin America,Operations,Salaries,11423.9
+2023-02-01,Latin America,Operations,Rent,2258.04
+2023-02-01,Latin America,Operations,Utilities,680.26
+2023-02-01,Latin America,Operations,Travel,587.2
+2023-02-01,Latin America,Operations,Software,835.75
+2023-02-01,Latin America,Operations,Professional Services,1000.64
+2023-02-01,Middle East,Sales,Salaries,9674.33
+2023-02-01,Middle East,Sales,Rent,2876.23
+2023-02-01,Middle East,Sales,Travel,511.53
+2023-02-01,Middle East,Sales,Software,774.9
+2023-02-01,Middle East,Sales,Professional Services,996.08
+2023-02-01,Middle East,Marketing,Rent,2439.13
+2023-02-01,Middle East,Marketing,Professional Services,851.95
+2023-02-01,Middle East,R&D,Salaries,11919.07
+2023-02-01,Middle East,R&D,Rent,2384.0
+2023-02-01,Middle East,R&D,Utilities,808.23
+2023-02-01,Middle East,R&D,Travel,533.79
+2023-02-01,Middle East,R&D,Software,782.44
+2023-02-01,Middle East,R&D,Professional Services,1252.31
+2023-02-01,Middle East,Admin,Rent,2574.73
+2023-02-01,Middle East,Admin,Utilities,630.39
+2023-02-01,Middle East,Admin,Travel,602.94
+2023-02-01,Middle East,Operations,Rent,2949.93
+2023-02-01,Middle East,Operations,Utilities,677.85
+2023-02-01,Middle East,Operations,Travel,455.81
+2023-02-01,Middle East,Operations,Software,824.61
+2023-03-01,North America,Sales,Rent,3293.93
+2023-03-01,North America,Sales,Utilities,944.87
+2023-03-01,North America,Sales,Travel,702.6
+2023-03-01,North America,Sales,Professional Services,1257.23
+2023-03-01,North America,Marketing,Salaries,12147.73
+2023-03-01,North America,Marketing,Rent,2646.76
+2023-03-01,North America,Marketing,Utilities,685.24
+2023-03-01,North America,Marketing,Travel,514.76
+2023-03-01,North America,R&D,Salaries,13133.18
+2023-03-01,North America,R&D,Rent,2502.16
+2023-03-01,North America,R&D,Software,887.42
+2023-03-01,North America,R&D,Professional Services,1315.23
+2023-03-01,North America,Admin,Professional Services,1399.73
+2023-03-01,North America,Operations,Salaries,9665.83
+2023-03-01,North America,Operations,Rent,2747.59
+2023-03-01,North America,Operations,Utilities,802.98
+2023-03-01,North America,Operations,Travel,465.57
+2023-03-01,North America,Operations,Professional Services,1203.46
+2023-03-01,Europe,Sales,Salaries,11155.48
+2023-03-01,Europe,Sales,Rent,3223.81
+2023-03-01,Europe,Sales,Utilities,805.82
+2023-03-01,Europe,Sales,Software,925.33
+2023-03-01,Europe,Sales,Professional Services,1117.43
+2023-03-01,Europe,Marketing,Salaries,9431.55
+2023-03-01,Europe,Marketing,Rent,2299.6
+2023-03-01,Europe,Marketing,Utilities,622.53
+2023-03-01,Europe,Marketing,Travel,457.82
+2023-03-01,Europe,Marketing,Professional Services,861.13
+2023-03-01,Europe,R&D,Rent,2906.75
+2023-03-01,Europe,R&D,Utilities,776.67
+2023-03-01,Europe,R&D,Software,1021.49
+2023-03-01,Europe,R&D,Professional Services,1148.32
+2023-03-01,Europe,Admin,Salaries,12199.1
+2023-03-01,Europe,Admin,Rent,3077.47
+2023-03-01,Europe,Admin,Utilities,890.63
+2023-03-01,Europe,Admin,Travel,573.69
+2023-03-01,Europe,Admin,Software,979.82
+2023-03-01,Europe,Admin,Professional Services,1159.57
+2023-03-01,Europe,Operations,Salaries,8767.1
+2023-03-01,Europe,Operations,Utilities,705.95
+2023-03-01,Europe,Operations,Travel,459.27
+2023-03-01,Europe,Operations,Professional Services,883.59
+2023-03-01,Asia Pacific,Sales,Salaries,10037.28
+2023-03-01,Asia Pacific,Sales,Rent,2391.38
+2023-03-01,Asia Pacific,Sales,Travel,447.25
+2023-03-01,Asia Pacific,Sales,Professional Services,848.56
+2023-03-01,Asia Pacific,Marketing,Salaries,8872.79
+2023-03-01,Asia Pacific,Marketing,Utilities,604.42
+2023-03-01,Asia Pacific,Marketing,Travel,457.44
+2023-03-01,Asia Pacific,Marketing,Software,763.54
+2023-03-01,Asia Pacific,R&D,Rent,2243.98
+2023-03-01,Asia Pacific,R&D,Travel,437.91
+2023-03-01,Asia Pacific,R&D,Software,687.42
+2023-03-01,Asia Pacific,R&D,Professional Services,872.8
+2023-03-01,Asia Pacific,Admin,Rent,2627.62
+2023-03-01,Asia Pacific,Admin,Utilities,647.26
+2023-03-01,Asia Pacific,Admin,Travel,535.14
+2023-03-01,Asia Pacific,Admin,Software,866.51
+2023-03-01,Asia Pacific,Admin,Professional Services,1012.35
+2023-03-01,Asia Pacific,Operations,Utilities,643.55
+2023-03-01,Asia Pacific,Operations,Travel,493.37
+2023-03-01,Asia Pacific,Operations,Software,887.18
+2023-03-01,Latin America,Sales,Salaries,12857.78
+2023-03-01,Latin America,Sales,Rent,3126.34
+2023-03-01,Latin America,Sales,Utilities,724.37
+2023-03-01,Latin America,Sales,Travel,577.64
+2023-03-01,Latin America,Sales,Software,889.5
+2023-03-01,Latin America,Sales,Professional Services,1051.16
+2023-03-01,Latin America,Marketing,Utilities,562.95
+2023-03-01,Latin America,Marketing,Travel,458.54
+2023-03-01,Latin America,R&D,Salaries,12669.44
+2023-03-01,Latin America,R&D,Utilities,822.35
+2023-03-01,Latin America,R&D,Software,1070.22
+2023-03-01,Latin America,R&D,Professional Services,1103.5
+2023-03-01,Latin America,Admin,Salaries,10557.52
+2023-03-01,Latin America,Admin,Rent,2348.7
+2023-03-01,Latin America,Admin,Utilities,594.1
+2023-03-01,Latin America,Admin,Software,933.0
+2023-03-01,Latin America,Operations,Salaries,9673.75
+2023-03-01,Latin America,Operations,Utilities,633.79
+2023-03-01,Latin America,Operations,Travel,401.23
+2023-03-01,Latin America,Operations,Professional Services,879.61
+2023-03-01,Middle East,Sales,Salaries,17672.74
+2023-03-01,Middle East,Sales,Rent,3747.14
+2023-03-01,Middle East,Sales,Utilities,950.62
+2023-03-01,Middle East,Sales,Travel,830.75
+2023-03-01,Middle East,Sales,Professional Services,1404.95
+2023-03-01,Middle East,Marketing,Salaries,11960.51
+2023-03-01,Middle East,Marketing,Rent,3582.05
+2023-03-01,Middle East,Marketing,Utilities,791.39
+2023-03-01,Middle East,Marketing,Travel,591.38
+2023-03-01,Middle East,Marketing,Professional Services,1239.19
+2023-03-01,Middle East,R&D,Salaries,12603.65
+2023-03-01,Middle East,R&D,Travel,704.99
+2023-03-01,Middle East,R&D,Professional Services,1436.52
+2023-03-01,Middle East,Admin,Utilities,1044.72
+2023-03-01,Middle East,Admin,Travel,896.9
+2023-03-01,Middle East,Admin,Professional Services,1882.94
+2023-03-01,Middle East,Operations,Salaries,17740.42
+2023-03-01,Middle East,Operations,Rent,4277.42
+2023-03-01,Middle East,Operations,Utilities,1142.11
+2023-03-01,Middle East,Operations,Travel,705.59
+2023-03-01,Middle East,Operations,Professional Services,1596.45
+2023-04-01,North America,Sales,Salaries,13562.16
+2023-04-01,North America,Sales,Utilities,847.39
+2023-04-01,North America,Sales,Travel,546.95
+2023-04-01,North America,Sales,Software,1144.5
+2023-04-01,North America,Sales,Professional Services,1357.92
+2023-04-01,North America,Marketing,Salaries,15657.8
+2023-04-01,North America,Marketing,Rent,4307.3
+2023-04-01,North America,Marketing,Travel,836.41
+2023-04-01,North America,Marketing,Software,1361.03
+2023-04-01,North America,Marketing,Professional Services,1719.92
+2023-04-01,North America,R&D,Salaries,15704.82
+2023-04-01,North America,R&D,Rent,3747.7
+2023-04-01,North America,R&D,Utilities,1064.25
+2023-04-01,North America,R&D,Professional Services,1480.41
+2023-04-01,North America,Admin,Rent,3487.5
+2023-04-01,North America,Admin,Travel,712.6
+2023-04-01,North America,Admin,Professional Services,1165.86
+2023-04-01,North America,Operations,Salaries,16113.13
+2023-04-01,North America,Operations,Utilities,1043.47
+2023-04-01,Europe,Sales,Salaries,17800.85
+2023-04-01,Europe,Sales,Rent,4116.99
+2023-04-01,Europe,Sales,Utilities,1152.37
+2023-04-01,Europe,Sales,Software,1511.5
+2023-04-01,Europe,Sales,Professional Services,1697.79
+2023-04-01,Europe,Marketing,Salaries,14688.09
+2023-04-01,Europe,Marketing,Rent,3111.1
+2023-04-01,Europe,R&D,Salaries,11057.51
+2023-04-01,Europe,R&D,Utilities,865.51
+2023-04-01,Europe,R&D,Travel,658.77
+2023-04-01,Europe,R&D,Software,1100.34
+2023-04-01,Europe,R&D,Professional Services,1348.66
+2023-04-01,Europe,Admin,Salaries,14833.96
+2023-04-01,Europe,Admin,Utilities,926.93
+2023-04-01,Europe,Admin,Professional Services,1421.63
+2023-04-01,Europe,Operations,Salaries,14357.47
+2023-04-01,Europe,Operations,Rent,3872.86
+2023-04-01,Europe,Operations,Travel,923.06
+2023-04-01,Europe,Operations,Software,1398.29
+2023-04-01,Europe,Operations,Professional Services,1670.78
+2023-04-01,Asia Pacific,Sales,Salaries,11973.75
+2023-04-01,Asia Pacific,Sales,Rent,3537.66
+2023-04-01,Asia Pacific,Sales,Utilities,781.84
+2023-04-01,Asia Pacific,Sales,Travel,653.94
+2023-04-01,Asia Pacific,Marketing,Salaries,11581.51
+2023-04-01,Asia Pacific,Marketing,Rent,3186.51
+2023-04-01,Asia Pacific,Marketing,Utilities,831.32
+2023-04-01,Asia Pacific,Marketing,Travel,651.24
+2023-04-01,Asia Pacific,Marketing,Software,1045.2
+2023-04-01,Asia Pacific,Marketing,Professional Services,1295.8
+2023-04-01,Asia Pacific,R&D,Rent,3505.74
+2023-04-01,Asia Pacific,R&D,Utilities,938.22
+2023-04-01,Asia Pacific,R&D,Travel,802.8
+2023-04-01,Asia Pacific,R&D,Software,1062.57
+2023-04-01,Asia Pacific,Admin,Rent,2915.99
+2023-04-01,Asia Pacific,Admin,Utilities,618.5
+2023-04-01,Asia Pacific,Admin,Travel,483.65
+2023-04-01,Asia Pacific,Admin,Software,809.61
+2023-04-01,Asia Pacific,Admin,Professional Services,1022.96
+2023-04-01,Asia Pacific,Operations,Salaries,14666.44
+2023-04-01,Asia Pacific,Operations,Utilities,907.16
+2023-04-01,Asia Pacific,Operations,Travel,751.71
+2023-04-01,Asia Pacific,Operations,Software,1039.98
+2023-04-01,Asia Pacific,Operations,Professional Services,1258.79
+2023-04-01,Latin America,Sales,Salaries,12195.91
+2023-04-01,Latin America,Sales,Rent,2768.89
+2023-04-01,Latin America,Sales,Utilities,800.87
+2023-04-01,Latin America,Sales,Software,974.48
+2023-04-01,Latin America,Sales,Professional Services,1044.01
+2023-04-01,Latin America,Marketing,Salaries,13789.57
+2023-04-01,Latin America,Marketing,Rent,2860.16
+2023-04-01,Latin America,Marketing,Utilities,831.09
+2023-04-01,Latin America,Marketing,Travel,615.62
+2023-04-01,Latin America,Marketing,Software,996.16
+2023-04-01,Latin America,Marketing,Professional Services,1167.82
+2023-04-01,Latin America,R&D,Utilities,629.39
+2023-04-01,Latin America,R&D,Software,812.58
+2023-04-01,Latin America,Admin,Rent,2223.25
+2023-04-01,Latin America,Admin,Software,680.69
+2023-04-01,Latin America,Admin,Professional Services,855.07
+2023-04-01,Latin America,Operations,Salaries,10547.43
+2023-04-01,Latin America,Operations,Utilities,799.79
+2023-04-01,Latin America,Operations,Professional Services,1089.08
+2023-04-01,Middle East,Sales,Salaries,8916.62
+2023-04-01,Middle East,Sales,Rent,2372.2
+2023-04-01,Middle East,Sales,Utilities,523.51
+2023-04-01,Middle East,Sales,Travel,400.08
+2023-04-01,Middle East,Marketing,Salaries,7631.22
+2023-04-01,Middle East,Marketing,Rent,2326.31
+2023-04-01,Middle East,Marketing,Utilities,644.01
+2023-04-01,Middle East,Marketing,Travel,474.32
+2023-04-01,Middle East,Marketing,Professional Services,919.66
+2023-04-01,Middle East,R&D,Utilities,553.04
+2023-04-01,Middle East,R&D,Software,800.24
+2023-04-01,Middle East,Admin,Rent,3153.86
+2023-04-01,Middle East,Admin,Travel,633.82
+2023-04-01,Middle East,Admin,Software,1056.5
+2023-04-01,Middle East,Admin,Professional Services,970.34
+2023-04-01,Middle East,Operations,Salaries,11178.7
+2023-04-01,Middle East,Operations,Rent,2759.91
+2023-04-01,Middle East,Operations,Travel,471.45
+2023-04-01,Middle East,Operations,Software,994.84
+2023-04-01,Middle East,Operations,Professional Services,1083.86
+2023-05-01,North America,Sales,Salaries,12150.36
+2023-05-01,North America,Sales,Travel,716.33
+2023-05-01,North America,Sales,Software,963.92
+2023-05-01,North America,Sales,Professional Services,1218.53
+2023-05-01,North America,Marketing,Rent,3425.17
+2023-05-01,North America,Marketing,Utilities,856.6
+2023-05-01,North America,Marketing,Travel,543.64
+2023-05-01,North America,Marketing,Professional Services,1156.2
+2023-05-01,North America,R&D,Salaries,9493.41
+2023-05-01,North America,R&D,Rent,2096.31
+2023-05-01,North America,R&D,Utilities,591.66
+2023-05-01,North America,R&D,Travel,434.0
+2023-05-01,North America,R&D,Software,768.41
+2023-05-01,North America,Admin,Salaries,10967.05
+2023-05-01,North America,Admin,Utilities,707.97
+2023-05-01,North America,Admin,Travel,548.01
+2023-05-01,North America,Admin,Software,997.7
+2023-05-01,North America,Admin,Professional Services,1147.58
+2023-05-01,North America,Operations,Salaries,8326.95
+2023-05-01,North America,Operations,Rent,1909.69
+2023-05-01,North America,Operations,Software,698.32
+2023-05-01,North America,Operations,Professional Services,833.76
+2023-05-01,Europe,Sales,Rent,3021.54
+2023-05-01,Europe,Sales,Utilities,743.75
+2023-05-01,Europe,Sales,Travel,717.93
+2023-05-01,Europe,Sales,Professional Services,1367.96
+2023-05-01,Europe,Marketing,Salaries,11610.8
+2023-05-01,Europe,Marketing,Rent,3194.71
+2023-05-01,Europe,Marketing,Travel,566.24
+2023-05-01,Europe,Marketing,Professional Services,1280.11
+2023-05-01,Europe,R&D,Salaries,10867.69
+2023-05-01,Europe,R&D,Rent,2448.74
+2023-05-01,Europe,R&D,Utilities,652.03
+2023-05-01,Europe,R&D,Professional Services,916.23
+2023-05-01,Europe,Admin,Rent,3454.57
+2023-05-01,Europe,Admin,Utilities,931.26
+2023-05-01,Europe,Admin,Travel,612.79
+2023-05-01,Europe,Admin,Software,1004.09
+2023-05-01,Europe,Admin,Professional Services,1354.42
+2023-05-01,Europe,Operations,Salaries,13350.89
+2023-05-01,Europe,Operations,Utilities,669.18
+2023-05-01,Europe,Operations,Travel,531.52
+2023-05-01,Europe,Operations,Software,880.35
+2023-05-01,Europe,Operations,Professional Services,1085.21
+2023-05-01,Asia Pacific,Sales,Salaries,10191.68
+2023-05-01,Asia Pacific,Sales,Rent,2846.05
+2023-05-01,Asia Pacific,Sales,Utilities,627.42
+2023-05-01,Asia Pacific,Sales,Travel,490.46
+2023-05-01,Asia Pacific,Sales,Professional Services,913.36
+2023-05-01,Asia Pacific,Marketing,Salaries,8724.42
+2023-05-01,Asia Pacific,Marketing,Rent,2774.31
+2023-05-01,Asia Pacific,Marketing,Utilities,695.36
+2023-05-01,Asia Pacific,Marketing,Travel,563.09
+2023-05-01,Asia Pacific,Marketing,Software,734.91
+2023-05-01,Asia Pacific,Marketing,Professional Services,990.91
+2023-05-01,Asia Pacific,R&D,Salaries,8154.42
+2023-05-01,Asia Pacific,R&D,Rent,2217.91
+2023-05-01,Asia Pacific,R&D,Professional Services,820.79
+2023-05-01,Asia Pacific,Admin,Rent,2411.58
+2023-05-01,Asia Pacific,Admin,Utilities,631.65
+2023-05-01,Asia Pacific,Operations,Salaries,13635.77
+2023-05-01,Asia Pacific,Operations,Rent,3049.46
+2023-05-01,Asia Pacific,Operations,Utilities,871.7
+2023-05-01,Asia Pacific,Operations,Travel,666.52
+2023-05-01,Asia Pacific,Operations,Software,987.04
+2023-05-01,Asia Pacific,Operations,Professional Services,1319.31
+2023-05-01,Latin America,Sales,Rent,3363.21
+2023-05-01,Latin America,Sales,Travel,535.27
+2023-05-01,Latin America,Sales,Software,1130.13
+2023-05-01,Latin America,Sales,Professional Services,1377.68
+2023-05-01,Latin America,Marketing,Salaries,8683.1
+2023-05-01,Latin America,Marketing,Utilities,552.32
+2023-05-01,Latin America,Marketing,Travel,435.62
+2023-05-01,Latin America,Marketing,Software,691.54
+2023-05-01,Latin America,Marketing,Professional Services,871.46
+2023-05-01,Latin America,R&D,Salaries,9645.33
+2023-05-01,Latin America,R&D,Rent,2474.33
+2023-05-01,Latin America,R&D,Travel,504.23
+2023-05-01,Latin America,R&D,Software,904.2
+2023-05-01,Latin America,R&D,Professional Services,1128.31
+2023-05-01,Latin America,Admin,Salaries,13030.61
+2023-05-01,Latin America,Admin,Utilities,710.61
+2023-05-01,Latin America,Admin,Travel,606.46
+2023-05-01,Latin America,Admin,Software,1112.94
+2023-05-01,Latin America,Operations,Salaries,9450.68
+2023-05-01,Latin America,Operations,Rent,2981.12
+2023-05-01,Latin America,Operations,Travel,505.16
+2023-05-01,Latin America,Operations,Software,803.85
+2023-05-01,Latin America,Operations,Professional Services,1218.21
+2023-05-01,Middle East,Sales,Salaries,9642.6
+2023-05-01,Middle East,Sales,Rent,2029.33
+2023-05-01,Middle East,Sales,Travel,446.47
+2023-05-01,Middle East,Sales,Software,750.22
+2023-05-01,Middle East,Sales,Professional Services,793.12
+2023-05-01,Middle East,Marketing,Salaries,9340.97
+2023-05-01,Middle East,Marketing,Rent,1969.39
+2023-05-01,Middle East,Marketing,Utilities,535.22
+2023-05-01,Middle East,Marketing,Software,635.49
+2023-05-01,Middle East,Marketing,Professional Services,716.6
+2023-05-01,Middle East,R&D,Salaries,7558.6
+2023-05-01,Middle East,R&D,Rent,1743.72
+2023-05-01,Middle East,R&D,Utilities,568.95
+2023-05-01,Middle East,R&D,Travel,353.8
+2023-05-01,Middle East,R&D,Software,635.71
+2023-05-01,Middle East,R&D,Professional Services,745.82
+2023-05-01,Middle East,Admin,Salaries,7436.31
+2023-05-01,Middle East,Admin,Rent,1824.4
+2023-05-01,Middle East,Admin,Utilities,555.54
+2023-05-01,Middle East,Admin,Travel,382.75
+2023-05-01,Middle East,Admin,Software,723.51
+2023-05-01,Middle East,Admin,Professional Services,823.82
+2023-05-01,Middle East,Operations,Salaries,12975.74
+2023-05-01,Middle East,Operations,Rent,2506.36
+2023-05-01,Middle East,Operations,Utilities,816.18
+2023-05-01,Middle East,Operations,Travel,570.54
+2023-05-01,Middle East,Operations,Professional Services,1026.06
+2023-06-01,North America,Sales,Salaries,15388.42
+2023-06-01,North America,Sales,Rent,3580.16
+2023-06-01,North America,Sales,Utilities,1018.44
+2023-06-01,North America,Sales,Travel,596.34
+2023-06-01,North America,Sales,Software,1056.18
+2023-06-01,North America,Sales,Professional Services,1447.01
+2023-06-01,North America,Marketing,Rent,3546.9
+2023-06-01,North America,Marketing,Software,1202.5
+2023-06-01,North America,R&D,Salaries,13454.5
+2023-06-01,North America,R&D,Rent,2983.19
+2023-06-01,North America,R&D,Utilities,727.61
+2023-06-01,North America,R&D,Travel,546.4
+2023-06-01,North America,R&D,Professional Services,1436.89
+2023-06-01,North America,Admin,Salaries,15164.21
+2023-06-01,North America,Admin,Rent,3606.72
+2023-06-01,North America,Admin,Utilities,994.23
+2023-06-01,North America,Admin,Travel,852.34
+2023-06-01,North America,Admin,Software,1108.62
+2023-06-01,North America,Admin,Professional Services,1376.93
+2023-06-01,North America,Operations,Salaries,11725.28
+2023-06-01,North America,Operations,Rent,3244.88
+2023-06-01,North America,Operations,Utilities,744.8
+2023-06-01,North America,Operations,Software,946.49
+2023-06-01,North America,Operations,Professional Services,1488.86
+2023-06-01,Europe,Sales,Salaries,8703.28
+2023-06-01,Europe,Sales,Rent,2096.62
+2023-06-01,Europe,Sales,Utilities,517.62
+2023-06-01,Europe,Sales,Travel,460.21
+2023-06-01,Europe,Sales,Software,697.31
+2023-06-01,Europe,Sales,Professional Services,758.29
+2023-06-01,Europe,Marketing,Rent,2012.92
+2023-06-01,Europe,Marketing,Utilities,498.66
+2023-06-01,Europe,Marketing,Travel,473.19
+2023-06-01,Europe,R&D,Salaries,7498.23
+2023-06-01,Europe,R&D,Rent,1991.59
+2023-06-01,Europe,R&D,Utilities,541.3
+2023-06-01,Europe,R&D,Travel,467.1
+2023-06-01,Europe,R&D,Professional Services,705.11
+2023-06-01,Europe,Admin,Salaries,10302.48
+2023-06-01,Europe,Admin,Rent,2279.74
+2023-06-01,Europe,Admin,Utilities,628.2
+2023-06-01,Europe,Admin,Travel,485.24
+2023-06-01,Europe,Admin,Software,770.26
+2023-06-01,Europe,Admin,Professional Services,941.86
+2023-06-01,Europe,Operations,Salaries,8778.59
+2023-06-01,Europe,Operations,Utilities,627.07
+2023-06-01,Asia Pacific,Sales,Salaries,8338.52
+2023-06-01,Asia Pacific,Sales,Rent,2104.17
+2023-06-01,Asia Pacific,Sales,Utilities,693.26
+2023-06-01,Asia Pacific,Sales,Travel,412.01
+2023-06-01,Asia Pacific,Sales,Software,923.35
+2023-06-01,Asia Pacific,Sales,Professional Services,875.75
+2023-06-01,Asia Pacific,Marketing,Salaries,7640.26
+2023-06-01,Asia Pacific,Marketing,Rent,1997.29
+2023-06-01,Asia Pacific,Marketing,Utilities,540.44
+2023-06-01,Asia Pacific,Marketing,Software,581.18
+2023-06-01,Asia Pacific,Marketing,Professional Services,838.76
+2023-06-01,Asia Pacific,R&D,Salaries,9142.41
+2023-06-01,Asia Pacific,R&D,Rent,2334.97
+2023-06-01,Asia Pacific,R&D,Software,679.93
+2023-06-01,Asia Pacific,R&D,Professional Services,831.81
+2023-06-01,Asia Pacific,Admin,Salaries,6755.13
+2023-06-01,Asia Pacific,Admin,Rent,2051.16
+2023-06-01,Asia Pacific,Admin,Travel,399.39
+2023-06-01,Asia Pacific,Admin,Software,703.41
+2023-06-01,Asia Pacific,Admin,Professional Services,788.3
+2023-06-01,Asia Pacific,Operations,Salaries,9232.64
+2023-06-01,Asia Pacific,Operations,Rent,2129.96
+2023-06-01,Asia Pacific,Operations,Utilities,582.89
+2023-06-01,Asia Pacific,Operations,Travel,364.61
+2023-06-01,Asia Pacific,Operations,Professional Services,807.42
+2023-06-01,Latin America,Sales,Salaries,10513.27
+2023-06-01,Latin America,Sales,Rent,2685.52
+2023-06-01,Latin America,Sales,Utilities,712.9
+2023-06-01,Latin America,Sales,Travel,532.09
+2023-06-01,Latin America,Sales,Software,882.06
+2023-06-01,Latin America,Marketing,Salaries,12653.04
+2023-06-01,Latin America,Marketing,Rent,2495.35
+2023-06-01,Latin America,Marketing,Utilities,695.32
+2023-06-01,Latin America,Marketing,Travel,624.88
+2023-06-01,Latin America,Marketing,Software,974.3
+2023-06-01,Latin America,Marketing,Professional Services,1119.62
+2023-06-01,Latin America,R&D,Salaries,14423.04
+2023-06-01,Latin America,R&D,Rent,3101.02
+2023-06-01,Latin America,R&D,Software,1354.04
+2023-06-01,Latin America,R&D,Professional Services,1319.75
+2023-06-01,Latin America,Admin,Salaries,11540.14
+2023-06-01,Latin America,Admin,Rent,2850.86
+2023-06-01,Latin America,Admin,Utilities,620.72
+2023-06-01,Latin America,Admin,Travel,599.68
+2023-06-01,Latin America,Admin,Software,760.13
+2023-06-01,Latin America,Admin,Professional Services,1175.5
+2023-06-01,Latin America,Operations,Salaries,11534.27
+2023-06-01,Latin America,Operations,Rent,3155.21
+2023-06-01,Latin America,Operations,Travel,716.63
+2023-06-01,Latin America,Operations,Software,981.85
+2023-06-01,Middle East,Sales,Salaries,18583.66
+2023-06-01,Middle East,Sales,Rent,4348.43
+2023-06-01,Middle East,Sales,Professional Services,1592.91
+2023-06-01,Middle East,Marketing,Salaries,12357.33
+2023-06-01,Middle East,Marketing,Utilities,865.16
+2023-06-01,Middle East,Marketing,Travel,759.15
+2023-06-01,Middle East,Marketing,Professional Services,1514.36
+2023-06-01,Middle East,R&D,Salaries,17786.29
+2023-06-01,Middle East,R&D,Rent,4537.15
+2023-06-01,Middle East,R&D,Travel,880.42
+2023-06-01,Middle East,R&D,Software,1377.96
+2023-06-01,Middle East,Admin,Salaries,14941.71
+2023-06-01,Middle East,Admin,Rent,3521.65
+2023-06-01,Middle East,Admin,Utilities,977.32
+2023-06-01,Middle East,Admin,Travel,686.76
+2023-06-01,Middle East,Admin,Software,1190.69
+2023-06-01,Middle East,Admin,Professional Services,1522.63
+2023-06-01,Middle East,Operations,Salaries,15009.08
+2023-06-01,Middle East,Operations,Rent,3439.22
+2023-06-01,Middle East,Operations,Utilities,1057.88
+2023-06-01,Middle East,Operations,Software,1408.41
+2023-06-01,Middle East,Operations,Professional Services,1612.25
+2023-07-01,North America,Sales,Utilities,935.66
+2023-07-01,North America,Sales,Software,1094.87
+2023-07-01,North America,Sales,Professional Services,1238.41
+2023-07-01,North America,Marketing,Salaries,14798.62
+2023-07-01,North America,Marketing,Utilities,764.01
+2023-07-01,North America,Marketing,Travel,583.17
+2023-07-01,North America,R&D,Salaries,11219.8
+2023-07-01,North America,R&D,Rent,3026.01
+2023-07-01,North America,R&D,Utilities,929.32
+2023-07-01,North America,R&D,Travel,553.21
+2023-07-01,North America,R&D,Software,1167.95
+2023-07-01,North America,Admin,Salaries,13932.79
+2023-07-01,North America,Admin,Rent,3222.45
+2023-07-01,North America,Admin,Utilities,880.44
+2023-07-01,North America,Admin,Professional Services,1128.87
+2023-07-01,North America,Operations,Salaries,15172.11
+2023-07-01,North America,Operations,Rent,3391.49
+2023-07-01,North America,Operations,Utilities,844.12
+2023-07-01,North America,Operations,Travel,618.07
+2023-07-01,North America,Operations,Software,1242.73
+2023-07-01,North America,Operations,Professional Services,1513.47
+2023-07-01,Europe,Sales,Salaries,13937.05
+2023-07-01,Europe,Sales,Rent,3473.17
+2023-07-01,Europe,Sales,Utilities,852.0
+2023-07-01,Europe,Sales,Professional Services,1523.29
+2023-07-01,Europe,Marketing,Salaries,15761.07
+2023-07-01,Europe,Marketing,Rent,3675.34
+2023-07-01,Europe,Marketing,Utilities,976.58
+2023-07-01,Europe,Marketing,Travel,868.11
+2023-07-01,Europe,Marketing,Software,1488.31
+2023-07-01,Europe,Marketing,Professional Services,1795.0
+2023-07-01,Europe,R&D,Salaries,17539.15
+2023-07-01,Europe,R&D,Rent,4796.6
+2023-07-01,Europe,R&D,Utilities,1219.2
+2023-07-01,Europe,R&D,Travel,823.88
+2023-07-01,Europe,R&D,Software,1348.71
+2023-07-01,Europe,R&D,Professional Services,1473.8
+2023-07-01,Europe,Admin,Salaries,13206.85
+2023-07-01,Europe,Admin,Rent,3147.79
+2023-07-01,Europe,Admin,Utilities,992.02
+2023-07-01,Europe,Admin,Travel,593.6
+2023-07-01,Europe,Admin,Software,1124.67
+2023-07-01,Europe,Admin,Professional Services,1341.43
+2023-07-01,Europe,Operations,Salaries,15049.76
+2023-07-01,Europe,Operations,Rent,3641.42
+2023-07-01,Europe,Operations,Utilities,1051.39
+2023-07-01,Europe,Operations,Travel,800.65
+2023-07-01,Europe,Operations,Software,1096.79
+2023-07-01,Europe,Operations,Professional Services,1374.24
+2023-07-01,Asia Pacific,Sales,Salaries,11385.55
+2023-07-01,Asia Pacific,Sales,Rent,3485.55
+2023-07-01,Asia Pacific,Sales,Utilities,911.56
+2023-07-01,Asia Pacific,Sales,Travel,683.51
+2023-07-01,Asia Pacific,Sales,Professional Services,1056.36
+2023-07-01,Asia Pacific,Marketing,Salaries,13880.25
+2023-07-01,Asia Pacific,Marketing,Rent,3173.62
+2023-07-01,Asia Pacific,Marketing,Utilities,930.82
+2023-07-01,Asia Pacific,Marketing,Travel,734.16
+2023-07-01,Asia Pacific,R&D,Salaries,13405.99
+2023-07-01,Asia Pacific,R&D,Travel,665.76
+2023-07-01,Asia Pacific,R&D,Software,1386.84
+2023-07-01,Asia Pacific,Admin,Salaries,15326.32
+2023-07-01,Asia Pacific,Admin,Rent,3413.66
+2023-07-01,Asia Pacific,Admin,Travel,761.53
+2023-07-01,Asia Pacific,Admin,Professional Services,1568.61
+2023-07-01,Asia Pacific,Operations,Salaries,11174.01
+2023-07-01,Asia Pacific,Operations,Rent,2560.19
+2023-07-01,Asia Pacific,Operations,Utilities,662.82
+2023-07-01,Asia Pacific,Operations,Travel,583.71
+2023-07-01,Asia Pacific,Operations,Software,804.22
+2023-07-01,Asia Pacific,Operations,Professional Services,992.07
+2023-07-01,Latin America,Sales,Salaries,11973.94
+2023-07-01,Latin America,Sales,Utilities,752.74
+2023-07-01,Latin America,Sales,Software,1205.01
+2023-07-01,Latin America,Marketing,Salaries,17810.05
+2023-07-01,Latin America,Marketing,Rent,4217.41
+2023-07-01,Latin America,Marketing,Utilities,1117.79
+2023-07-01,Latin America,Marketing,Travel,705.53
+2023-07-01,Latin America,Marketing,Software,1164.64
+2023-07-01,Latin America,Marketing,Professional Services,1576.88
+2023-07-01,Latin America,R&D,Salaries,17074.15
+2023-07-01,Latin America,R&D,Utilities,1107.45
+2023-07-01,Latin America,R&D,Software,1186.12
+2023-07-01,Latin America,R&D,Professional Services,1494.47
+2023-07-01,Latin America,Admin,Travel,600.49
+2023-07-01,Latin America,Admin,Professional Services,1327.48
+2023-07-01,Latin America,Operations,Salaries,13638.99
+2023-07-01,Latin America,Operations,Rent,3081.06
+2023-07-01,Latin America,Operations,Utilities,1079.62
+2023-07-01,Latin America,Operations,Travel,723.1
+2023-07-01,Latin America,Operations,Software,1125.24
+2023-07-01,Latin America,Operations,Professional Services,1527.03
+2023-07-01,Middle East,Sales,Rent,3441.03
+2023-07-01,Middle East,Sales,Travel,830.87
+2023-07-01,Middle East,Marketing,Salaries,13490.31
+2023-07-01,Middle East,Marketing,Travel,595.92
+2023-07-01,Middle East,Marketing,Software,1041.67
+2023-07-01,Middle East,Marketing,Professional Services,1193.85
+2023-07-01,Middle East,R&D,Rent,4778.35
+2023-07-01,Middle East,R&D,Utilities,1101.99
+2023-07-01,Middle East,R&D,Software,1490.72
+2023-07-01,Middle East,Admin,Salaries,16779.64
+2023-07-01,Middle East,Admin,Rent,3984.87
+2023-07-01,Middle East,Admin,Utilities,948.71
+2023-07-01,Middle East,Admin,Travel,660.0
+2023-07-01,Middle East,Admin,Software,1247.99
+2023-07-01,Middle East,Admin,Professional Services,1411.56
+2023-07-01,Middle East,Operations,Salaries,12670.28
+2023-07-01,Middle East,Operations,Utilities,884.34
+2023-07-01,Middle East,Operations,Travel,674.59
+2023-07-01,Middle East,Operations,Software,1086.26
+2023-07-01,Middle East,Operations,Professional Services,1559.2
+2023-08-01,North America,Sales,Salaries,12637.01
+2023-08-01,North America,Sales,Rent,3223.94
+2023-08-01,North America,Sales,Utilities,751.94
+2023-08-01,North America,Sales,Travel,567.72
+2023-08-01,North America,Sales,Software,1084.77
+2023-08-01,North America,Sales,Professional Services,1101.79
+2023-08-01,North America,Marketing,Salaries,11811.76
+2023-08-01,North America,Marketing,Software,1115.75
+2023-08-01,North America,Marketing,Professional Services,1173.2
+2023-08-01,North America,R&D,Rent,2698.78
+2023-08-01,North America,R&D,Utilities,695.27
+2023-08-01,North America,R&D,Software,836.79
+2023-08-01,North America,Admin,Salaries,11696.72
+2023-08-01,North America,Admin,Rent,3236.88
+2023-08-01,North America,Admin,Travel,514.74
+2023-08-01,North America,Admin,Software,918.92
+2023-08-01,North America,Admin,Professional Services,1275.96
+2023-08-01,North America,Operations,Salaries,10901.83
+2023-08-01,North America,Operations,Rent,3224.98
+2023-08-01,North America,Operations,Travel,577.11
+2023-08-01,North America,Operations,Software,843.46
+2023-08-01,North America,Operations,Professional Services,1190.09
+2023-08-01,Europe,Sales,Rent,2166.42
+2023-08-01,Europe,Sales,Utilities,772.09
+2023-08-01,Europe,Sales,Professional Services,874.28
+2023-08-01,Europe,Marketing,Salaries,12424.75
+2023-08-01,Europe,Marketing,Rent,3205.27
+2023-08-01,Europe,Marketing,Utilities,736.2
+2023-08-01,Europe,Marketing,Travel,674.58
+2023-08-01,Europe,Marketing,Software,1000.19
+2023-08-01,Europe,Marketing,Professional Services,1060.08
+2023-08-01,Europe,R&D,Rent,2404.48
+2023-08-01,Europe,R&D,Utilities,629.9
+2023-08-01,Europe,R&D,Travel,511.71
+2023-08-01,Europe,R&D,Software,952.53
+2023-08-01,Europe,R&D,Professional Services,1167.26
+2023-08-01,Europe,Admin,Salaries,9002.7
+2023-08-01,Europe,Admin,Rent,2529.95
+2023-08-01,Europe,Admin,Utilities,602.01
+2023-08-01,Europe,Admin,Professional Services,1096.35
+2023-08-01,Europe,Operations,Rent,3217.38
+2023-08-01,Europe,Operations,Utilities,875.54
+2023-08-01,Europe,Operations,Travel,709.42
+2023-08-01,Europe,Operations,Professional Services,1450.88
+2023-08-01,Asia Pacific,Sales,Salaries,11976.27
+2023-08-01,Asia Pacific,Sales,Rent,2904.29
+2023-08-01,Asia Pacific,Sales,Utilities,810.56
+2023-08-01,Asia Pacific,Sales,Travel,510.08
+2023-08-01,Asia Pacific,Sales,Professional Services,950.69
+2023-08-01,Asia Pacific,Marketing,Rent,1876.62
+2023-08-01,Asia Pacific,Marketing,Utilities,605.83
+2023-08-01,Asia Pacific,Marketing,Travel,394.03
+2023-08-01,Asia Pacific,Marketing,Software,709.68
+2023-08-01,Asia Pacific,Marketing,Professional Services,874.71
+2023-08-01,Asia Pacific,R&D,Salaries,7248.02
+2023-08-01,Asia Pacific,R&D,Rent,2118.61
+2023-08-01,Asia Pacific,R&D,Travel,360.72
+2023-08-01,Asia Pacific,R&D,Software,705.36
+2023-08-01,Asia Pacific,Admin,Salaries,7273.09
+2023-08-01,Asia Pacific,Admin,Rent,2091.13
+2023-08-01,Asia Pacific,Admin,Utilities,482.65
+2023-08-01,Asia Pacific,Admin,Travel,439.87
+2023-08-01,Asia Pacific,Admin,Professional Services,713.75
+2023-08-01,Asia Pacific,Operations,Salaries,8855.86
+2023-08-01,Asia Pacific,Operations,Rent,2106.81
+2023-08-01,Asia Pacific,Operations,Travel,494.39
+2023-08-01,Asia Pacific,Operations,Software,716.51
+2023-08-01,Asia Pacific,Operations,Professional Services,775.87
+2023-08-01,Latin America,Sales,Salaries,9687.93
+2023-08-01,Latin America,Sales,Rent,1942.22
+2023-08-01,Latin America,Sales,Travel,439.73
+2023-08-01,Latin America,Sales,Software,820.7
+2023-08-01,Latin America,Sales,Professional Services,980.68
+2023-08-01,Latin America,Marketing,Salaries,12693.48
+2023-08-01,Latin America,Marketing,Rent,2813.79
+2023-08-01,Latin America,Marketing,Utilities,713.55
+2023-08-01,Latin America,Marketing,Travel,660.29
+2023-08-01,Latin America,Marketing,Software,1013.06
+2023-08-01,Latin America,Marketing,Professional Services,1090.09
+2023-08-01,Latin America,R&D,Salaries,9330.25
+2023-08-01,Latin America,R&D,Rent,2092.38
+2023-08-01,Latin America,R&D,Utilities,581.43
+2023-08-01,Latin America,R&D,Travel,440.94
+2023-08-01,Latin America,R&D,Professional Services,892.42
+2023-08-01,Latin America,Admin,Salaries,9030.34
+2023-08-01,Latin America,Admin,Rent,2290.58
+2023-08-01,Latin America,Admin,Utilities,523.12
+2023-08-01,Latin America,Admin,Travel,425.91
+2023-08-01,Latin America,Admin,Software,630.07
+2023-08-01,Latin America,Operations,Salaries,11731.54
+2023-08-01,Latin America,Operations,Rent,2479.45
+2023-08-01,Latin America,Operations,Utilities,735.51
+2023-08-01,Latin America,Operations,Travel,605.16
+2023-08-01,Latin America,Operations,Software,1001.92
+2023-08-01,Latin America,Operations,Professional Services,1076.72
+2023-08-01,Middle East,Sales,Salaries,6756.02
+2023-08-01,Middle East,Sales,Utilities,441.33
+2023-08-01,Middle East,Sales,Travel,392.79
+2023-08-01,Middle East,Sales,Software,639.2
+2023-08-01,Middle East,Sales,Professional Services,760.57
+2023-08-01,Middle East,Marketing,Salaries,7191.6
+2023-08-01,Middle East,Marketing,Rent,2032.66
+2023-08-01,Middle East,Marketing,Utilities,502.3
+2023-08-01,Middle East,Marketing,Travel,343.26
+2023-08-01,Middle East,Marketing,Software,593.34
+2023-08-01,Middle East,Marketing,Professional Services,687.13
+2023-08-01,Middle East,R&D,Salaries,8043.57
+2023-08-01,Middle East,R&D,Travel,362.38
+2023-08-01,Middle East,R&D,Software,770.16
+2023-08-01,Middle East,R&D,Professional Services,913.71
+2023-08-01,Middle East,Admin,Rent,1977.95
+2023-08-01,Middle East,Admin,Utilities,424.11
+2023-08-01,Middle East,Admin,Travel,353.27
+2023-08-01,Middle East,Admin,Software,551.46
+2023-08-01,Middle East,Admin,Professional Services,637.68
+2023-08-01,Middle East,Operations,Salaries,10582.42
+2023-08-01,Middle East,Operations,Rent,2737.06
+2023-08-01,Middle East,Operations,Software,787.66
+2023-09-01,North America,Sales,Utilities,571.51
+2023-09-01,North America,Sales,Travel,517.51
+2023-09-01,North America,Sales,Professional Services,935.94
+2023-09-01,North America,Marketing,Travel,600.66
+2023-09-01,North America,Marketing,Software,928.82
+2023-09-01,North America,Marketing,Professional Services,1104.28
+2023-09-01,North America,R&D,Salaries,7626.02
+2023-09-01,North America,R&D,Utilities,599.39
+2023-09-01,North America,R&D,Travel,396.42
+2023-09-01,North America,Admin,Salaries,8991.32
+2023-09-01,North America,Admin,Utilities,490.96
+2023-09-01,North America,Admin,Software,716.01
+2023-09-01,North America,Admin,Professional Services,783.37
+2023-09-01,North America,Operations,Utilities,715.7
+2023-09-01,North America,Operations,Travel,559.94
+2023-09-01,North America,Operations,Software,936.12
+2023-09-01,North America,Operations,Professional Services,847.21
+2023-09-01,Europe,Sales,Rent,1979.74
+2023-09-01,Europe,Sales,Utilities,511.34
+2023-09-01,Europe,Sales,Software,595.23
+2023-09-01,Europe,Marketing,Salaries,7526.95
+2023-09-01,Europe,Marketing,Rent,2175.83
+2023-09-01,Europe,Marketing,Utilities,479.96
+2023-09-01,Europe,Marketing,Travel,425.14
+2023-09-01,Europe,Marketing,Professional Services,803.38
+2023-09-01,Europe,R&D,Rent,1899.83
+2023-09-01,Europe,R&D,Software,673.2
+2023-09-01,Europe,R&D,Professional Services,817.49
+2023-09-01,Europe,Admin,Salaries,11550.62
+2023-09-01,Europe,Admin,Rent,2268.7
+2023-09-01,Europe,Admin,Utilities,652.33
+2023-09-01,Europe,Admin,Travel,571.42
+2023-09-01,Europe,Admin,Software,975.94
+2023-09-01,Europe,Admin,Professional Services,955.53
+2023-09-01,Europe,Operations,Rent,1939.47
+2023-09-01,Europe,Operations,Utilities,598.94
+2023-09-01,Europe,Operations,Professional Services,767.95
+2023-09-01,Asia Pacific,Sales,Utilities,838.08
+2023-09-01,Asia Pacific,Sales,Software,948.84
+2023-09-01,Asia Pacific,Sales,Professional Services,1176.86
+2023-09-01,Asia Pacific,Marketing,Salaries,12737.81
+2023-09-01,Asia Pacific,Marketing,Rent,3031.18
+2023-09-01,Asia Pacific,Marketing,Travel,550.51
+2023-09-01,Asia Pacific,Marketing,Software,936.92
+2023-09-01,Asia Pacific,R&D,Salaries,12195.9
+2023-09-01,Asia Pacific,R&D,Utilities,795.99
+2023-09-01,Asia Pacific,R&D,Travel,639.4
+2023-09-01,Asia Pacific,R&D,Software,1036.91
+2023-09-01,Asia Pacific,R&D,Professional Services,1345.22
+2023-09-01,Asia Pacific,Admin,Salaries,10141.49
+2023-09-01,Asia Pacific,Admin,Rent,2794.86
+2023-09-01,Asia Pacific,Admin,Utilities,906.11
+2023-09-01,Asia Pacific,Admin,Travel,510.78
+2023-09-01,Asia Pacific,Operations,Rent,3479.91
+2023-09-01,Asia Pacific,Operations,Utilities,849.15
+2023-09-01,Asia Pacific,Operations,Travel,534.84
+2023-09-01,Asia Pacific,Operations,Software,903.03
+2023-09-01,Latin America,Sales,Salaries,9099.38
+2023-09-01,Latin America,Sales,Rent,2208.44
+2023-09-01,Latin America,Sales,Utilities,555.03
+2023-09-01,Latin America,Sales,Travel,429.12
+2023-09-01,Latin America,Sales,Professional Services,798.74
+2023-09-01,Latin America,Marketing,Rent,2059.89
+2023-09-01,Latin America,Marketing,Utilities,641.03
+2023-09-01,Latin America,Marketing,Travel,433.9
+2023-09-01,Latin America,Marketing,Software,788.06
+2023-09-01,Latin America,R&D,Salaries,9414.9
+2023-09-01,Latin America,R&D,Rent,2298.49
+2023-09-01,Latin America,R&D,Utilities,577.67
+2023-09-01,Latin America,Admin,Salaries,9485.45
+2023-09-01,Latin America,Admin,Rent,2463.77
+2023-09-01,Latin America,Admin,Utilities,693.95
+2023-09-01,Latin America,Admin,Travel,472.77
+2023-09-01,Latin America,Admin,Software,849.96
+2023-09-01,Latin America,Admin,Professional Services,940.81
+2023-09-01,Latin America,Operations,Salaries,10211.29
+2023-09-01,Latin America,Operations,Rent,3204.41
+2023-09-01,Latin America,Operations,Travel,515.4
+2023-09-01,Latin America,Operations,Software,933.87
+2023-09-01,Middle East,Sales,Salaries,13778.8
+2023-09-01,Middle East,Sales,Rent,4146.48
+2023-09-01,Middle East,Sales,Utilities,893.84
+2023-09-01,Middle East,Sales,Travel,746.84
+2023-09-01,Middle East,Sales,Software,1204.37
+2023-09-01,Middle East,Sales,Professional Services,1312.32
+2023-09-01,Middle East,Marketing,Salaries,13892.24
+2023-09-01,Middle East,Marketing,Rent,4563.63
+2023-09-01,Middle East,Marketing,Software,1408.35
+2023-09-01,Middle East,R&D,Salaries,19072.41
+2023-09-01,Middle East,R&D,Rent,4647.4
+2023-09-01,Middle East,R&D,Utilities,1048.68
+2023-09-01,Middle East,R&D,Travel,748.04
+2023-09-01,Middle East,R&D,Software,1260.82
+2023-09-01,Middle East,R&D,Professional Services,1472.4
+2023-09-01,Middle East,Admin,Rent,3743.75
+2023-09-01,Middle East,Admin,Travel,764.05
+2023-09-01,Middle East,Admin,Software,1203.87
+2023-09-01,Middle East,Admin,Professional Services,1235.82
+2023-09-01,Middle East,Operations,Rent,4273.19
+2023-09-01,Middle East,Operations,Utilities,1029.81
+2023-09-01,Middle East,Operations,Travel,868.36
+2023-10-01,North America,Sales,Salaries,9879.21
+2023-10-01,North America,Sales,Rent,2693.22
+2023-10-01,North America,Sales,Software,1075.97
+2023-10-01,North America,Sales,Professional Services,1221.64
+2023-10-01,North America,Marketing,Salaries,15047.34
+2023-10-01,North America,Marketing,Rent,3491.77
+2023-10-01,North America,Marketing,Software,1240.44
+2023-10-01,North America,Marketing,Professional Services,1537.94
+2023-10-01,North America,R&D,Salaries,9911.13
+2023-10-01,North America,R&D,Rent,2142.51
+2023-10-01,North America,R&D,Utilities,721.13
+2023-10-01,North America,R&D,Travel,520.99
+2023-10-01,North America,R&D,Software,790.53
+2023-10-01,North America,R&D,Professional Services,987.51
+2023-10-01,North America,Admin,Salaries,11851.99
+2023-10-01,North America,Admin,Rent,2983.86
+2023-10-01,North America,Admin,Utilities,911.85
+2023-10-01,North America,Admin,Travel,620.89
+2023-10-01,North America,Admin,Software,1077.74
+2023-10-01,North America,Admin,Professional Services,1241.29
+2023-10-01,North America,Operations,Salaries,14152.86
+2023-10-01,North America,Operations,Rent,3066.67
+2023-10-01,North America,Operations,Utilities,919.83
+2023-10-01,North America,Operations,Software,1157.1
+2023-10-01,Europe,Sales,Salaries,15014.84
+2023-10-01,Europe,Sales,Rent,3779.3
+2023-10-01,Europe,Sales,Utilities,879.52
+2023-10-01,Europe,Sales,Travel,826.65
+2023-10-01,Europe,Sales,Software,1291.78
+2023-10-01,Europe,Sales,Professional Services,1636.17
+2023-10-01,Europe,Marketing,Salaries,13819.31
+2023-10-01,Europe,Marketing,Rent,3712.43
+2023-10-01,Europe,Marketing,Utilities,933.8
+2023-10-01,Europe,Marketing,Travel,586.54
+2023-10-01,Europe,Marketing,Software,1170.51
+2023-10-01,Europe,Marketing,Professional Services,1444.76
+2023-10-01,Europe,R&D,Salaries,12070.03
+2023-10-01,Europe,R&D,Rent,2658.42
+2023-10-01,Europe,R&D,Travel,599.6
+2023-10-01,Europe,Admin,Rent,3844.46
+2023-10-01,Europe,Admin,Travel,633.09
+2023-10-01,Europe,Admin,Software,1314.5
+2023-10-01,Europe,Admin,Professional Services,1576.16
+2023-10-01,Europe,Operations,Salaries,12597.88
+2023-10-01,Europe,Operations,Rent,3651.49
+2023-10-01,Europe,Operations,Travel,704.76
+2023-10-01,Europe,Operations,Software,1009.5
+2023-10-01,Europe,Operations,Professional Services,1191.74
+2023-10-01,Asia Pacific,Sales,Salaries,14664.43
+2023-10-01,Asia Pacific,Sales,Rent,3759.86
+2023-10-01,Asia Pacific,Sales,Utilities,1057.35
+2023-10-01,Asia Pacific,Sales,Software,1289.04
+2023-10-01,Asia Pacific,Sales,Professional Services,1407.13
+2023-10-01,Asia Pacific,Marketing,Salaries,17324.89
+2023-10-01,Asia Pacific,Marketing,Utilities,1053.41
+2023-10-01,Asia Pacific,Marketing,Travel,775.91
+2023-10-01,Asia Pacific,Marketing,Software,1240.84
+2023-10-01,Asia Pacific,Marketing,Professional Services,1400.84
+2023-10-01,Asia Pacific,R&D,Salaries,15196.28
+2023-10-01,Asia Pacific,R&D,Rent,4402.03
+2023-10-01,Asia Pacific,R&D,Utilities,1009.56
+2023-10-01,Asia Pacific,R&D,Travel,848.51
+2023-10-01,Asia Pacific,R&D,Software,1423.79
+2023-10-01,Asia Pacific,R&D,Professional Services,1709.54
+2023-10-01,Asia Pacific,Admin,Rent,3280.93
+2023-10-01,Asia Pacific,Admin,Utilities,894.25
+2023-10-01,Asia Pacific,Admin,Travel,552.94
+2023-10-01,Asia Pacific,Admin,Professional Services,1082.2
+2023-10-01,Asia Pacific,Operations,Professional Services,1575.94
+2023-10-01,Latin America,Sales,Salaries,15696.21
+2023-10-01,Latin America,Sales,Rent,3329.2
+2023-10-01,Latin America,Sales,Utilities,1126.43
+2023-10-01,Latin America,Sales,Travel,692.04
+2023-10-01,Latin America,Sales,Software,1360.29
+2023-10-01,Latin America,Sales,Professional Services,1510.06
+2023-10-01,Latin America,Marketing,Salaries,15438.47
+2023-10-01,Latin America,Marketing,Travel,762.18
+2023-10-01,Latin America,Marketing,Software,1266.66
+2023-10-01,Latin America,R&D,Rent,3657.61
+2023-10-01,Latin America,R&D,Utilities,829.34
+2023-10-01,Latin America,R&D,Travel,653.78
+2023-10-01,Latin America,R&D,Professional Services,1382.96
+2023-10-01,Latin America,Admin,Rent,2878.72
+2023-10-01,Latin America,Admin,Travel,558.42
+2023-10-01,Latin America,Admin,Software,893.86
+2023-10-01,Latin America,Operations,Salaries,10755.33
+2023-10-01,Latin America,Operations,Utilities,923.58
+2023-10-01,Latin America,Operations,Travel,571.85
+2023-10-01,Latin America,Operations,Software,944.01
+2023-10-01,Middle East,Sales,Salaries,11855.2
+2023-10-01,Middle East,Sales,Rent,2735.78
+2023-10-01,Middle East,Sales,Utilities,851.73
+2023-10-01,Middle East,Sales,Travel,585.99
+2023-10-01,Middle East,Sales,Software,828.02
+2023-10-01,Middle East,Sales,Professional Services,1034.13
+2023-10-01,Middle East,Marketing,Salaries,9782.29
+2023-10-01,Middle East,Marketing,Utilities,818.08
+2023-10-01,Middle East,Marketing,Travel,521.03
+2023-10-01,Middle East,Marketing,Professional Services,948.34
+2023-10-01,Middle East,R&D,Salaries,11065.87
+2023-10-01,Middle East,R&D,Rent,2446.92
+2023-10-01,Middle East,R&D,Travel,631.4
+2023-10-01,Middle East,R&D,Professional Services,1195.17
+2023-10-01,Middle East,Admin,Rent,2412.04
+2023-10-01,Middle East,Admin,Utilities,654.98
+2023-10-01,Middle East,Admin,Travel,494.56
+2023-10-01,Middle East,Admin,Software,823.35
+2023-10-01,Middle East,Admin,Professional Services,1009.51
+2023-10-01,Middle East,Operations,Salaries,13747.63
+2023-10-01,Middle East,Operations,Rent,3166.56
+2023-10-01,Middle East,Operations,Utilities,896.16
+2023-10-01,Middle East,Operations,Travel,666.41
+2023-10-01,Middle East,Operations,Software,1153.91
+2023-11-01,North America,Sales,Salaries,16716.14
+2023-11-01,North America,Sales,Rent,3812.83
+2023-11-01,North America,Sales,Travel,690.13
+2023-11-01,North America,Sales,Software,1351.63
+2023-11-01,North America,Sales,Professional Services,1360.68
+2023-11-01,North America,Marketing,Salaries,11866.66
+2023-11-01,North America,Marketing,Utilities,729.46
+2023-11-01,North America,Marketing,Travel,557.64
+2023-11-01,North America,R&D,Salaries,14594.78
+2023-11-01,North America,R&D,Rent,3233.92
+2023-11-01,North America,R&D,Utilities,844.55
+2023-11-01,North America,R&D,Travel,610.4
+2023-11-01,North America,R&D,Software,1072.24
+2023-11-01,North America,Admin,Rent,3049.25
+2023-11-01,North America,Admin,Utilities,849.47
+2023-11-01,North America,Admin,Travel,687.74
+2023-11-01,North America,Admin,Software,1067.49
+2023-11-01,North America,Admin,Professional Services,1321.73
+2023-11-01,North America,Operations,Salaries,11758.99
+2023-11-01,North America,Operations,Rent,3831.87
+2023-11-01,North America,Operations,Travel,760.55
+2023-11-01,North America,Operations,Professional Services,1519.02
+2023-11-01,Europe,Sales,Salaries,13809.04
+2023-11-01,Europe,Sales,Utilities,744.68
+2023-11-01,Europe,Sales,Software,1136.07
+2023-11-01,Europe,Sales,Professional Services,1412.27
+2023-11-01,Europe,Marketing,Salaries,12644.64
+2023-11-01,Europe,Marketing,Utilities,891.1
+2023-11-01,Europe,Marketing,Professional Services,1536.98
+2023-11-01,Europe,R&D,Salaries,18347.91
+2023-11-01,Europe,R&D,Utilities,1041.15
+2023-11-01,Europe,R&D,Travel,869.52
+2023-11-01,Europe,R&D,Software,1399.55
+2023-11-01,Europe,R&D,Professional Services,1982.17
+2023-11-01,Europe,Admin,Salaries,17153.49
+2023-11-01,Europe,Admin,Utilities,1145.82
+2023-11-01,Europe,Admin,Travel,804.13
+2023-11-01,Europe,Admin,Software,1465.93
+2023-11-01,Europe,Admin,Professional Services,1757.36
+2023-11-01,Europe,Operations,Salaries,13855.16
+2023-11-01,Europe,Operations,Rent,3902.12
+2023-11-01,Europe,Operations,Travel,691.13
+2023-11-01,Europe,Operations,Software,1284.86
+2023-11-01,Europe,Operations,Professional Services,1526.49
+2023-11-01,Asia Pacific,Sales,Salaries,16303.12
+2023-11-01,Asia Pacific,Sales,Utilities,1000.44
+2023-11-01,Asia Pacific,Sales,Travel,737.14
+2023-11-01,Asia Pacific,Sales,Software,1319.59
+2023-11-01,Asia Pacific,Marketing,Salaries,18230.74
+2023-11-01,Asia Pacific,Marketing,Utilities,982.57
+2023-11-01,Asia Pacific,Marketing,Travel,818.17
+2023-11-01,Asia Pacific,Marketing,Software,1355.22
+2023-11-01,Asia Pacific,Marketing,Professional Services,1591.89
+2023-11-01,Asia Pacific,R&D,Salaries,15418.32
+2023-11-01,Asia Pacific,R&D,Software,1301.58
+2023-11-01,Asia Pacific,Admin,Rent,4814.49
+2023-11-01,Asia Pacific,Admin,Utilities,1282.2
+2023-11-01,Asia Pacific,Admin,Travel,1032.58
+2023-11-01,Asia Pacific,Admin,Professional Services,1997.34
+2023-11-01,Asia Pacific,Operations,Salaries,16008.15
+2023-11-01,Asia Pacific,Operations,Rent,4504.21
+2023-11-01,Asia Pacific,Operations,Utilities,1347.72
+2023-11-01,Asia Pacific,Operations,Travel,845.76
+2023-11-01,Asia Pacific,Operations,Software,1329.99
+2023-11-01,Latin America,Sales,Salaries,10699.33
+2023-11-01,Latin America,Sales,Rent,2784.69
+2023-11-01,Latin America,Sales,Utilities,787.7
+2023-11-01,Latin America,Sales,Travel,581.02
+2023-11-01,Latin America,Sales,Software,876.82
+2023-11-01,Latin America,Sales,Professional Services,1024.14
+2023-11-01,Latin America,Marketing,Salaries,9090.13
+2023-11-01,Latin America,Marketing,Rent,2368.64
+2023-11-01,Latin America,Marketing,Utilities,551.62
+2023-11-01,Latin America,Marketing,Travel,431.09
+2023-11-01,Latin America,Marketing,Software,687.15
+2023-11-01,Latin America,Marketing,Professional Services,913.87
+2023-11-01,Latin America,R&D,Rent,2693.17
+2023-11-01,Latin America,R&D,Utilities,713.64
+2023-11-01,Latin America,R&D,Software,826.25
+2023-11-01,Latin America,R&D,Professional Services,1114.94
+2023-11-01,Latin America,Admin,Software,709.38
+2023-11-01,Latin America,Admin,Professional Services,860.29
+2023-11-01,Latin America,Operations,Salaries,7405.09
+2023-11-01,Latin America,Operations,Rent,2243.99
+2023-11-01,Latin America,Operations,Utilities,559.88
+2023-11-01,Latin America,Operations,Software,753.92
+2023-11-01,Latin America,Operations,Professional Services,695.7
+2023-11-01,Middle East,Sales,Rent,2428.45
+2023-11-01,Middle East,Sales,Utilities,609.34
+2023-11-01,Middle East,Sales,Travel,467.61
+2023-11-01,Middle East,Sales,Software,775.48
+2023-11-01,Middle East,Sales,Professional Services,931.09
+2023-11-01,Middle East,Marketing,Professional Services,1186.64
+2023-11-01,Middle East,R&D,Salaries,9622.8
+2023-11-01,Middle East,R&D,Utilities,545.81
+2023-11-01,Middle East,R&D,Software,898.0
+2023-11-01,Middle East,R&D,Professional Services,1074.55
+2023-11-01,Middle East,Admin,Rent,2511.69
+2023-11-01,Middle East,Admin,Software,865.02
+2023-11-01,Middle East,Operations,Salaries,13513.81
+2023-11-01,Middle East,Operations,Utilities,737.68
+2023-11-01,Middle East,Operations,Travel,547.45
+2023-11-01,Middle East,Operations,Professional Services,1135.73
+2023-12-01,North America,Sales,Rent,2865.5
+2023-12-01,North America,Sales,Utilities,742.56
+2023-12-01,North America,Sales,Software,862.92
+2023-12-01,North America,Marketing,Salaries,9721.12
+2023-12-01,North America,Marketing,Rent,2333.53
+2023-12-01,North America,Marketing,Utilities,591.58
+2023-12-01,North America,Marketing,Travel,447.81
+2023-12-01,North America,Marketing,Software,775.26
+2023-12-01,North America,Marketing,Professional Services,792.02
+2023-12-01,North America,R&D,Salaries,10187.46
+2023-12-01,North America,R&D,Rent,2529.37
+2023-12-01,North America,R&D,Utilities,661.94
+2023-12-01,North America,R&D,Software,764.46
+2023-12-01,North America,R&D,Professional Services,851.17
+2023-12-01,North America,Admin,Salaries,9305.1
+2023-12-01,North America,Admin,Rent,2294.51
+2023-12-01,North America,Admin,Utilities,573.36
+2023-12-01,North America,Admin,Travel,482.57
+2023-12-01,North America,Admin,Software,826.94
+2023-12-01,North America,Admin,Professional Services,952.14
+2023-12-01,North America,Operations,Salaries,10279.61
+2023-12-01,North America,Operations,Rent,2533.2
+2023-12-01,North America,Operations,Utilities,712.71
+2023-12-01,North America,Operations,Travel,642.44
+2023-12-01,North America,Operations,Professional Services,1194.63
+2023-12-01,Europe,Sales,Rent,2595.17
+2023-12-01,Europe,Sales,Utilities,594.08
+2023-12-01,Europe,Sales,Travel,477.34
+2023-12-01,Europe,Sales,Software,884.94
+2023-12-01,Europe,Sales,Professional Services,1005.56
+2023-12-01,Europe,Marketing,Salaries,13823.94
+2023-12-01,Europe,Marketing,Software,1225.08
+2023-12-01,Europe,R&D,Salaries,10416.03
+2023-12-01,Europe,R&D,Rent,2676.76
+2023-12-01,Europe,R&D,Utilities,634.37
+2023-12-01,Europe,R&D,Travel,516.03
+2023-12-01,Europe,R&D,Software,948.19
+2023-12-01,Europe,Admin,Salaries,13933.87
+2023-12-01,Europe,Admin,Rent,2931.76
+2023-12-01,Europe,Admin,Utilities,893.11
+2023-12-01,Europe,Admin,Travel,669.29
+2023-12-01,Europe,Admin,Software,1060.23
+2023-12-01,Europe,Admin,Professional Services,1171.35
+2023-12-01,Europe,Operations,Salaries,12361.48
+2023-12-01,Europe,Operations,Rent,2738.94
+2023-12-01,Europe,Operations,Utilities,677.58
+2023-12-01,Europe,Operations,Travel,563.79
+2023-12-01,Europe,Operations,Software,1061.44
+2023-12-01,Europe,Operations,Professional Services,1177.81
+2023-12-01,Asia Pacific,Sales,Salaries,9866.59
+2023-12-01,Asia Pacific,Sales,Rent,3188.91
+2023-12-01,Asia Pacific,Sales,Utilities,836.49
+2023-12-01,Asia Pacific,Sales,Travel,581.25
+2023-12-01,Asia Pacific,Sales,Professional Services,1143.64
+2023-12-01,Asia Pacific,Marketing,Rent,2538.01
+2023-12-01,Asia Pacific,Marketing,Utilities,638.47
+2023-12-01,Asia Pacific,Marketing,Travel,508.06
+2023-12-01,Asia Pacific,Marketing,Software,883.74
+2023-12-01,Asia Pacific,R&D,Rent,3044.33
+2023-12-01,Asia Pacific,R&D,Utilities,831.27
+2023-12-01,Asia Pacific,R&D,Travel,646.71
+2023-12-01,Asia Pacific,R&D,Software,1028.63
+2023-12-01,Asia Pacific,Admin,Salaries,10903.51
+2023-12-01,Asia Pacific,Admin,Rent,2930.59
+2023-12-01,Asia Pacific,Admin,Utilities,690.59
+2023-12-01,Asia Pacific,Admin,Travel,561.07
+2023-12-01,Asia Pacific,Admin,Software,1053.85
+2023-12-01,Asia Pacific,Admin,Professional Services,1235.8
+2023-12-01,Asia Pacific,Operations,Rent,3113.76
+2023-12-01,Asia Pacific,Operations,Utilities,911.05
+2023-12-01,Latin America,Sales,Salaries,10103.47
+2023-12-01,Latin America,Sales,Rent,2322.52
+2023-12-01,Latin America,Sales,Utilities,587.05
+2023-12-01,Latin America,Sales,Travel,448.87
+2023-12-01,Latin America,Marketing,Rent,3601.52
+2023-12-01,Latin America,Marketing,Utilities,811.2
+2023-12-01,Latin America,Marketing,Software,1018.16
+2023-12-01,Latin America,Marketing,Professional Services,1283.86
+2023-12-01,Latin America,R&D,Rent,2651.14
+2023-12-01,Latin America,R&D,Utilities,680.19
+2023-12-01,Latin America,R&D,Travel,617.87
+2023-12-01,Latin America,Admin,Utilities,767.04
+2023-12-01,Latin America,Admin,Software,861.86
+2023-12-01,Latin America,Admin,Professional Services,959.57
+2023-12-01,Latin America,Operations,Salaries,11365.86
+2023-12-01,Latin America,Operations,Utilities,966.97
+2023-12-01,Latin America,Operations,Travel,683.53
+2023-12-01,Latin America,Operations,Software,1195.65
+2023-12-01,Latin America,Operations,Professional Services,1309.64
+2023-12-01,Middle East,Sales,Salaries,10518.94
+2023-12-01,Middle East,Sales,Utilities,779.76
+2023-12-01,Middle East,Sales,Professional Services,1356.1
+2023-12-01,Middle East,Marketing,Rent,3194.34
+2023-12-01,Middle East,Marketing,Utilities,852.49
+2023-12-01,Middle East,Marketing,Travel,525.4
+2023-12-01,Middle East,Marketing,Software,988.82
+2023-12-01,Middle East,Marketing,Professional Services,1097.93
+2023-12-01,Middle East,R&D,Salaries,16460.11
+2023-12-01,Middle East,R&D,Rent,3795.91
+2023-12-01,Middle East,R&D,Utilities,1129.6
+2023-12-01,Middle East,R&D,Professional Services,1691.77
+2023-12-01,Middle East,Admin,Salaries,10588.58
+2023-12-01,Middle East,Admin,Rent,3213.88
+2023-12-01,Middle East,Admin,Travel,557.18
+2023-12-01,Middle East,Admin,Software,947.31
+2023-12-01,Middle East,Admin,Professional Services,1281.54
+2023-12-01,Middle East,Operations,Utilities,824.28
+2023-12-01,Middle East,Operations,Travel,556.31
+2023-12-01,Middle East,Operations,Software,952.14
+2023-12-01,Middle East,Operations,Professional Services,1121.78
+2024-01-01,North America,Sales,Salaries,13857.7
+2024-01-01,North America,Sales,Utilities,1031.65
+2024-01-01,North America,Sales,Travel,842.69
+2024-01-01,North America,Sales,Software,1473.72
+2024-01-01,North America,Sales,Professional Services,1779.03
+2024-01-01,North America,Marketing,Salaries,12263.34
+2024-01-01,North America,Marketing,Rent,2999.83
+2024-01-01,North America,Marketing,Utilities,793.58
+2024-01-01,North America,Marketing,Travel,561.71
+2024-01-01,North America,R&D,Rent,3806.32
+2024-01-01,North America,R&D,Utilities,811.02
+2024-01-01,North America,R&D,Travel,601.19
+2024-01-01,North America,R&D,Software,1268.84
+2024-01-01,North America,Admin,Rent,2988.09
+2024-01-01,North America,Admin,Software,838.27
+2024-01-01,North America,Admin,Professional Services,1240.5
+2024-01-01,North America,Operations,Salaries,15068.64
+2024-01-01,North America,Operations,Rent,3388.88
+2024-01-01,North America,Operations,Travel,648.35
+2024-01-01,North America,Operations,Software,1320.12
+2024-01-01,North America,Operations,Professional Services,1414.42
+2024-01-01,Europe,Sales,Rent,3418.79
+2024-01-01,Europe,Sales,Utilities,933.93
+2024-01-01,Europe,Sales,Software,1116.53
+2024-01-01,Europe,Marketing,Salaries,10252.7
+2024-01-01,Europe,Marketing,Rent,2603.81
+2024-01-01,Europe,Marketing,Utilities,695.29
+2024-01-01,Europe,Marketing,Travel,525.9
+2024-01-01,Europe,Marketing,Software,827.59
+2024-01-01,Europe,Marketing,Professional Services,1095.17
+2024-01-01,Europe,R&D,Salaries,11678.43
+2024-01-01,Europe,R&D,Rent,2491.62
+2024-01-01,Europe,R&D,Travel,542.61
+2024-01-01,Europe,R&D,Professional Services,1065.18
+2024-01-01,Europe,Admin,Salaries,12399.75
+2024-01-01,Europe,Admin,Utilities,755.39
+2024-01-01,Europe,Admin,Travel,687.99
+2024-01-01,Europe,Admin,Software,900.79
+2024-01-01,Europe,Admin,Professional Services,1251.05
+2024-01-01,Europe,Operations,Salaries,11894.07
+2024-01-01,Europe,Operations,Rent,2776.91
+2024-01-01,Europe,Operations,Utilities,713.04
+2024-01-01,Europe,Operations,Travel,553.01
+2024-01-01,Europe,Operations,Software,1114.61
+2024-01-01,Europe,Operations,Professional Services,1055.37
+2024-01-01,Asia Pacific,Sales,Salaries,7641.38
+2024-01-01,Asia Pacific,Sales,Rent,1940.85
+2024-01-01,Asia Pacific,Sales,Utilities,543.06
+2024-01-01,Asia Pacific,Marketing,Salaries,7657.31
+2024-01-01,Asia Pacific,Marketing,Rent,1642.73
+2024-01-01,Asia Pacific,Marketing,Utilities,464.76
+2024-01-01,Asia Pacific,Marketing,Travel,314.63
+2024-01-01,Asia Pacific,Marketing,Software,535.58
+2024-01-01,Asia Pacific,R&D,Salaries,8755.35
+2024-01-01,Asia Pacific,R&D,Utilities,500.99
+2024-01-01,Asia Pacific,R&D,Travel,396.01
+2024-01-01,Asia Pacific,R&D,Professional Services,889.95
+2024-01-01,Asia Pacific,Admin,Salaries,9007.5
+2024-01-01,Asia Pacific,Admin,Rent,1997.97
+2024-01-01,Asia Pacific,Admin,Utilities,514.21
+2024-01-01,Asia Pacific,Admin,Travel,436.03
+2024-01-01,Asia Pacific,Admin,Software,705.78
+2024-01-01,Asia Pacific,Admin,Professional Services,806.14
+2024-01-01,Asia Pacific,Operations,Rent,2077.74
+2024-01-01,Asia Pacific,Operations,Travel,338.06
+2024-01-01,Asia Pacific,Operations,Software,520.32
+2024-01-01,Asia Pacific,Operations,Professional Services,757.81
+2024-01-01,Latin America,Sales,Salaries,12523.71
+2024-01-01,Latin America,Sales,Rent,2855.81
+2024-01-01,Latin America,Sales,Utilities,674.97
+2024-01-01,Latin America,Sales,Travel,512.6
+2024-01-01,Latin America,Sales,Software,808.2
+2024-01-01,Latin America,Sales,Professional Services,1108.64
+2024-01-01,Latin America,Marketing,Salaries,14226.91
+2024-01-01,Latin America,Marketing,Utilities,790.31
+2024-01-01,Latin America,Marketing,Travel,618.06
+2024-01-01,Latin America,Marketing,Software,1115.74
+2024-01-01,Latin America,R&D,Salaries,11897.84
+2024-01-01,Latin America,R&D,Utilities,781.45
+2024-01-01,Latin America,R&D,Software,949.65
+2024-01-01,Latin America,R&D,Professional Services,1209.77
+2024-01-01,Latin America,Admin,Utilities,921.43
+2024-01-01,Latin America,Admin,Travel,761.35
+2024-01-01,Latin America,Operations,Salaries,13083.79
+2024-01-01,Latin America,Operations,Rent,3011.08
+2024-01-01,Latin America,Operations,Utilities,832.2
+2024-01-01,Latin America,Operations,Software,1066.65
+2024-01-01,Latin America,Operations,Professional Services,1238.56
+2024-01-01,Middle East,Sales,Rent,3296.29
+2024-01-01,Middle East,Sales,Travel,513.64
+2024-01-01,Middle East,Sales,Professional Services,1185.84
+2024-01-01,Middle East,Marketing,Salaries,12790.94
+2024-01-01,Middle East,Marketing,Rent,2984.49
+2024-01-01,Middle East,Marketing,Utilities,649.34
+2024-01-01,Middle East,Marketing,Travel,475.46
+2024-01-01,Middle East,Marketing,Software,861.96
+2024-01-01,Middle East,Marketing,Professional Services,1208.57
+2024-01-01,Middle East,R&D,Rent,3707.94
+2024-01-01,Middle East,R&D,Travel,707.33
+2024-01-01,Middle East,R&D,Professional Services,1391.97
+2024-01-01,Middle East,Admin,Salaries,9889.83
+2024-01-01,Middle East,Admin,Rent,2690.37
+2024-01-01,Middle East,Admin,Travel,534.06
+2024-01-01,Middle East,Admin,Professional Services,844.86
+2024-01-01,Middle East,Operations,Rent,3211.4
+2024-01-01,Middle East,Operations,Utilities,901.43
+2024-01-01,Middle East,Operations,Travel,638.46
+2024-01-01,Middle East,Operations,Software,1106.55
+2024-01-01,Middle East,Operations,Professional Services,1317.51
+2024-02-01,North America,Sales,Salaries,9182.93
+2024-02-01,North America,Sales,Utilities,658.95
+2024-02-01,North America,Sales,Software,814.31
+2024-02-01,North America,Sales,Professional Services,1136.15
+2024-02-01,North America,Marketing,Salaries,12783.48
+2024-02-01,North America,Marketing,Rent,3338.09
+2024-02-01,North America,Marketing,Software,1114.8
+2024-02-01,North America,Marketing,Professional Services,1269.39
+2024-02-01,North America,R&D,Salaries,9324.82
+2024-02-01,North America,R&D,Utilities,653.5
+2024-02-01,North America,R&D,Travel,455.57
+2024-02-01,North America,R&D,Software,864.69
+2024-02-01,North America,R&D,Professional Services,879.43
+2024-02-01,North America,Admin,Salaries,10054.11
+2024-02-01,North America,Admin,Utilities,657.99
+2024-02-01,North America,Admin,Travel,501.92
+2024-02-01,North America,Admin,Software,921.94
+2024-02-01,North America,Operations,Salaries,8531.6
+2024-02-01,North America,Operations,Software,678.62
+2024-02-01,North America,Operations,Professional Services,1085.35
+2024-02-01,Europe,Sales,Salaries,13156.65
+2024-02-01,Europe,Sales,Rent,3627.3
+2024-02-01,Europe,Sales,Software,1231.53
+2024-02-01,Europe,Sales,Professional Services,1173.47
+2024-02-01,Europe,Marketing,Rent,4347.46
+2024-02-01,Europe,Marketing,Utilities,901.67
+2024-02-01,Europe,Marketing,Travel,751.72
+2024-02-01,Europe,Marketing,Software,1226.52
+2024-02-01,Europe,Marketing,Professional Services,1440.91
+2024-02-01,Europe,R&D,Salaries,11148.18
+2024-02-01,Europe,R&D,Rent,3394.55
+2024-02-01,Europe,Admin,Salaries,14913.94
+2024-02-01,Europe,Admin,Rent,4622.56
+2024-02-01,Europe,Admin,Utilities,1098.29
+2024-02-01,Europe,Admin,Travel,850.96
+2024-02-01,Europe,Admin,Software,1537.16
+2024-02-01,Europe,Admin,Professional Services,1593.93
+2024-02-01,Europe,Operations,Salaries,15884.17
+2024-02-01,Europe,Operations,Rent,3971.36
+2024-02-01,Europe,Operations,Utilities,1099.87
+2024-02-01,Europe,Operations,Travel,936.08
+2024-02-01,Europe,Operations,Software,1300.08
+2024-02-01,Europe,Operations,Professional Services,1457.71
+2024-02-01,Asia Pacific,Sales,Salaries,7917.11
+2024-02-01,Asia Pacific,Sales,Rent,2392.34
+2024-02-01,Asia Pacific,Sales,Travel,492.66
+2024-02-01,Asia Pacific,Sales,Software,665.57
+2024-02-01,Asia Pacific,Sales,Professional Services,903.32
+2024-02-01,Asia Pacific,Marketing,Rent,2675.58
+2024-02-01,Asia Pacific,Marketing,Utilities,728.15
+2024-02-01,Asia Pacific,Marketing,Software,960.86
+2024-02-01,Asia Pacific,Marketing,Professional Services,1089.92
+2024-02-01,Asia Pacific,R&D,Salaries,11426.93
+2024-02-01,Asia Pacific,R&D,Rent,2339.05
+2024-02-01,Asia Pacific,R&D,Utilities,727.22
+2024-02-01,Asia Pacific,R&D,Travel,439.29
+2024-02-01,Asia Pacific,R&D,Professional Services,927.32
+2024-02-01,Asia Pacific,Admin,Salaries,8778.97
+2024-02-01,Asia Pacific,Admin,Travel,485.56
+2024-02-01,Asia Pacific,Admin,Software,690.51
+2024-02-01,Asia Pacific,Operations,Salaries,10607.71
+2024-02-01,Asia Pacific,Operations,Rent,2701.8
+2024-02-01,Asia Pacific,Operations,Utilities,815.29
+2024-02-01,Asia Pacific,Operations,Software,889.07
+2024-02-01,Asia Pacific,Operations,Professional Services,1201.35
+2024-02-01,Latin America,Sales,Salaries,12315.89
+2024-02-01,Latin America,Sales,Rent,2687.09
+2024-02-01,Latin America,Sales,Utilities,817.6
+2024-02-01,Latin America,Sales,Travel,500.4
+2024-02-01,Latin America,Sales,Software,834.48
+2024-02-01,Latin America,Marketing,Rent,3066.21
+2024-02-01,Latin America,Marketing,Utilities,897.84
+2024-02-01,Latin America,Marketing,Travel,600.91
+2024-02-01,Latin America,Marketing,Software,1084.33
+2024-02-01,Latin America,Marketing,Professional Services,1259.56
+2024-02-01,Latin America,R&D,Salaries,10274.3
+2024-02-01,Latin America,R&D,Utilities,780.62
+2024-02-01,Latin America,R&D,Travel,465.87
+2024-02-01,Latin America,R&D,Professional Services,1136.08
+2024-02-01,Latin America,Admin,Salaries,12134.7
+2024-02-01,Latin America,Admin,Utilities,970.15
+2024-02-01,Latin America,Admin,Travel,646.6
+2024-02-01,Latin America,Admin,Software,1086.86
+2024-02-01,Latin America,Admin,Professional Services,1336.64
+2024-02-01,Latin America,Operations,Salaries,14633.68
+2024-02-01,Latin America,Operations,Rent,2762.03
+2024-02-01,Latin America,Operations,Travel,654.13
+2024-02-01,Latin America,Operations,Software,1146.43
+2024-02-01,Latin America,Operations,Professional Services,1356.46
+2024-02-01,Middle East,Sales,Salaries,11739.72
+2024-02-01,Middle East,Sales,Rent,3527.22
+2024-02-01,Middle East,Sales,Utilities,890.39
+2024-02-01,Middle East,Sales,Travel,685.07
+2024-02-01,Middle East,Sales,Software,1028.09
+2024-02-01,Middle East,Sales,Professional Services,1132.96
+2024-02-01,Middle East,Marketing,Utilities,705.96
+2024-02-01,Middle East,Marketing,Travel,530.13
+2024-02-01,Middle East,Marketing,Software,848.99
+2024-02-01,Middle East,R&D,Rent,3257.12
+2024-02-01,Middle East,R&D,Utilities,1041.39
+2024-02-01,Middle East,R&D,Professional Services,1415.04
+2024-02-01,Middle East,Admin,Rent,3548.41
+2024-02-01,Middle East,Admin,Utilities,879.94
+2024-02-01,Middle East,Admin,Travel,743.01
+2024-02-01,Middle East,Admin,Professional Services,1305.63
+2024-02-01,Middle East,Operations,Salaries,12896.55
+2024-02-01,Middle East,Operations,Utilities,899.52
+2024-02-01,Middle East,Operations,Travel,668.71
+2024-02-01,Middle East,Operations,Professional Services,1271.53
+2024-03-01,North America,Sales,Salaries,9765.2
+2024-03-01,North America,Sales,Rent,2624.03
+2024-03-01,North America,Sales,Utilities,557.49
+2024-03-01,North America,Sales,Travel,458.58
+2024-03-01,North America,Sales,Software,724.33
+2024-03-01,North America,Sales,Professional Services,930.89
+2024-03-01,North America,Marketing,Salaries,9940.48
+2024-03-01,North America,Marketing,Utilities,744.26
+2024-03-01,North America,Marketing,Travel,499.71
+2024-03-01,North America,Marketing,Software,753.14
+2024-03-01,North America,Marketing,Professional Services,1062.81
+2024-03-01,North America,R&D,Salaries,10048.54
+2024-03-01,North America,R&D,Rent,2592.91
+2024-03-01,North America,R&D,Travel,547.6
+2024-03-01,North America,R&D,Software,894.7
+2024-03-01,North America,R&D,Professional Services,1218.11
+2024-03-01,North America,Admin,Salaries,11432.21
+2024-03-01,North America,Admin,Rent,2640.28
+2024-03-01,North America,Admin,Utilities,873.1
+2024-03-01,North America,Admin,Travel,559.87
+2024-03-01,North America,Admin,Professional Services,1252.12
+2024-03-01,North America,Operations,Salaries,10469.33
+2024-03-01,North America,Operations,Rent,2330.99
+2024-03-01,North America,Operations,Utilities,602.01
+2024-03-01,North America,Operations,Travel,537.76
+2024-03-01,North America,Operations,Software,761.11
+2024-03-01,North America,Operations,Professional Services,872.67
+2024-03-01,Europe,Sales,Salaries,16506.27
+2024-03-01,Europe,Sales,Rent,4106.6
+2024-03-01,Europe,Sales,Utilities,1067.25
+2024-03-01,Europe,Sales,Software,1162.51
+2024-03-01,Europe,Sales,Professional Services,1390.41
+2024-03-01,Europe,Marketing,Salaries,10474.34
+2024-03-01,Europe,Marketing,Rent,3020.06
+2024-03-01,Europe,Marketing,Software,873.06
+2024-03-01,Europe,R&D,Salaries,9639.42
+2024-03-01,Europe,R&D,Utilities,705.51
+2024-03-01,Europe,R&D,Software,944.63
+2024-03-01,Europe,R&D,Professional Services,992.61
+2024-03-01,Europe,Admin,Rent,3515.51
+2024-03-01,Europe,Admin,Utilities,764.83
+2024-03-01,Europe,Admin,Travel,561.75
+2024-03-01,Europe,Admin,Software,990.09
+2024-03-01,Europe,Admin,Professional Services,1134.39
+2024-03-01,Europe,Operations,Utilities,1047.95
+2024-03-01,Europe,Operations,Travel,761.9
+2024-03-01,Asia Pacific,Sales,Salaries,10161.23
+2024-03-01,Asia Pacific,Sales,Rent,2997.1
+2024-03-01,Asia Pacific,Sales,Software,1001.02
+2024-03-01,Asia Pacific,Sales,Professional Services,1177.2
+2024-03-01,Asia Pacific,Marketing,Rent,2582.19
+2024-03-01,Asia Pacific,Marketing,Utilities,686.91
+2024-03-01,Asia Pacific,Marketing,Travel,567.81
+2024-03-01,Asia Pacific,Marketing,Software,973.07
+2024-03-01,Asia Pacific,Marketing,Professional Services,1276.03
+2024-03-01,Asia Pacific,R&D,Salaries,13916.2
+2024-03-01,Asia Pacific,R&D,Rent,3458.64
+2024-03-01,Asia Pacific,R&D,Utilities,845.39
+2024-03-01,Asia Pacific,R&D,Travel,574.45
+2024-03-01,Asia Pacific,R&D,Professional Services,1157.29
+2024-03-01,Asia Pacific,Admin,Salaries,10830.87
+2024-03-01,Asia Pacific,Admin,Rent,2700.5
+2024-03-01,Asia Pacific,Admin,Utilities,856.59
+2024-03-01,Asia Pacific,Admin,Professional Services,1154.46
+2024-03-01,Asia Pacific,Operations,Salaries,9734.01
+2024-03-01,Asia Pacific,Operations,Rent,2377.46
+2024-03-01,Asia Pacific,Operations,Utilities,648.06
+2024-03-01,Asia Pacific,Operations,Travel,538.96
+2024-03-01,Asia Pacific,Operations,Professional Services,987.71
+2024-03-01,Latin America,Sales,Salaries,10919.76
+2024-03-01,Latin America,Sales,Travel,562.89
+2024-03-01,Latin America,Sales,Software,1054.08
+2024-03-01,Latin America,Sales,Professional Services,1206.13
+2024-03-01,Latin America,Marketing,Salaries,10554.88
+2024-03-01,Latin America,Marketing,Rent,2772.38
+2024-03-01,Latin America,Marketing,Utilities,858.89
+2024-03-01,Latin America,Marketing,Software,838.85
+2024-03-01,Latin America,Marketing,Professional Services,1198.23
+2024-03-01,Latin America,R&D,Salaries,10477.43
+2024-03-01,Latin America,R&D,Utilities,697.83
+2024-03-01,Latin America,R&D,Travel,523.81
+2024-03-01,Latin America,R&D,Software,839.21
+2024-03-01,Latin America,R&D,Professional Services,1158.05
+2024-03-01,Latin America,Admin,Salaries,13301.5
+2024-03-01,Latin America,Admin,Rent,3060.05
+2024-03-01,Latin America,Admin,Utilities,848.11
+2024-03-01,Latin America,Admin,Travel,590.1
+2024-03-01,Latin America,Admin,Software,827.01
+2024-03-01,Latin America,Admin,Professional Services,1271.31
+2024-03-01,Latin America,Operations,Rent,3036.65
+2024-03-01,Latin America,Operations,Utilities,727.85
+2024-03-01,Latin America,Operations,Travel,651.54
+2024-03-01,Latin America,Operations,Software,893.15
+2024-03-01,Latin America,Operations,Professional Services,1247.9
+2024-03-01,Middle East,Sales,Salaries,11856.33
+2024-03-01,Middle East,Sales,Rent,2800.28
+2024-03-01,Middle East,Sales,Utilities,774.39
+2024-03-01,Middle East,Sales,Software,871.15
+2024-03-01,Middle East,Sales,Professional Services,1307.06
+2024-03-01,Middle East,Marketing,Utilities,949.55
+2024-03-01,Middle East,Marketing,Travel,554.84
+2024-03-01,Middle East,R&D,Salaries,16127.8
+2024-03-01,Middle East,R&D,Rent,4467.01
+2024-03-01,Middle East,R&D,Utilities,1161.29
+2024-03-01,Middle East,R&D,Travel,787.49
+2024-03-01,Middle East,R&D,Software,1230.75
+2024-03-01,Middle East,R&D,Professional Services,1387.22
+2024-03-01,Middle East,Admin,Travel,707.26
+2024-03-01,Middle East,Admin,Software,1079.66
+2024-03-01,Middle East,Admin,Professional Services,1559.15
+2024-03-01,Middle East,Operations,Salaries,12364.37
+2024-03-01,Middle East,Operations,Rent,2840.34
+2024-03-01,Middle East,Operations,Utilities,700.09
+2024-03-01,Middle East,Operations,Travel,630.22
+2024-03-01,Middle East,Operations,Software,1086.1
+2024-04-01,North America,Sales,Utilities,531.93
+2024-04-01,North America,Sales,Travel,381.93
+2024-04-01,North America,Sales,Professional Services,685.39
+2024-04-01,North America,Marketing,Rent,3095.34
+2024-04-01,North America,Marketing,Utilities,761.99
+2024-04-01,North America,Marketing,Travel,490.79
+2024-04-01,North America,Marketing,Software,1027.75
+2024-04-01,North America,Marketing,Professional Services,1088.07
+2024-04-01,North America,R&D,Salaries,9171.53
+2024-04-01,North America,R&D,Rent,2041.12
+2024-04-01,North America,R&D,Travel,407.95
+2024-04-01,North America,Admin,Utilities,696.71
+2024-04-01,North America,Admin,Travel,635.56
+2024-04-01,North America,Admin,Software,928.49
+2024-04-01,North America,Admin,Professional Services,974.71
+2024-04-01,North America,Operations,Utilities,519.31
+2024-04-01,North America,Operations,Software,725.18
+2024-04-01,Europe,Sales,Rent,2079.58
+2024-04-01,Europe,Sales,Utilities,479.05
+2024-04-01,Europe,Sales,Travel,383.91
+2024-04-01,Europe,Marketing,Salaries,7330.49
+2024-04-01,Europe,Marketing,Rent,1935.74
+2024-04-01,Europe,Marketing,Utilities,541.66
+2024-04-01,Europe,Marketing,Travel,412.24
+2024-04-01,Europe,R&D,Salaries,8267.42
+2024-04-01,Europe,R&D,Rent,2596.44
+2024-04-01,Europe,R&D,Utilities,706.05
+2024-04-01,Europe,R&D,Travel,464.88
+2024-04-01,Europe,R&D,Software,720.33
+2024-04-01,Europe,R&D,Professional Services,976.05
+2024-04-01,Europe,Admin,Salaries,6981.16
+2024-04-01,Europe,Admin,Utilities,538.29
+2024-04-01,Europe,Admin,Travel,362.35
+2024-04-01,Europe,Admin,Software,673.84
+2024-04-01,Europe,Admin,Professional Services,805.23
+2024-04-01,Europe,Operations,Salaries,8220.01
+2024-04-01,Europe,Operations,Rent,1814.26
+2024-04-01,Europe,Operations,Utilities,609.1
+2024-04-01,Europe,Operations,Travel,460.27
+2024-04-01,Europe,Operations,Software,609.16
+2024-04-01,Asia Pacific,Sales,Salaries,14827.08
+2024-04-01,Asia Pacific,Sales,Rent,3534.35
+2024-04-01,Asia Pacific,Sales,Utilities,1005.62
+2024-04-01,Asia Pacific,Sales,Travel,735.98
+2024-04-01,Asia Pacific,Sales,Software,1103.82
+2024-04-01,Asia Pacific,Sales,Professional Services,1260.46
+2024-04-01,Asia Pacific,Marketing,Salaries,15328.48
+2024-04-01,Asia Pacific,Marketing,Rent,3063.71
+2024-04-01,Asia Pacific,Marketing,Utilities,1100.2
+2024-04-01,Asia Pacific,Marketing,Travel,649.71
+2024-04-01,Asia Pacific,Marketing,Software,1169.51
+2024-04-01,Asia Pacific,Marketing,Professional Services,1369.63
+2024-04-01,Asia Pacific,R&D,Salaries,14366.15
+2024-04-01,Asia Pacific,R&D,Utilities,960.95
+2024-04-01,Asia Pacific,R&D,Travel,649.45
+2024-04-01,Asia Pacific,R&D,Software,1370.59
+2024-04-01,Asia Pacific,Admin,Rent,3395.42
+2024-04-01,Asia Pacific,Admin,Utilities,766.19
+2024-04-01,Asia Pacific,Admin,Travel,646.77
+2024-04-01,Asia Pacific,Operations,Salaries,14028.04
+2024-04-01,Asia Pacific,Operations,Rent,3640.56
+2024-04-01,Asia Pacific,Operations,Utilities,841.01
+2024-04-01,Asia Pacific,Operations,Software,1131.69
+2024-04-01,Asia Pacific,Operations,Professional Services,1154.06
+2024-04-01,Latin America,Sales,Salaries,13632.88
+2024-04-01,Latin America,Sales,Rent,4024.72
+2024-04-01,Latin America,Sales,Utilities,1042.67
+2024-04-01,Latin America,Sales,Travel,844.25
+2024-04-01,Latin America,Sales,Software,1215.71
+2024-04-01,Latin America,Sales,Professional Services,1639.48
+2024-04-01,Latin America,Marketing,Utilities,1070.42
+2024-04-01,Latin America,Marketing,Travel,704.21
+2024-04-01,Latin America,Marketing,Software,1317.77
+2024-04-01,Latin America,Marketing,Professional Services,1286.4
+2024-04-01,Latin America,R&D,Rent,4262.31
+2024-04-01,Latin America,R&D,Utilities,1007.87
+2024-04-01,Latin America,R&D,Travel,746.3
+2024-04-01,Latin America,R&D,Software,1244.95
+2024-04-01,Latin America,R&D,Professional Services,1770.12
+2024-04-01,Latin America,Admin,Rent,2608.86
+2024-04-01,Latin America,Admin,Travel,672.65
+2024-04-01,Latin America,Admin,Software,959.49
+2024-04-01,Latin America,Admin,Professional Services,1178.56
+2024-04-01,Latin America,Operations,Salaries,12501.38
+2024-04-01,Latin America,Operations,Rent,3498.59
+2024-04-01,Latin America,Operations,Travel,603.02
+2024-04-01,Latin America,Operations,Software,986.92
+2024-04-01,Latin America,Operations,Professional Services,1415.94
+2024-04-01,Middle East,Sales,Rent,2204.52
+2024-04-01,Middle East,Sales,Utilities,599.92
+2024-04-01,Middle East,Sales,Software,782.45
+2024-04-01,Middle East,Marketing,Rent,3130.12
+2024-04-01,Middle East,Marketing,Utilities,938.62
+2024-04-01,Middle East,Marketing,Software,1128.06
+2024-04-01,Middle East,Marketing,Professional Services,1420.36
+2024-04-01,Middle East,R&D,Salaries,12278.92
+2024-04-01,Middle East,R&D,Rent,3359.06
+2024-04-01,Middle East,R&D,Utilities,914.64
+2024-04-01,Middle East,R&D,Software,974.14
+2024-04-01,Middle East,R&D,Professional Services,1150.25
+2024-04-01,Middle East,Admin,Salaries,10220.66
+2024-04-01,Middle East,Admin,Rent,2654.4
+2024-04-01,Middle East,Admin,Utilities,682.86
+2024-04-01,Middle East,Admin,Travel,471.67
+2024-04-01,Middle East,Admin,Software,662.15
+2024-04-01,Middle East,Admin,Professional Services,1002.14
+2024-04-01,Middle East,Operations,Salaries,9614.49
+2024-04-01,Middle East,Operations,Utilities,576.47
+2024-04-01,Middle East,Operations,Software,701.24
+2024-05-01,North America,Sales,Salaries,12287.82
+2024-05-01,North America,Sales,Utilities,661.3
+2024-05-01,North America,Sales,Travel,490.27
+2024-05-01,North America,Sales,Software,857.97
+2024-05-01,North America,Sales,Professional Services,1002.68
+2024-05-01,North America,Marketing,Salaries,12399.04
+2024-05-01,North America,Marketing,Rent,2601.85
+2024-05-01,North America,Marketing,Travel,582.29
+2024-05-01,North America,Marketing,Software,1136.23
+2024-05-01,North America,Marketing,Professional Services,1083.42
+2024-05-01,North America,R&D,Salaries,12500.37
+2024-05-01,North America,R&D,Rent,3050.12
+2024-05-01,North America,R&D,Utilities,978.47
+2024-05-01,North America,R&D,Travel,754.5
+2024-05-01,North America,R&D,Software,945.98
+2024-05-01,North America,R&D,Professional Services,1193.85
+2024-05-01,North America,Admin,Rent,3828.31
+2024-05-01,North America,Admin,Utilities,826.41
+2024-05-01,North America,Admin,Travel,747.3
+2024-05-01,North America,Admin,Software,1009.83
+2024-05-01,North America,Admin,Professional Services,1363.33
+2024-05-01,North America,Operations,Rent,2884.09
+2024-05-01,North America,Operations,Software,1046.86
+2024-05-01,Europe,Sales,Salaries,13820.43
+2024-05-01,Europe,Sales,Rent,2794.18
+2024-05-01,Europe,Sales,Utilities,895.63
+2024-05-01,Europe,Sales,Travel,677.41
+2024-05-01,Europe,Sales,Software,977.04
+2024-05-01,Europe,Sales,Professional Services,1321.92
+2024-05-01,Europe,Marketing,Salaries,10148.85
+2024-05-01,Europe,Marketing,Utilities,714.67
+2024-05-01,Europe,Marketing,Travel,543.96
+2024-05-01,Europe,Marketing,Software,824.79
+2024-05-01,Europe,Marketing,Professional Services,1094.83
+2024-05-01,Europe,R&D,Salaries,11496.17
+2024-05-01,Europe,R&D,Utilities,738.97
+2024-05-01,Europe,R&D,Travel,683.67
+2024-05-01,Europe,R&D,Software,971.83
+2024-05-01,Europe,R&D,Professional Services,1098.57
+2024-05-01,Europe,Admin,Salaries,11854.8
+2024-05-01,Europe,Admin,Utilities,829.62
+2024-05-01,Europe,Admin,Travel,603.84
+2024-05-01,Europe,Admin,Professional Services,1204.4
+2024-05-01,Europe,Operations,Salaries,10289.47
+2024-05-01,Europe,Operations,Rent,2061.13
+2024-05-01,Europe,Operations,Utilities,651.45
+2024-05-01,Europe,Operations,Travel,499.08
+2024-05-01,Europe,Operations,Software,746.53
+2024-05-01,Europe,Operations,Professional Services,988.37
+2024-05-01,Asia Pacific,Sales,Salaries,15018.3
+2024-05-01,Asia Pacific,Sales,Rent,4137.59
+2024-05-01,Asia Pacific,Sales,Utilities,1160.15
+2024-05-01,Asia Pacific,Sales,Travel,682.45
+2024-05-01,Asia Pacific,Sales,Software,1387.15
+2024-05-01,Asia Pacific,Sales,Professional Services,1559.01
+2024-05-01,Asia Pacific,Marketing,Salaries,14096.87
+2024-05-01,Asia Pacific,Marketing,Utilities,1045.57
+2024-05-01,Asia Pacific,Marketing,Travel,710.06
+2024-05-01,Asia Pacific,Marketing,Professional Services,1366.75
+2024-05-01,Asia Pacific,R&D,Rent,3438.7
+2024-05-01,Asia Pacific,R&D,Utilities,1016.97
+2024-05-01,Asia Pacific,R&D,Software,1347.81
+2024-05-01,Asia Pacific,R&D,Professional Services,1279.31
+2024-05-01,Asia Pacific,Admin,Salaries,13813.73
+2024-05-01,Asia Pacific,Admin,Rent,2826.1
+2024-05-01,Asia Pacific,Admin,Utilities,945.62
+2024-05-01,Asia Pacific,Admin,Travel,574.88
+2024-05-01,Asia Pacific,Admin,Software,1078.14
+2024-05-01,Asia Pacific,Operations,Utilities,813.01
+2024-05-01,Asia Pacific,Operations,Travel,567.52
+2024-05-01,Asia Pacific,Operations,Software,1058.57
+2024-05-01,Asia Pacific,Operations,Professional Services,1424.89
+2024-05-01,Latin America,Sales,Rent,2546.43
+2024-05-01,Latin America,Sales,Utilities,702.69
+2024-05-01,Latin America,Sales,Travel,572.83
+2024-05-01,Latin America,Sales,Software,930.1
+2024-05-01,Latin America,Sales,Professional Services,1061.09
+2024-05-01,Latin America,Marketing,Salaries,11510.45
+2024-05-01,Latin America,Marketing,Rent,3154.33
+2024-05-01,Latin America,Marketing,Travel,574.9
+2024-05-01,Latin America,Marketing,Professional Services,1199.11
+2024-05-01,Latin America,R&D,Salaries,14125.06
+2024-05-01,Latin America,R&D,Rent,3566.49
+2024-05-01,Latin America,R&D,Utilities,868.93
+2024-05-01,Latin America,R&D,Travel,720.03
+2024-05-01,Latin America,R&D,Professional Services,1382.51
+2024-05-01,Latin America,Admin,Salaries,10125.81
+2024-05-01,Latin America,Admin,Utilities,685.07
+2024-05-01,Latin America,Operations,Salaries,12468.71
+2024-05-01,Latin America,Operations,Utilities,907.5
+2024-05-01,Latin America,Operations,Travel,576.47
+2024-05-01,Latin America,Operations,Professional Services,1360.69
+2024-05-01,Middle East,Sales,Utilities,668.83
+2024-05-01,Middle East,Sales,Travel,556.34
+2024-05-01,Middle East,Sales,Software,717.27
+2024-05-01,Middle East,Sales,Professional Services,1073.5
+2024-05-01,Middle East,Marketing,Salaries,9464.54
+2024-05-01,Middle East,Marketing,Travel,515.01
+2024-05-01,Middle East,R&D,Utilities,705.86
+2024-05-01,Middle East,R&D,Travel,507.55
+2024-05-01,Middle East,R&D,Software,908.03
+2024-05-01,Middle East,R&D,Professional Services,905.84
+2024-05-01,Middle East,Admin,Salaries,11349.04
+2024-05-01,Middle East,Admin,Utilities,699.2
+2024-05-01,Middle East,Admin,Travel,570.25
+2024-05-01,Middle East,Admin,Software,901.09
+2024-05-01,Middle East,Admin,Professional Services,1102.06
+2024-05-01,Middle East,Operations,Salaries,8861.21
+2024-05-01,Middle East,Operations,Utilities,774.23
+2024-05-01,Middle East,Operations,Travel,438.35
+2024-05-01,Middle East,Operations,Software,914.59
+2024-05-01,Middle East,Operations,Professional Services,891.7
+2024-06-01,North America,Sales,Salaries,10105.45
+2024-06-01,North America,Sales,Travel,588.3
+2024-06-01,North America,Sales,Software,905.23
+2024-06-01,North America,Sales,Professional Services,1049.59
+2024-06-01,North America,Marketing,Salaries,14372.05
+2024-06-01,North America,Marketing,Rent,3723.07
+2024-06-01,North America,Marketing,Travel,613.65
+2024-06-01,North America,Marketing,Professional Services,1357.99
+2024-06-01,North America,R&D,Rent,4000.06
+2024-06-01,North America,R&D,Utilities,1030.93
+2024-06-01,North America,R&D,Software,1293.25
+2024-06-01,North America,R&D,Professional Services,1523.7
+2024-06-01,North America,Admin,Salaries,13320.01
+2024-06-01,North America,Admin,Travel,653.67
+2024-06-01,North America,Admin,Software,1178.21
+2024-06-01,North America,Admin,Professional Services,1220.66
+2024-06-01,North America,Operations,Salaries,13312.22
+2024-06-01,North America,Operations,Rent,3095.13
+2024-06-01,North America,Operations,Utilities,873.9
+2024-06-01,North America,Operations,Travel,536.38
+2024-06-01,North America,Operations,Software,1033.25
+2024-06-01,Europe,Sales,Salaries,15712.63
+2024-06-01,Europe,Sales,Rent,3287.14
+2024-06-01,Europe,Sales,Utilities,936.68
+2024-06-01,Europe,Sales,Travel,796.83
+2024-06-01,Europe,Sales,Software,1085.64
+2024-06-01,Europe,Sales,Professional Services,1296.02
+2024-06-01,Europe,Marketing,Rent,3882.93
+2024-06-01,Europe,Marketing,Utilities,894.5
+2024-06-01,Europe,Marketing,Travel,746.92
+2024-06-01,Europe,Marketing,Software,1046.02
+2024-06-01,Europe,Marketing,Professional Services,1433.55
+2024-06-01,Europe,R&D,Rent,3121.98
+2024-06-01,Europe,R&D,Utilities,894.21
+2024-06-01,Europe,R&D,Travel,734.12
+2024-06-01,Europe,R&D,Software,1003.4
+2024-06-01,Europe,Admin,Salaries,16420.59
+2024-06-01,Europe,Admin,Utilities,851.82
+2024-06-01,Europe,Admin,Travel,758.36
+2024-06-01,Europe,Admin,Software,1253.95
+2024-06-01,Europe,Admin,Professional Services,1525.7
+2024-06-01,Europe,Operations,Salaries,11553.26
+2024-06-01,Europe,Operations,Rent,2562.62
+2024-06-01,Europe,Operations,Utilities,766.14
+2024-06-01,Europe,Operations,Professional Services,1011.22
+2024-06-01,Asia Pacific,Sales,Rent,2059.77
+2024-06-01,Asia Pacific,Sales,Travel,372.88
+2024-06-01,Asia Pacific,Sales,Software,609.99
+2024-06-01,Asia Pacific,Sales,Professional Services,908.3
+2024-06-01,Asia Pacific,Marketing,Rent,2071.26
+2024-06-01,Asia Pacific,Marketing,Utilities,538.82
+2024-06-01,Asia Pacific,Marketing,Travel,473.86
+2024-06-01,Asia Pacific,Marketing,Software,849.51
+2024-06-01,Asia Pacific,R&D,Rent,2594.13
+2024-06-01,Asia Pacific,R&D,Travel,441.39
+2024-06-01,Asia Pacific,R&D,Professional Services,1017.81
+2024-06-01,Asia Pacific,Admin,Salaries,11068.08
+2024-06-01,Asia Pacific,Admin,Rent,2374.92
+2024-06-01,Asia Pacific,Admin,Utilities,627.15
+2024-06-01,Asia Pacific,Admin,Travel,497.22
+2024-06-01,Asia Pacific,Admin,Software,914.62
+2024-06-01,Asia Pacific,Admin,Professional Services,1156.0
+2024-06-01,Asia Pacific,Operations,Salaries,10516.77
+2024-06-01,Asia Pacific,Operations,Utilities,666.39
+2024-06-01,Asia Pacific,Operations,Travel,478.59
+2024-06-01,Asia Pacific,Operations,Software,969.78
+2024-06-01,Asia Pacific,Operations,Professional Services,917.85
+2024-06-01,Latin America,Sales,Salaries,12926.24
+2024-06-01,Latin America,Sales,Rent,3549.54
+2024-06-01,Latin America,Sales,Travel,731.49
+2024-06-01,Latin America,Sales,Software,1232.13
+2024-06-01,Latin America,Sales,Professional Services,1250.02
+2024-06-01,Latin America,Marketing,Rent,3796.11
+2024-06-01,Latin America,Marketing,Utilities,1121.33
+2024-06-01,Latin America,Marketing,Travel,835.39
+2024-06-01,Latin America,Marketing,Software,1440.88
+2024-06-01,Latin America,R&D,Salaries,15320.61
+2024-06-01,Latin America,R&D,Utilities,949.69
+2024-06-01,Latin America,R&D,Professional Services,1425.23
+2024-06-01,Latin America,Admin,Rent,3920.3
+2024-06-01,Latin America,Admin,Utilities,1217.23
+2024-06-01,Latin America,Admin,Travel,723.83
+2024-06-01,Latin America,Admin,Software,1603.71
+2024-06-01,Latin America,Admin,Professional Services,1535.22
+2024-06-01,Latin America,Operations,Salaries,15389.26
+2024-06-01,Latin America,Operations,Rent,4285.04
+2024-06-01,Latin America,Operations,Utilities,1254.58
+2024-06-01,Latin America,Operations,Travel,899.73
+2024-06-01,Latin America,Operations,Software,1232.08
+2024-06-01,Latin America,Operations,Professional Services,1944.92
+2024-06-01,Middle East,Sales,Salaries,11410.5
+2024-06-01,Middle East,Sales,Rent,2558.54
+2024-06-01,Middle East,Sales,Utilities,684.02
+2024-06-01,Middle East,Sales,Travel,555.18
+2024-06-01,Middle East,Sales,Software,823.67
+2024-06-01,Middle East,Marketing,Utilities,851.82
+2024-06-01,Middle East,Marketing,Travel,662.2
+2024-06-01,Middle East,Marketing,Software,1096.72
+2024-06-01,Middle East,Marketing,Professional Services,1041.41
+2024-06-01,Middle East,R&D,Travel,669.58
+2024-06-01,Middle East,R&D,Software,1189.32
+2024-06-01,Middle East,R&D,Professional Services,1110.45
+2024-06-01,Middle East,Admin,Salaries,15200.14
+2024-06-01,Middle East,Admin,Travel,616.96
+2024-06-01,Middle East,Admin,Software,1124.74
+2024-06-01,Middle East,Operations,Salaries,10686.6
+2024-06-01,Middle East,Operations,Rent,2245.27
+2024-06-01,Middle East,Operations,Travel,473.36
+2024-06-01,Middle East,Operations,Professional Services,1103.23
+2024-07-01,North America,Sales,Salaries,10247.94
+2024-07-01,North America,Sales,Rent,2917.11
+2024-07-01,North America,Sales,Utilities,787.9
+2024-07-01,North America,Sales,Travel,534.99
+2024-07-01,North America,Marketing,Salaries,11383.77
+2024-07-01,North America,Marketing,Rent,2710.68
+2024-07-01,North America,Marketing,Utilities,622.69
+2024-07-01,North America,Marketing,Travel,494.82
+2024-07-01,North America,Marketing,Software,864.9
+2024-07-01,North America,R&D,Rent,2416.96
+2024-07-01,North America,R&D,Software,937.84
+2024-07-01,North America,R&D,Professional Services,1069.84
+2024-07-01,North America,Admin,Salaries,9166.97
+2024-07-01,North America,Admin,Utilities,589.19
+2024-07-01,North America,Admin,Software,839.6
+2024-07-01,North America,Operations,Salaries,9975.63
+2024-07-01,North America,Operations,Utilities,789.03
+2024-07-01,North America,Operations,Travel,551.79
+2024-07-01,North America,Operations,Professional Services,1194.34
+2024-07-01,Europe,Sales,Rent,2642.42
+2024-07-01,Europe,Sales,Utilities,729.92
+2024-07-01,Europe,Sales,Travel,426.79
+2024-07-01,Europe,Sales,Software,824.42
+2024-07-01,Europe,Marketing,Salaries,10179.29
+2024-07-01,Europe,Marketing,Rent,2417.51
+2024-07-01,Europe,Marketing,Utilities,531.57
+2024-07-01,Europe,Marketing,Travel,381.01
+2024-07-01,Europe,Marketing,Professional Services,946.63
+2024-07-01,Europe,R&D,Rent,2033.91
+2024-07-01,Europe,R&D,Travel,389.82
+2024-07-01,Europe,R&D,Software,765.23
+2024-07-01,Europe,R&D,Professional Services,818.45
+2024-07-01,Europe,Admin,Rent,1987.25
+2024-07-01,Europe,Admin,Travel,397.29
+2024-07-01,Europe,Operations,Salaries,10379.92
+2024-07-01,Europe,Operations,Rent,2353.77
+2024-07-01,Europe,Operations,Utilities,708.49
+2024-07-01,Europe,Operations,Travel,529.54
+2024-07-01,Europe,Operations,Software,773.83
+2024-07-01,Europe,Operations,Professional Services,873.17
+2024-07-01,Asia Pacific,Sales,Rent,2515.29
+2024-07-01,Asia Pacific,Sales,Utilities,604.44
+2024-07-01,Asia Pacific,Sales,Travel,531.94
+2024-07-01,Asia Pacific,Sales,Software,817.76
+2024-07-01,Asia Pacific,Sales,Professional Services,907.97
+2024-07-01,Asia Pacific,Marketing,Salaries,12290.55
+2024-07-01,Asia Pacific,Marketing,Rent,3075.8
+2024-07-01,Asia Pacific,Marketing,Utilities,961.68
+2024-07-01,Asia Pacific,Marketing,Travel,602.16
+2024-07-01,Asia Pacific,Marketing,Software,1026.11
+2024-07-01,Asia Pacific,R&D,Salaries,12346.23
+2024-07-01,Asia Pacific,R&D,Utilities,836.96
+2024-07-01,Asia Pacific,R&D,Travel,610.65
+2024-07-01,Asia Pacific,R&D,Software,1081.63
+2024-07-01,Asia Pacific,Admin,Salaries,8828.62
+2024-07-01,Asia Pacific,Admin,Rent,2777.89
+2024-07-01,Asia Pacific,Admin,Travel,586.5
+2024-07-01,Asia Pacific,Admin,Software,851.84
+2024-07-01,Asia Pacific,Admin,Professional Services,926.39
+2024-07-01,Asia Pacific,Operations,Salaries,9692.25
+2024-07-01,Asia Pacific,Operations,Rent,2149.64
+2024-07-01,Asia Pacific,Operations,Utilities,573.43
+2024-07-01,Asia Pacific,Operations,Travel,482.54
+2024-07-01,Asia Pacific,Operations,Software,770.65
+2024-07-01,Latin America,Sales,Rent,3244.76
+2024-07-01,Latin America,Sales,Travel,589.81
+2024-07-01,Latin America,Sales,Software,972.3
+2024-07-01,Latin America,Sales,Professional Services,1245.22
+2024-07-01,Latin America,Marketing,Salaries,13475.95
+2024-07-01,Latin America,Marketing,Rent,3288.45
+2024-07-01,Latin America,Marketing,Travel,523.8
+2024-07-01,Latin America,Marketing,Software,1051.19
+2024-07-01,Latin America,Marketing,Professional Services,1224.4
+2024-07-01,Latin America,R&D,Utilities,775.67
+2024-07-01,Latin America,R&D,Software,1226.97
+2024-07-01,Latin America,R&D,Professional Services,1245.56
+2024-07-01,Latin America,Admin,Rent,3319.24
+2024-07-01,Latin America,Admin,Utilities,1041.26
+2024-07-01,Latin America,Admin,Travel,612.6
+2024-07-01,Latin America,Admin,Software,1067.68
+2024-07-01,Latin America,Admin,Professional Services,1236.72
+2024-07-01,Latin America,Operations,Salaries,9917.27
+2024-07-01,Latin America,Operations,Rent,2193.67
+2024-07-01,Latin America,Operations,Utilities,577.48
+2024-07-01,Latin America,Operations,Software,768.1
+2024-07-01,Latin America,Operations,Professional Services,862.74
+2024-07-01,Middle East,Sales,Rent,2537.26
+2024-07-01,Middle East,Sales,Travel,439.26
+2024-07-01,Middle East,Sales,Software,689.2
+2024-07-01,Middle East,Sales,Professional Services,961.32
+2024-07-01,Middle East,Marketing,Salaries,8240.46
+2024-07-01,Middle East,Marketing,Rent,2310.61
+2024-07-01,Middle East,Marketing,Utilities,648.78
+2024-07-01,Middle East,Marketing,Travel,385.64
+2024-07-01,Middle East,Marketing,Software,788.59
+2024-07-01,Middle East,Marketing,Professional Services,809.57
+2024-07-01,Middle East,R&D,Rent,2582.82
+2024-07-01,Middle East,R&D,Travel,449.95
+2024-07-01,Middle East,R&D,Software,944.89
+2024-07-01,Middle East,R&D,Professional Services,1091.0
+2024-07-01,Middle East,Admin,Salaries,8479.12
+2024-07-01,Middle East,Admin,Utilities,498.64
+2024-07-01,Middle East,Admin,Travel,396.46
+2024-07-01,Middle East,Admin,Software,640.94
+2024-07-01,Middle East,Operations,Salaries,7270.56
+2024-07-01,Middle East,Operations,Rent,1863.58
+2024-07-01,Middle East,Operations,Utilities,561.96
+2024-07-01,Middle East,Operations,Travel,380.81
+2024-07-01,Middle East,Operations,Software,780.39
+2024-07-01,Middle East,Operations,Professional Services,815.88
+2024-08-01,North America,Sales,Salaries,12465.68
+2024-08-01,North America,Sales,Utilities,971.57
+2024-08-01,North America,Sales,Travel,730.21
+2024-08-01,North America,Sales,Software,1021.48
+2024-08-01,North America,Sales,Professional Services,1489.47
+2024-08-01,North America,Marketing,Salaries,15875.06
+2024-08-01,North America,Marketing,Rent,4228.45
+2024-08-01,North America,Marketing,Utilities,981.53
+2024-08-01,North America,Marketing,Travel,751.18
+2024-08-01,North America,Marketing,Software,1418.31
+2024-08-01,North America,Marketing,Professional Services,1489.81
+2024-08-01,North America,R&D,Salaries,13014.66
+2024-08-01,North America,R&D,Utilities,825.98
+2024-08-01,North America,R&D,Travel,589.73
+2024-08-01,North America,R&D,Software,1143.42
+2024-08-01,North America,R&D,Professional Services,1119.66
+2024-08-01,North America,Admin,Salaries,15320.87
+2024-08-01,North America,Admin,Utilities,1215.15
+2024-08-01,North America,Admin,Travel,809.91
+2024-08-01,North America,Admin,Software,1517.41
+2024-08-01,North America,Admin,Professional Services,1762.47
+2024-08-01,North America,Operations,Salaries,11167.82
+2024-08-01,North America,Operations,Utilities,726.78
+2024-08-01,North America,Operations,Software,943.57
+2024-08-01,Europe,Sales,Salaries,12594.96
+2024-08-01,Europe,Sales,Rent,3842.12
+2024-08-01,Europe,Sales,Professional Services,1276.0
+2024-08-01,Europe,Marketing,Salaries,12657.9
+2024-08-01,Europe,Marketing,Rent,3167.68
+2024-08-01,Europe,Marketing,Travel,679.76
+2024-08-01,Europe,Marketing,Software,1167.7
+2024-08-01,Europe,R&D,Rent,3296.67
+2024-08-01,Europe,R&D,Utilities,838.43
+2024-08-01,Europe,R&D,Travel,676.54
+2024-08-01,Europe,Admin,Salaries,10657.64
+2024-08-01,Europe,Admin,Utilities,705.11
+2024-08-01,Europe,Admin,Software,923.78
+2024-08-01,Europe,Admin,Professional Services,1078.75
+2024-08-01,Europe,Operations,Salaries,12047.26
+2024-08-01,Europe,Operations,Rent,3308.61
+2024-08-01,Europe,Operations,Utilities,859.18
+2024-08-01,Europe,Operations,Professional Services,1167.13
+2024-08-01,Asia Pacific,Sales,Salaries,13761.19
+2024-08-01,Asia Pacific,Sales,Rent,3428.05
+2024-08-01,Asia Pacific,Sales,Utilities,1053.37
+2024-08-01,Asia Pacific,Sales,Travel,784.97
+2024-08-01,Asia Pacific,Sales,Software,1304.26
+2024-08-01,Asia Pacific,Marketing,Salaries,13573.59
+2024-08-01,Asia Pacific,Marketing,Rent,4037.83
+2024-08-01,Asia Pacific,Marketing,Travel,829.17
+2024-08-01,Asia Pacific,Marketing,Software,1180.36
+2024-08-01,Asia Pacific,Marketing,Professional Services,1674.88
+2024-08-01,Asia Pacific,R&D,Utilities,891.59
+2024-08-01,Asia Pacific,R&D,Software,1228.69
+2024-08-01,Asia Pacific,R&D,Professional Services,1520.06
+2024-08-01,Asia Pacific,Admin,Salaries,16273.37
+2024-08-01,Asia Pacific,Admin,Rent,3817.54
+2024-08-01,Asia Pacific,Admin,Travel,676.48
+2024-08-01,Asia Pacific,Admin,Software,1341.78
+2024-08-01,Asia Pacific,Operations,Rent,3762.33
+2024-08-01,Asia Pacific,Operations,Utilities,1037.99
+2024-08-01,Asia Pacific,Operations,Travel,719.44
+2024-08-01,Asia Pacific,Operations,Software,1407.93
+2024-08-01,Asia Pacific,Operations,Professional Services,1308.56
+2024-08-01,Latin America,Sales,Salaries,12714.95
+2024-08-01,Latin America,Sales,Rent,2780.63
+2024-08-01,Latin America,Sales,Travel,556.32
+2024-08-01,Latin America,Sales,Software,1108.16
+2024-08-01,Latin America,Sales,Professional Services,1135.44
+2024-08-01,Latin America,Marketing,Salaries,13781.57
+2024-08-01,Latin America,Marketing,Travel,804.73
+2024-08-01,Latin America,Marketing,Software,1000.7
+2024-08-01,Latin America,Marketing,Professional Services,1224.86
+2024-08-01,Latin America,R&D,Salaries,14663.66
+2024-08-01,Latin America,R&D,Utilities,830.3
+2024-08-01,Latin America,R&D,Software,1153.25
+2024-08-01,Latin America,R&D,Professional Services,1544.15
+2024-08-01,Latin America,Admin,Salaries,13722.8
+2024-08-01,Latin America,Admin,Rent,3766.26
+2024-08-01,Latin America,Admin,Travel,727.83
+2024-08-01,Latin America,Admin,Software,1261.46
+2024-08-01,Latin America,Operations,Utilities,1272.36
+2024-08-01,Latin America,Operations,Software,1321.17
+2024-08-01,Latin America,Operations,Professional Services,1649.07
+2024-08-01,Middle East,Sales,Salaries,11516.62
+2024-08-01,Middle East,Sales,Rent,2725.04
+2024-08-01,Middle East,Sales,Utilities,813.1
+2024-08-01,Middle East,Sales,Travel,550.04
+2024-08-01,Middle East,Sales,Software,936.86
+2024-08-01,Middle East,Sales,Professional Services,1130.23
+2024-08-01,Middle East,Marketing,Salaries,10313.64
+2024-08-01,Middle East,Marketing,Rent,2477.93
+2024-08-01,Middle East,Marketing,Utilities,647.87
+2024-08-01,Middle East,Marketing,Software,698.62
+2024-08-01,Middle East,R&D,Salaries,11022.65
+2024-08-01,Middle East,R&D,Rent,2903.26
+2024-08-01,Middle East,R&D,Utilities,798.44
+2024-08-01,Middle East,R&D,Travel,524.03
+2024-08-01,Middle East,R&D,Professional Services,963.83
+2024-08-01,Middle East,Admin,Utilities,530.3
+2024-08-01,Middle East,Admin,Travel,390.52
+2024-08-01,Middle East,Admin,Software,676.44
+2024-08-01,Middle East,Operations,Salaries,6894.73
+2024-08-01,Middle East,Operations,Rent,1642.8
+2024-08-01,Middle East,Operations,Utilities,440.13
+2024-08-01,Middle East,Operations,Travel,411.12
+2024-08-01,Middle East,Operations,Professional Services,812.62
+2024-09-01,North America,Sales,Salaries,7091.63
+2024-09-01,North America,Sales,Rent,2164.93
+2024-09-01,North America,Sales,Utilities,504.18
+2024-09-01,North America,Sales,Travel,437.4
+2024-09-01,North America,Sales,Professional Services,850.42
+2024-09-01,North America,Marketing,Salaries,10267.85
+2024-09-01,North America,Marketing,Rent,3150.5
+2024-09-01,North America,Marketing,Utilities,661.74
+2024-09-01,North America,Marketing,Travel,527.99
+2024-09-01,North America,Marketing,Software,1002.21
+2024-09-01,North America,R&D,Rent,2026.7
+2024-09-01,North America,R&D,Utilities,656.95
+2024-09-01,North America,R&D,Travel,432.89
+2024-09-01,North America,R&D,Software,689.64
+2024-09-01,North America,R&D,Professional Services,977.57
+2024-09-01,North America,Admin,Salaries,10981.41
+2024-09-01,North America,Admin,Rent,2574.81
+2024-09-01,North America,Admin,Utilities,714.2
+2024-09-01,North America,Admin,Travel,631.24
+2024-09-01,North America,Admin,Software,874.6
+2024-09-01,North America,Admin,Professional Services,1110.3
+2024-09-01,North America,Operations,Salaries,9436.94
+2024-09-01,North America,Operations,Rent,2144.21
+2024-09-01,North America,Operations,Utilities,717.02
+2024-09-01,North America,Operations,Software,840.66
+2024-09-01,North America,Operations,Professional Services,989.52
+2024-09-01,Europe,Sales,Salaries,14436.69
+2024-09-01,Europe,Sales,Rent,3241.91
+2024-09-01,Europe,Sales,Utilities,837.26
+2024-09-01,Europe,Sales,Software,1163.55
+2024-09-01,Europe,Sales,Professional Services,1190.27
+2024-09-01,Europe,Marketing,Rent,3415.98
+2024-09-01,Europe,Marketing,Travel,768.36
+2024-09-01,Europe,Marketing,Professional Services,1341.2
+2024-09-01,Europe,R&D,Salaries,12820.58
+2024-09-01,Europe,R&D,Travel,586.12
+2024-09-01,Europe,R&D,Software,1074.84
+2024-09-01,Europe,R&D,Professional Services,1331.98
+2024-09-01,Europe,Admin,Salaries,16042.33
+2024-09-01,Europe,Admin,Rent,3924.54
+2024-09-01,Europe,Admin,Utilities,965.19
+2024-09-01,Europe,Admin,Travel,787.45
+2024-09-01,Europe,Admin,Professional Services,1752.03
+2024-09-01,Europe,Operations,Salaries,14972.59
+2024-09-01,Europe,Operations,Rent,4024.08
+2024-09-01,Europe,Operations,Travel,631.56
+2024-09-01,Europe,Operations,Software,1340.05
+2024-09-01,Europe,Operations,Professional Services,1522.04
+2024-09-01,Asia Pacific,Sales,Travel,457.16
+2024-09-01,Asia Pacific,Sales,Software,799.59
+2024-09-01,Asia Pacific,Marketing,Salaries,11228.74
+2024-09-01,Asia Pacific,Marketing,Rent,2185.88
+2024-09-01,Asia Pacific,Marketing,Utilities,743.62
+2024-09-01,Asia Pacific,Marketing,Travel,461.45
+2024-09-01,Asia Pacific,Marketing,Professional Services,1122.84
+2024-09-01,Asia Pacific,R&D,Salaries,12295.93
+2024-09-01,Asia Pacific,R&D,Rent,2926.25
+2024-09-01,Asia Pacific,R&D,Utilities,760.55
+2024-09-01,Asia Pacific,R&D,Travel,604.2
+2024-09-01,Asia Pacific,R&D,Software,1123.18
+2024-09-01,Asia Pacific,R&D,Professional Services,1138.43
+2024-09-01,Asia Pacific,Admin,Salaries,10085.71
+2024-09-01,Asia Pacific,Admin,Rent,2541.79
+2024-09-01,Asia Pacific,Admin,Utilities,727.65
+2024-09-01,Asia Pacific,Admin,Software,880.03
+2024-09-01,Asia Pacific,Admin,Professional Services,1123.83
+2024-09-01,Asia Pacific,Operations,Salaries,11688.23
+2024-09-01,Asia Pacific,Operations,Rent,3231.32
+2024-09-01,Asia Pacific,Operations,Utilities,841.64
+2024-09-01,Asia Pacific,Operations,Travel,656.89
+2024-09-01,Asia Pacific,Operations,Professional Services,1089.87
+2024-09-01,Latin America,Sales,Salaries,11639.38
+2024-09-01,Latin America,Sales,Rent,3265.98
+2024-09-01,Latin America,Sales,Utilities,913.73
+2024-09-01,Latin America,Sales,Travel,655.96
+2024-09-01,Latin America,Sales,Professional Services,1148.9
+2024-09-01,Latin America,Marketing,Salaries,8664.19
+2024-09-01,Latin America,Marketing,Rent,2164.5
+2024-09-01,Latin America,Marketing,Travel,499.93
+2024-09-01,Latin America,Marketing,Software,793.04
+2024-09-01,Latin America,R&D,Salaries,9971.36
+2024-09-01,Latin America,R&D,Rent,3022.33
+2024-09-01,Latin America,R&D,Utilities,776.54
+2024-09-01,Latin America,R&D,Travel,541.01
+2024-09-01,Latin America,R&D,Software,943.48
+2024-09-01,Latin America,Admin,Salaries,10670.65
+2024-09-01,Latin America,Admin,Rent,2471.07
+2024-09-01,Latin America,Admin,Utilities,662.81
+2024-09-01,Latin America,Admin,Travel,480.11
+2024-09-01,Latin America,Operations,Rent,3146.93
+2024-09-01,Latin America,Operations,Utilities,776.42
+2024-09-01,Latin America,Operations,Travel,488.67
+2024-09-01,Latin America,Operations,Software,840.16
+2024-09-01,Latin America,Operations,Professional Services,1002.16
+2024-09-01,Middle East,Sales,Salaries,7151.64
+2024-09-01,Middle East,Sales,Rent,2059.43
+2024-09-01,Middle East,Sales,Utilities,547.41
+2024-09-01,Middle East,Sales,Software,693.63
+2024-09-01,Middle East,Sales,Professional Services,833.28
+2024-09-01,Middle East,Marketing,Salaries,8243.15
+2024-09-01,Middle East,Marketing,Rent,1925.83
+2024-09-01,Middle East,Marketing,Utilities,630.62
+2024-09-01,Middle East,Marketing,Professional Services,870.47
+2024-09-01,Middle East,R&D,Salaries,11735.76
+2024-09-01,Middle East,R&D,Rent,2397.75
+2024-09-01,Middle East,R&D,Utilities,714.51
+2024-09-01,Middle East,R&D,Travel,488.44
+2024-09-01,Middle East,Admin,Rent,1694.63
+2024-09-01,Middle East,Admin,Utilities,600.08
+2024-09-01,Middle East,Admin,Travel,400.02
+2024-09-01,Middle East,Admin,Software,625.05
+2024-09-01,Middle East,Admin,Professional Services,869.09
+2024-09-01,Middle East,Operations,Salaries,11591.16
+2024-09-01,Middle East,Operations,Rent,2715.57
+2024-09-01,Middle East,Operations,Utilities,707.87
+2024-09-01,Middle East,Operations,Travel,543.52
+2024-09-01,Middle East,Operations,Software,804.63
+2024-09-01,Middle East,Operations,Professional Services,944.61
+2024-10-01,North America,Sales,Salaries,13620.55
+2024-10-01,North America,Sales,Rent,3314.84
+2024-10-01,North America,Sales,Travel,784.02
+2024-10-01,North America,Sales,Software,1328.54
+2024-10-01,North America,Marketing,Salaries,14628.16
+2024-10-01,North America,Marketing,Rent,3667.27
+2024-10-01,North America,Marketing,Utilities,938.36
+2024-10-01,North America,Marketing,Software,1222.93
+2024-10-01,North America,Marketing,Professional Services,1401.36
+2024-10-01,North America,R&D,Salaries,14253.01
+2024-10-01,North America,R&D,Rent,3504.38
+2024-10-01,North America,R&D,Utilities,980.88
+2024-10-01,North America,R&D,Travel,750.81
+2024-10-01,North America,R&D,Professional Services,1402.79
+2024-10-01,North America,Admin,Salaries,12753.97
+2024-10-01,North America,Admin,Rent,3526.9
+2024-10-01,North America,Admin,Utilities,756.19
+2024-10-01,North America,Admin,Travel,608.66
+2024-10-01,North America,Admin,Professional Services,1270.8
+2024-10-01,North America,Operations,Salaries,11245.99
+2024-10-01,North America,Operations,Rent,2641.36
+2024-10-01,North America,Operations,Travel,561.28
+2024-10-01,North America,Operations,Professional Services,1002.04
+2024-10-01,Europe,Sales,Salaries,17338.14
+2024-10-01,Europe,Sales,Rent,4107.33
+2024-10-01,Europe,Sales,Utilities,1053.53
+2024-10-01,Europe,Sales,Travel,659.01
+2024-10-01,Europe,Marketing,Salaries,13428.11
+2024-10-01,Europe,Marketing,Rent,3258.24
+2024-10-01,Europe,Marketing,Utilities,854.04
+2024-10-01,Europe,Marketing,Travel,663.67
+2024-10-01,Europe,Marketing,Software,1070.0
+2024-10-01,Europe,Marketing,Professional Services,1232.13
+2024-10-01,Europe,R&D,Salaries,14025.89
+2024-10-01,Europe,R&D,Rent,3079.21
+2024-10-01,Europe,R&D,Travel,620.06
+2024-10-01,Europe,R&D,Software,1009.22
+2024-10-01,Europe,R&D,Professional Services,1312.54
+2024-10-01,Europe,Admin,Salaries,14322.14
+2024-10-01,Europe,Admin,Utilities,1275.05
+2024-10-01,Europe,Admin,Travel,793.71
+2024-10-01,Europe,Admin,Software,1224.04
+2024-10-01,Europe,Admin,Professional Services,1718.8
+2024-10-01,Europe,Operations,Salaries,14177.46
+2024-10-01,Asia Pacific,Sales,Salaries,12115.82
+2024-10-01,Asia Pacific,Sales,Rent,2844.27
+2024-10-01,Asia Pacific,Sales,Professional Services,1236.11
+2024-10-01,Asia Pacific,Marketing,Salaries,12333.89
+2024-10-01,Asia Pacific,Marketing,Rent,3516.62
+2024-10-01,Asia Pacific,Marketing,Travel,601.82
+2024-10-01,Asia Pacific,Marketing,Professional Services,1361.3
+2024-10-01,Asia Pacific,R&D,Salaries,10740.39
+2024-10-01,Asia Pacific,R&D,Travel,479.87
+2024-10-01,Asia Pacific,R&D,Software,1006.52
+2024-10-01,Asia Pacific,R&D,Professional Services,1253.29
+2024-10-01,Asia Pacific,Admin,Salaries,13151.29
+2024-10-01,Asia Pacific,Admin,Utilities,842.79
+2024-10-01,Asia Pacific,Admin,Travel,619.31
+2024-10-01,Asia Pacific,Admin,Professional Services,1108.48
+2024-10-01,Asia Pacific,Operations,Salaries,16811.63
+2024-10-01,Asia Pacific,Operations,Rent,3481.04
+2024-10-01,Asia Pacific,Operations,Utilities,1095.7
+2024-10-01,Asia Pacific,Operations,Travel,710.72
+2024-10-01,Asia Pacific,Operations,Professional Services,1516.79
+2024-10-01,Latin America,Sales,Salaries,14971.65
+2024-10-01,Latin America,Sales,Rent,3532.52
+2024-10-01,Latin America,Sales,Utilities,872.62
+2024-10-01,Latin America,Sales,Software,1098.31
+2024-10-01,Latin America,Sales,Professional Services,1235.29
+2024-10-01,Latin America,Marketing,Rent,2903.44
+2024-10-01,Latin America,Marketing,Utilities,678.46
+2024-10-01,Latin America,Marketing,Travel,583.45
+2024-10-01,Latin America,Marketing,Software,957.33
+2024-10-01,Latin America,Marketing,Professional Services,1273.43
+2024-10-01,Latin America,R&D,Salaries,10975.5
+2024-10-01,Latin America,R&D,Rent,2895.5
+2024-10-01,Latin America,R&D,Travel,663.17
+2024-10-01,Latin America,R&D,Software,1143.9
+2024-10-01,Latin America,R&D,Professional Services,1179.58
+2024-10-01,Latin America,Admin,Salaries,14079.84
+2024-10-01,Latin America,Admin,Rent,3176.88
+2024-10-01,Latin America,Admin,Utilities,898.32
+2024-10-01,Latin America,Admin,Travel,636.55
+2024-10-01,Latin America,Admin,Professional Services,1281.79
+2024-10-01,Latin America,Operations,Salaries,13107.21
+2024-10-01,Latin America,Operations,Utilities,863.74
+2024-10-01,Latin America,Operations,Travel,655.06
+2024-10-01,Latin America,Operations,Software,1042.32
+2024-10-01,Latin America,Operations,Professional Services,1299.52
+2024-10-01,Middle East,Sales,Salaries,17263.39
+2024-10-01,Middle East,Sales,Rent,4569.48
+2024-10-01,Middle East,Sales,Software,1320.0
+2024-10-01,Middle East,Sales,Professional Services,1752.28
+2024-10-01,Middle East,Marketing,Salaries,19483.29
+2024-10-01,Middle East,Marketing,Utilities,1044.28
+2024-10-01,Middle East,Marketing,Travel,926.82
+2024-10-01,Middle East,Marketing,Software,1592.31
+2024-10-01,Middle East,Marketing,Professional Services,1557.59
+2024-10-01,Middle East,R&D,Salaries,14868.07
+2024-10-01,Middle East,R&D,Rent,3060.37
+2024-10-01,Middle East,R&D,Utilities,929.87
+2024-10-01,Middle East,R&D,Travel,574.16
+2024-10-01,Middle East,R&D,Software,1020.69
+2024-10-01,Middle East,R&D,Professional Services,1186.18
+2024-10-01,Middle East,Admin,Salaries,15445.39
+2024-10-01,Middle East,Admin,Rent,4137.3
+2024-10-01,Middle East,Admin,Utilities,1256.95
+2024-10-01,Middle East,Admin,Software,1467.04
+2024-10-01,Middle East,Admin,Professional Services,1596.01
+2024-10-01,Middle East,Operations,Rent,3772.04
+2024-10-01,Middle East,Operations,Utilities,987.53
+2024-10-01,Middle East,Operations,Professional Services,1468.35
+2024-11-01,North America,Sales,Salaries,16375.07
+2024-11-01,North America,Sales,Utilities,1061.85
+2024-11-01,North America,Sales,Travel,679.71
+2024-11-01,North America,Marketing,Rent,3129.57
+2024-11-01,North America,Marketing,Travel,644.4
+2024-11-01,North America,Marketing,Software,1113.46
+2024-11-01,North America,R&D,Salaries,12753.24
+2024-11-01,North America,R&D,Rent,2964.64
+2024-11-01,North America,R&D,Utilities,819.61
+2024-11-01,North America,R&D,Travel,630.84
+2024-11-01,North America,R&D,Software,1092.97
+2024-11-01,North America,R&D,Professional Services,1223.26
+2024-11-01,North America,Admin,Salaries,15280.19
+2024-11-01,North America,Admin,Rent,4329.33
+2024-11-01,North America,Admin,Utilities,1125.24
+2024-11-01,North America,Admin,Travel,868.37
+2024-11-01,North America,Admin,Software,1211.12
+2024-11-01,North America,Admin,Professional Services,1886.58
+2024-11-01,North America,Operations,Rent,4188.41
+2024-11-01,North America,Operations,Utilities,871.48
+2024-11-01,North America,Operations,Travel,660.97
+2024-11-01,North America,Operations,Software,1320.7
+2024-11-01,North America,Operations,Professional Services,1460.74
+2024-11-01,Europe,Sales,Utilities,1223.11
+2024-11-01,Europe,Sales,Travel,891.76
+2024-11-01,Europe,Sales,Software,1521.62
+2024-11-01,Europe,Sales,Professional Services,1491.78
+2024-11-01,Europe,Marketing,Rent,3540.07
+2024-11-01,Europe,Marketing,Utilities,743.26
+2024-11-01,Europe,Marketing,Travel,570.77
+2024-11-01,Europe,Marketing,Software,976.43
+2024-11-01,Europe,Marketing,Professional Services,1125.37
+2024-11-01,Europe,R&D,Salaries,16312.14
+2024-11-01,Europe,R&D,Utilities,1073.89
+2024-11-01,Europe,R&D,Travel,809.27
+2024-11-01,Europe,R&D,Software,1278.28
+2024-11-01,Europe,R&D,Professional Services,1522.51
+2024-11-01,Europe,Admin,Salaries,10741.6
+2024-11-01,Europe,Admin,Rent,2921.67
+2024-11-01,Europe,Admin,Utilities,782.91
+2024-11-01,Europe,Admin,Travel,570.65
+2024-11-01,Europe,Admin,Professional Services,1380.62
+2024-11-01,Europe,Operations,Salaries,12402.28
+2024-11-01,Europe,Operations,Utilities,1080.18
+2024-11-01,Europe,Operations,Travel,685.08
+2024-11-01,Europe,Operations,Software,1170.31
+2024-11-01,Europe,Operations,Professional Services,1403.34
+2024-11-01,Asia Pacific,Sales,Salaries,11996.61
+2024-11-01,Asia Pacific,Sales,Rent,3208.55
+2024-11-01,Asia Pacific,Sales,Utilities,760.9
+2024-11-01,Asia Pacific,Sales,Software,967.89
+2024-11-01,Asia Pacific,Sales,Professional Services,1275.24
+2024-11-01,Asia Pacific,Marketing,Salaries,8244.67
+2024-11-01,Asia Pacific,Marketing,Rent,2024.41
+2024-11-01,Asia Pacific,Marketing,Utilities,483.31
+2024-11-01,Asia Pacific,Marketing,Professional Services,833.9
+2024-11-01,Asia Pacific,R&D,Salaries,10497.0
+2024-11-01,Asia Pacific,R&D,Utilities,689.42
+2024-11-01,Asia Pacific,R&D,Travel,533.99
+2024-11-01,Asia Pacific,R&D,Software,903.14
+2024-11-01,Asia Pacific,Admin,Rent,2333.05
+2024-11-01,Asia Pacific,Admin,Utilities,519.93
+2024-11-01,Asia Pacific,Admin,Travel,419.59
+2024-11-01,Asia Pacific,Admin,Software,701.83
+2024-11-01,Asia Pacific,Operations,Salaries,8069.23
+2024-11-01,Asia Pacific,Operations,Rent,1974.29
+2024-11-01,Asia Pacific,Operations,Utilities,623.65
+2024-11-01,Asia Pacific,Operations,Professional Services,837.53
+2024-11-01,Latin America,Sales,Rent,1620.73
+2024-11-01,Latin America,Sales,Travel,419.91
+2024-11-01,Latin America,Sales,Software,611.52
+2024-11-01,Latin America,Sales,Professional Services,872.69
+2024-11-01,Latin America,Marketing,Salaries,9570.18
+2024-11-01,Latin America,Marketing,Rent,2594.44
+2024-11-01,Latin America,Marketing,Utilities,588.2
+2024-11-01,Latin America,Marketing,Travel,528.22
+2024-11-01,Latin America,Marketing,Software,786.33
+2024-11-01,Latin America,Marketing,Professional Services,1106.54
+2024-11-01,Latin America,R&D,Salaries,8186.23
+2024-11-01,Latin America,R&D,Rent,1781.56
+2024-11-01,Latin America,R&D,Utilities,515.0
+2024-11-01,Latin America,Admin,Salaries,9150.53
+2024-11-01,Latin America,Admin,Utilities,510.03
+2024-11-01,Latin America,Admin,Travel,480.54
+2024-11-01,Latin America,Admin,Software,741.07
+2024-11-01,Latin America,Admin,Professional Services,758.07
+2024-11-01,Latin America,Operations,Salaries,6573.28
+2024-11-01,Latin America,Operations,Rent,1718.78
+2024-11-01,Latin America,Operations,Utilities,556.74
+2024-11-01,Latin America,Operations,Travel,398.88
+2024-11-01,Middle East,Sales,Salaries,13740.36
+2024-11-01,Middle East,Sales,Rent,3193.24
+2024-11-01,Middle East,Sales,Utilities,900.98
+2024-11-01,Middle East,Sales,Travel,787.42
+2024-11-01,Middle East,Sales,Software,1234.55
+2024-11-01,Middle East,Sales,Professional Services,1224.76
+2024-11-01,Middle East,Marketing,Salaries,14213.13
+2024-11-01,Middle East,Marketing,Utilities,1053.36
+2024-11-01,Middle East,R&D,Salaries,13171.3
+2024-11-01,Middle East,R&D,Rent,3485.47
+2024-11-01,Middle East,R&D,Utilities,939.33
+2024-11-01,Middle East,R&D,Travel,724.8
+2024-11-01,Middle East,R&D,Software,1187.74
+2024-11-01,Middle East,R&D,Professional Services,1459.56
+2024-11-01,Middle East,Admin,Salaries,16524.35
+2024-11-01,Middle East,Admin,Rent,4155.85
+2024-11-01,Middle East,Admin,Utilities,872.48
+2024-11-01,Middle East,Admin,Professional Services,1758.48
+2024-11-01,Middle East,Operations,Rent,3885.52
+2024-11-01,Middle East,Operations,Utilities,966.19
+2024-11-01,Middle East,Operations,Travel,620.75
+2024-11-01,Middle East,Operations,Software,1291.05
+2024-12-01,North America,Sales,Salaries,13382.84
+2024-12-01,North America,Sales,Rent,3043.6
+2024-12-01,North America,Sales,Utilities,807.32
+2024-12-01,North America,Sales,Travel,509.67
+2024-12-01,North America,Sales,Software,1042.38
+2024-12-01,North America,Sales,Professional Services,1305.14
+2024-12-01,North America,Marketing,Salaries,10609.05
+2024-12-01,North America,Marketing,Utilities,816.94
+2024-12-01,North America,R&D,Salaries,12443.45
+2024-12-01,North America,R&D,Software,928.17
+2024-12-01,North America,R&D,Professional Services,1468.2
+2024-12-01,North America,Admin,Salaries,10336.6
+2024-12-01,North America,Admin,Rent,3297.03
+2024-12-01,North America,Admin,Utilities,809.86
+2024-12-01,North America,Admin,Travel,590.36
+2024-12-01,North America,Admin,Software,978.46
+2024-12-01,North America,Operations,Rent,2575.21
+2024-12-01,North America,Operations,Utilities,598.52
+2024-12-01,North America,Operations,Travel,551.53
+2024-12-01,North America,Operations,Software,772.75
+2024-12-01,North America,Operations,Professional Services,1095.36
+2024-12-01,Europe,Sales,Rent,3224.9
+2024-12-01,Europe,Sales,Utilities,788.76
+2024-12-01,Europe,Sales,Travel,770.8
+2024-12-01,Europe,Sales,Software,1196.71
+2024-12-01,Europe,Sales,Professional Services,1199.22
+2024-12-01,Europe,Marketing,Rent,3961.47
+2024-12-01,Europe,Marketing,Software,1092.81
+2024-12-01,Europe,Marketing,Professional Services,1269.78
+2024-12-01,Europe,R&D,Salaries,16107.65
+2024-12-01,Europe,R&D,Utilities,1154.31
+2024-12-01,Europe,R&D,Travel,803.81
+2024-12-01,Europe,R&D,Software,1527.84
+2024-12-01,Europe,R&D,Professional Services,1730.57
+2024-12-01,Europe,Admin,Salaries,18363.46
+2024-12-01,Europe,Admin,Rent,4456.26
+2024-12-01,Europe,Admin,Utilities,1321.43
+2024-12-01,Europe,Admin,Travel,884.47
+2024-12-01,Europe,Admin,Software,1652.26
+2024-12-01,Europe,Admin,Professional Services,1504.84
+2024-12-01,Europe,Operations,Salaries,15038.74
+2024-12-01,Europe,Operations,Rent,3654.85
+2024-12-01,Europe,Operations,Utilities,900.95
+2024-12-01,Europe,Operations,Travel,652.86
+2024-12-01,Europe,Operations,Software,1238.56
+2024-12-01,Europe,Operations,Professional Services,1316.62
+2024-12-01,Asia Pacific,Sales,Rent,2508.41
+2024-12-01,Asia Pacific,Sales,Utilities,864.98
+2024-12-01,Asia Pacific,Sales,Software,967.45
+2024-12-01,Asia Pacific,Sales,Professional Services,1292.27
+2024-12-01,Asia Pacific,Marketing,Utilities,1071.58
+2024-12-01,Asia Pacific,Marketing,Travel,681.24
+2024-12-01,Asia Pacific,Marketing,Professional Services,1343.02
+2024-12-01,Asia Pacific,R&D,Salaries,13769.47
+2024-12-01,Asia Pacific,R&D,Utilities,936.77
+2024-12-01,Asia Pacific,R&D,Travel,814.67
+2024-12-01,Asia Pacific,R&D,Professional Services,1281.82
+2024-12-01,Asia Pacific,Admin,Salaries,13242.25
+2024-12-01,Asia Pacific,Admin,Rent,2716.31
+2024-12-01,Asia Pacific,Admin,Utilities,792.58
+2024-12-01,Asia Pacific,Admin,Travel,636.68
+2024-12-01,Asia Pacific,Admin,Software,906.34
+2024-12-01,Asia Pacific,Admin,Professional Services,1316.27
+2024-12-01,Asia Pacific,Operations,Salaries,13060.96
+2024-12-01,Asia Pacific,Operations,Rent,2935.47
+2024-12-01,Asia Pacific,Operations,Utilities,842.06
+2024-12-01,Asia Pacific,Operations,Travel,656.35
+2024-12-01,Asia Pacific,Operations,Software,1235.47
+2024-12-01,Asia Pacific,Operations,Professional Services,1486.18
+2024-12-01,Latin America,Sales,Salaries,18386.3
+2024-12-01,Latin America,Sales,Utilities,1108.15
+2024-12-01,Latin America,Sales,Travel,800.36
+2024-12-01,Latin America,Sales,Software,1191.56
+2024-12-01,Latin America,Sales,Professional Services,1617.85
+2024-12-01,Latin America,Marketing,Rent,3276.27
+2024-12-01,Latin America,Marketing,Utilities,816.45
+2024-12-01,Latin America,Marketing,Travel,622.46
+2024-12-01,Latin America,Marketing,Software,1173.46
+2024-12-01,Latin America,Marketing,Professional Services,1356.11
+2024-12-01,Latin America,R&D,Rent,3760.31
+2024-12-01,Latin America,R&D,Utilities,1022.07
+2024-12-01,Latin America,R&D,Travel,764.48
+2024-12-01,Latin America,R&D,Professional Services,1350.38
+2024-12-01,Latin America,Admin,Salaries,17104.29
+2024-12-01,Latin America,Admin,Rent,3595.94
+2024-12-01,Latin America,Admin,Utilities,914.81
+2024-12-01,Latin America,Admin,Travel,875.99
+2024-12-01,Latin America,Admin,Software,1167.69
+2024-12-01,Latin America,Admin,Professional Services,1630.15
+2024-12-01,Latin America,Operations,Salaries,13160.84
+2024-12-01,Latin America,Operations,Rent,3091.85
+2024-12-01,Latin America,Operations,Utilities,866.26
+2024-12-01,Latin America,Operations,Travel,658.48
+2024-12-01,Latin America,Operations,Professional Services,1344.05
+2024-12-01,Middle East,Sales,Salaries,14309.61
+2024-12-01,Middle East,Sales,Rent,3334.97
+2024-12-01,Middle East,Sales,Utilities,822.49
+2024-12-01,Middle East,Sales,Travel,729.33
+2024-12-01,Middle East,Sales,Software,1230.69
+2024-12-01,Middle East,Sales,Professional Services,1287.75
+2024-12-01,Middle East,Marketing,Utilities,925.15
+2024-12-01,Middle East,Marketing,Travel,770.75
+2024-12-01,Middle East,Marketing,Software,1059.73
+2024-12-01,Middle East,Marketing,Professional Services,1158.43
+2024-12-01,Middle East,R&D,Salaries,14590.09
+2024-12-01,Middle East,R&D,Rent,2761.71
+2024-12-01,Middle East,R&D,Software,1122.14
+2024-12-01,Middle East,R&D,Professional Services,1161.45
+2024-12-01,Middle East,Admin,Rent,3626.66
+2024-12-01,Middle East,Admin,Utilities,897.63
+2024-12-01,Middle East,Admin,Software,1276.72
+2024-12-01,Middle East,Admin,Professional Services,1484.26
+2024-12-01,Middle East,Operations,Rent,2972.11
+2024-12-01,Middle East,Operations,Travel,618.36
+2024-12-01,Middle East,Operations,Software,914.23
+2024-12-01,Middle East,Operations,Professional Services,1145.69

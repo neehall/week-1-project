@@ -1,0 +1,481 @@
+date,region,cost_category,amount
+2023-01-01,North America,COGS,55293.74
+2023-01-01,North America,Logistics,16636.31
+2023-01-01,North America,Marketing,11932.34
+2023-01-01,North America,Admin,6595.87
+2023-01-01,Europe,COGS,67051.23
+2023-01-01,Europe,Logistics,18004.31
+2023-01-01,Europe,Marketing,11048.56
+2023-01-01,Europe,Admin,8167.26
+2023-01-01,Asia Pacific,COGS,50338.22
+2023-01-01,Asia Pacific,Logistics,12413.57
+2023-01-01,Asia Pacific,Marketing,9789.18
+2023-01-01,Asia Pacific,Admin,5848.98
+2023-01-01,Latin America,COGS,41120.62
+2023-01-01,Latin America,Logistics,9377.06
+2023-01-01,Latin America,Marketing,8886.94
+2023-01-01,Latin America,Admin,5607.49
+2023-01-01,Middle East,COGS,53427.88
+2023-01-01,Middle East,Logistics,17001.28
+2023-01-01,Middle East,Marketing,12490.93
+2023-01-01,Middle East,Admin,8070.89
+2023-02-01,North America,COGS,41115.27
+2023-02-01,North America,Logistics,9558.98
+2023-02-01,North America,Marketing,7444.54
+2023-02-01,North America,Admin,5841.4
+2023-02-01,Europe,COGS,66491.26
+2023-02-01,Europe,Logistics,14737.53
+2023-02-01,Europe,Marketing,11209.31
+2023-02-01,Europe,Admin,7704.02
+2023-02-01,Asia Pacific,COGS,36778.96
+2023-02-01,Asia Pacific,Logistics,10952.19
+2023-02-01,Asia Pacific,Marketing,7596.55
+2023-02-01,Asia Pacific,Admin,5797.32
+2023-02-01,Latin America,COGS,53811.56
+2023-02-01,Latin America,Logistics,13831.45
+2023-02-01,Latin America,Marketing,9234.83
+2023-02-01,Latin America,Admin,7174.06
+2023-02-01,Middle East,COGS,58113.02
+2023-02-01,Middle East,Logistics,15019.75
+2023-02-01,Middle East,Marketing,12687.2
+2023-02-01,Middle East,Admin,7152.44
+2023-03-01,North America,COGS,36161.05
+2023-03-01,North America,Logistics,12289.23
+2023-03-01,North America,Marketing,8906.13
+2023-03-01,North America,Admin,6005.84
+2023-03-01,Europe,COGS,59721.37
+2023-03-01,Europe,Logistics,16456.96
+2023-03-01,Europe,Marketing,10786.51
+2023-03-01,Europe,Admin,7129.9
+2023-03-01,Asia Pacific,COGS,56484.84
+2023-03-01,Asia Pacific,Logistics,15491.74
+2023-03-01,Asia Pacific,Marketing,12301.74
+2023-03-01,Asia Pacific,Admin,7904.23
+2023-03-01,Latin America,COGS,54362.38
+2023-03-01,Latin America,Logistics,13405.9
+2023-03-01,Latin America,Marketing,9179.08
+2023-03-01,Latin America,Admin,6986.61
+2023-03-01,Middle East,COGS,41710.95
+2023-03-01,Middle East,Logistics,12649.3
+2023-03-01,Middle East,Marketing,7892.92
+2023-03-01,Middle East,Admin,4960.64
+2023-04-01,North America,COGS,41440.78
+2023-04-01,North America,Logistics,12352.57
+2023-04-01,North America,Marketing,8986.42
+2023-04-01,North America,Admin,6391.83
+2023-04-01,Europe,COGS,54289.73
+2023-04-01,Europe,Logistics,16298.84
+2023-04-01,Europe,Marketing,10055.55
+2023-04-01,Europe,Admin,6381.37
+2023-04-01,Asia Pacific,COGS,40896.61
+2023-04-01,Asia Pacific,Logistics,10106.83
+2023-04-01,Asia Pacific,Marketing,6888.63
+2023-04-01,Asia Pacific,Admin,5113.48
+2023-04-01,Latin America,COGS,42608.51
+2023-04-01,Latin America,Logistics,10556.97
+2023-04-01,Latin America,Marketing,7760.47
+2023-04-01,Latin America,Admin,5045.67
+2023-04-01,Middle East,COGS,52547.61
+2023-04-01,Middle East,Logistics,12810.32
+2023-04-01,Middle East,Marketing,9707.59
+2023-04-01,Middle East,Admin,8322.22
+2023-05-01,North America,COGS,63842.81
+2023-05-01,North America,Logistics,14934.21
+2023-05-01,North America,Marketing,13742.43
+2023-05-01,North America,Admin,8702.82
+2023-05-01,Europe,COGS,53839.71
+2023-05-01,Europe,Logistics,13582.6
+2023-05-01,Europe,Marketing,9610.12
+2023-05-01,Europe,Admin,8169.78
+2023-05-01,Asia Pacific,COGS,42886.57
+2023-05-01,Asia Pacific,Logistics,11826.69
+2023-05-01,Asia Pacific,Marketing,9642.12
+2023-05-01,Asia Pacific,Admin,5670.01
+2023-05-01,Latin America,COGS,63280.25
+2023-05-01,Latin America,Logistics,16691.24
+2023-05-01,Latin America,Marketing,11505.87
+2023-05-01,Latin America,Admin,8129.15
+2023-05-01,Middle East,COGS,53100.32
+2023-05-01,Middle East,Logistics,11861.57
+2023-05-01,Middle East,Marketing,9906.49
+2023-05-01,Middle East,Admin,5843.73
+2023-06-01,North America,COGS,42549.16
+2023-06-01,North America,Logistics,10681.63
+2023-06-01,North America,Marketing,7900.6
+2023-06-01,North America,Admin,6135.56
+2023-06-01,Europe,COGS,40710.83
+2023-06-01,Europe,Logistics,9862.41
+2023-06-01,Europe,Marketing,6889.47
+2023-06-01,Europe,Admin,4945.44
+2023-06-01,Asia Pacific,COGS,36533.79
+2023-06-01,Asia Pacific,Logistics,8518.72
+2023-06-01,Asia Pacific,Marketing,6967.96
+2023-06-01,Asia Pacific,Admin,3746.06
+2023-06-01,Latin America,COGS,44515.32
+2023-06-01,Latin America,Logistics,13467.5
+2023-06-01,Latin America,Marketing,9120.07
+2023-06-01,Latin America,Admin,5904.63
+2023-06-01,Middle East,COGS,36752.44
+2023-06-01,Middle East,Logistics,10386.24
+2023-06-01,Middle East,Marketing,7599.79
+2023-06-01,Middle East,Admin,4420.41
+2023-07-01,North America,COGS,55689.71
+2023-07-01,North America,Logistics,11840.6
+2023-07-01,North America,Marketing,10116.2
+2023-07-01,North America,Admin,5857.24
+2023-07-01,Europe,COGS,42912.53
+2023-07-01,Europe,Logistics,12832.86
+2023-07-01,Europe,Marketing,9810.85
+2023-07-01,Europe,Admin,6617.08
+2023-07-01,Asia Pacific,COGS,35800.62
+2023-07-01,Asia Pacific,Logistics,7800.61
+2023-07-01,Asia Pacific,Marketing,5482.26
+2023-07-01,Asia Pacific,Admin,4313.61
+2023-07-01,Latin America,COGS,42200.59
+2023-07-01,Latin America,Logistics,11187.32
+2023-07-01,Latin America,Marketing,7258.93
+2023-07-01,Latin America,Admin,5815.85
+2023-07-01,Middle East,COGS,36567.61
+2023-07-01,Middle East,Logistics,8996.82
+2023-07-01,Middle East,Marketing,8233.04
+2023-07-01,Middle East,Admin,4365.38
+2023-08-01,North America,COGS,27908.9
+2023-08-01,North America,Logistics,8711.32
+2023-08-01,North America,Marketing,6361.52
+2023-08-01,North America,Admin,4078.13
+2023-08-01,Europe,COGS,54040.24
+2023-08-01,Europe,Logistics,12962.27
+2023-08-01,Europe,Marketing,9133.19
+2023-08-01,Europe,Admin,6970.58
+2023-08-01,Asia Pacific,COGS,41324.17
+2023-08-01,Asia Pacific,Logistics,10060.43
+2023-08-01,Asia Pacific,Marketing,9226.44
+2023-08-01,Asia Pacific,Admin,5318.84
+2023-08-01,Latin America,COGS,45576.13
+2023-08-01,Latin America,Logistics,11686.3
+2023-08-01,Latin America,Marketing,10864.98
+2023-08-01,Latin America,Admin,5903.49
+2023-08-01,Middle East,COGS,32562.24
+2023-08-01,Middle East,Logistics,9379.35
+2023-08-01,Middle East,Marketing,5747.99
+2023-08-01,Middle East,Admin,3976.04
+2023-09-01,North America,COGS,50931.81
+2023-09-01,North America,Logistics,11900.36
+2023-09-01,North America,Marketing,7970.01
+2023-09-01,North America,Admin,5081.4
+2023-09-01,Europe,COGS,28506.06
+2023-09-01,Europe,Logistics,9000.95
+2023-09-01,Europe,Marketing,5682.0
+2023-09-01,Europe,Admin,4280.86
+2023-09-01,Asia Pacific,COGS,43747.63
+2023-09-01,Asia Pacific,Logistics,10363.12
+2023-09-01,Asia Pacific,Marketing,9320.98
+2023-09-01,Asia Pacific,Admin,6062.43
+2023-09-01,Latin America,COGS,38894.01
+2023-09-01,Latin America,Logistics,10346.18
+2023-09-01,Latin America,Marketing,9868.9
+2023-09-01,Latin America,Admin,5652.12
+2023-09-01,Middle East,COGS,33566.42
+2023-09-01,Middle East,Logistics,9420.65
+2023-09-01,Middle East,Marketing,7657.13
+2023-09-01,Middle East,Admin,4203.19
+2023-10-01,North America,COGS,42130.49
+2023-10-01,North America,Logistics,13319.42
+2023-10-01,North America,Marketing,10221.8
+2023-10-01,North America,Admin,5776.67
+2023-10-01,Europe,COGS,29959.89
+2023-10-01,Europe,Logistics,9333.24
+2023-10-01,Europe,Marketing,6317.93
+2023-10-01,Europe,Admin,4625.83
+2023-10-01,Asia Pacific,COGS,45851.44
+2023-10-01,Asia Pacific,Logistics,13402.75
+2023-10-01,Asia Pacific,Marketing,7921.33
+2023-10-01,Asia Pacific,Admin,5450.0
+2023-10-01,Latin America,COGS,51069.1
+2023-10-01,Latin America,Logistics,11501.93
+2023-10-01,Latin America,Marketing,9465.27
+2023-10-01,Latin America,Admin,6451.32
+2023-10-01,Middle East,COGS,49271.83
+2023-10-01,Middle East,Logistics,12410.65
+2023-10-01,Middle East,Marketing,9197.9
+2023-10-01,Middle East,Admin,6230.77
+2023-11-01,North America,COGS,50426.85
+2023-11-01,North America,Logistics,11944.34
+2023-11-01,North America,Marketing,8396.72
+2023-11-01,North America,Admin,5577.5
+2023-11-01,Europe,COGS,52305.88
+2023-11-01,Europe,Logistics,11230.01
+2023-11-01,Europe,Marketing,8311.53
+2023-11-01,Europe,Admin,6549.67
+2023-11-01,Asia Pacific,COGS,35981.72
+2023-11-01,Asia Pacific,Logistics,8246.01
+2023-11-01,Asia Pacific,Marketing,5857.03
+2023-11-01,Asia Pacific,Admin,4923.87
+2023-11-01,Latin America,COGS,31122.84
+2023-11-01,Latin America,Logistics,7950.45
+2023-11-01,Latin America,Marketing,5886.73
+2023-11-01,Latin America,Admin,3798.93
+2023-11-01,Middle East,COGS,27541.92
+2023-11-01,Middle East,Logistics,7048.44
+2023-11-01,Middle East,Marketing,6271.11
+2023-11-01,Middle East,Admin,4290.09
+2023-12-01,North America,COGS,39827.72
+2023-12-01,North America,Logistics,11249.39
+2023-12-01,North America,Marketing,9373.5
+2023-12-01,North America,Admin,6208.77
+2023-12-01,Europe,COGS,29551.83
+2023-12-01,Europe,Logistics,8024.9
+2023-12-01,Europe,Marketing,6043.46
+2023-12-01,Europe,Admin,4449.61
+2023-12-01,Asia Pacific,COGS,36959.75
+2023-12-01,Asia Pacific,Logistics,10964.96
+2023-12-01,Asia Pacific,Marketing,8608.73
+2023-12-01,Asia Pacific,Admin,5017.58
+2023-12-01,Latin America,COGS,46744.71
+2023-12-01,Latin America,Logistics,16236.33
+2023-12-01,Latin America,Marketing,9501.72
+2023-12-01,Latin America,Admin,7942.62
+2023-12-01,Middle East,COGS,63909.95
+2023-12-01,Middle East,Logistics,16249.08
+2023-12-01,Middle East,Marketing,12111.22
+2023-12-01,Middle East,Admin,7767.98
+2024-01-01,North America,COGS,50281.5
+2024-01-01,North America,Logistics,15222.38
+2024-01-01,North America,Marketing,11342.77
+2024-01-01,North America,Admin,8337.44
+2024-01-01,Europe,COGS,45664.84
+2024-01-01,Europe,Logistics,13140.12
+2024-01-01,Europe,Marketing,8796.34
+2024-01-01,Europe,Admin,5624.54
+2024-01-01,Asia Pacific,COGS,46542.75
+2024-01-01,Asia Pacific,Logistics,11707.55
+2024-01-01,Asia Pacific,Marketing,9167.13
+2024-01-01,Asia Pacific,Admin,6109.29
+2024-01-01,Latin America,COGS,41799.84
+2024-01-01,Latin America,Logistics,12209.24
+2024-01-01,Latin America,Marketing,8145.07
+2024-01-01,Latin America,Admin,6561.05
+2024-01-01,Middle East,COGS,60113.26
+2024-01-01,Middle East,Logistics,15292.36
+2024-01-01,Middle East,Marketing,12220.44
+2024-01-01,Middle East,Admin,8904.22
+2024-02-01,North America,COGS,60568.9
+2024-02-01,North America,Logistics,14945.48
+2024-02-01,North America,Marketing,11542.76
+2024-02-01,North America,Admin,6929.79
+2024-02-01,Europe,COGS,52832.45
+2024-02-01,Europe,Logistics,16373.82
+2024-02-01,Europe,Marketing,12857.88
+2024-02-01,Europe,Admin,6881.19
+2024-02-01,Asia Pacific,COGS,47734.95
+2024-02-01,Asia Pacific,Logistics,15470.5
+2024-02-01,Asia Pacific,Marketing,9512.42
+2024-02-01,Asia Pacific,Admin,8192.15
+2024-02-01,Latin America,COGS,45260.75
+2024-02-01,Latin America,Logistics,11566.68
+2024-02-01,Latin America,Marketing,8180.41
+2024-02-01,Latin America,Admin,5754.28
+2024-02-01,Middle East,COGS,67857.12
+2024-02-01,Middle East,Logistics,14778.92
+2024-02-01,Middle East,Marketing,12293.23
+2024-02-01,Middle East,Admin,7010.41
+2024-03-01,North America,COGS,49898.05
+2024-03-01,North America,Logistics,15049.49
+2024-03-01,North America,Marketing,11311.96
+2024-03-01,North America,Admin,7305.61
+2024-03-01,Europe,COGS,56605.77
+2024-03-01,Europe,Logistics,15243.09
+2024-03-01,Europe,Marketing,10465.85
+2024-03-01,Europe,Admin,7202.65
+2024-03-01,Asia Pacific,COGS,57708.73
+2024-03-01,Asia Pacific,Logistics,15375.29
+2024-03-01,Asia Pacific,Marketing,11416.58
+2024-03-01,Asia Pacific,Admin,9096.65
+2024-03-01,Latin America,COGS,53273.65
+2024-03-01,Latin America,Logistics,13800.36
+2024-03-01,Latin America,Marketing,9353.23
+2024-03-01,Latin America,Admin,7347.39
+2024-03-01,Middle East,COGS,55778.02
+2024-03-01,Middle East,Logistics,15322.96
+2024-03-01,Middle East,Marketing,11313.4
+2024-03-01,Middle East,Admin,7166.5
+2024-04-01,North America,COGS,45347.13
+2024-04-01,North America,Logistics,10494.25
+2024-04-01,North America,Marketing,7739.36
+2024-04-01,North America,Admin,5715.15
+2024-04-01,Europe,COGS,59326.63
+2024-04-01,Europe,Logistics,15166.38
+2024-04-01,Europe,Marketing,10427.53
+2024-04-01,Europe,Admin,6735.52
+2024-04-01,Asia Pacific,COGS,69983.04
+2024-04-01,Asia Pacific,Logistics,19888.92
+2024-04-01,Asia Pacific,Marketing,11634.54
+2024-04-01,Asia Pacific,Admin,9679.96
+2024-04-01,Latin America,COGS,48786.04
+2024-04-01,Latin America,Logistics,15062.51
+2024-04-01,Latin America,Marketing,11619.91
+2024-04-01,Latin America,Admin,6263.52
+2024-04-01,Middle East,COGS,54279.53
+2024-04-01,Middle East,Logistics,12377.62
+2024-04-01,Middle East,Marketing,9767.41
+2024-04-01,Middle East,Admin,6479.5
+2024-05-01,North America,COGS,47976.89
+2024-05-01,North America,Logistics,12326.15
+2024-05-01,North America,Marketing,7529.25
+2024-05-01,North America,Admin,6530.92
+2024-05-01,Europe,COGS,55531.74
+2024-05-01,Europe,Logistics,17435.44
+2024-05-01,Europe,Marketing,10473.98
+2024-05-01,Europe,Admin,9103.0
+2024-05-01,Asia Pacific,COGS,55579.27
+2024-05-01,Asia Pacific,Logistics,12439.84
+2024-05-01,Asia Pacific,Marketing,11903.75
+2024-05-01,Asia Pacific,Admin,6089.21
+2024-05-01,Latin America,COGS,36477.5
+2024-05-01,Latin America,Logistics,11798.54
+2024-05-01,Latin America,Marketing,7430.76
+2024-05-01,Latin America,Admin,6118.03
+2024-05-01,Middle East,COGS,45548.12
+2024-05-01,Middle East,Logistics,12016.08
+2024-05-01,Middle East,Marketing,9158.82
+2024-05-01,Middle East,Admin,7278.94
+2024-06-01,North America,COGS,48972.02
+2024-06-01,North America,Logistics,15656.08
+2024-06-01,North America,Marketing,9216.28
+2024-06-01,North America,Admin,7725.06
+2024-06-01,Europe,COGS,61166.83
+2024-06-01,Europe,Logistics,15976.43
+2024-06-01,Europe,Marketing,12456.87
+2024-06-01,Europe,Admin,6499.88
+2024-06-01,Asia Pacific,COGS,32790.61
+2024-06-01,Asia Pacific,Logistics,9866.22
+2024-06-01,Asia Pacific,Marketing,7933.18
+2024-06-01,Asia Pacific,Admin,5118.56
+2024-06-01,Latin America,COGS,48845.29
+2024-06-01,Latin America,Logistics,15550.73
+2024-06-01,Latin America,Marketing,9892.71
+2024-06-01,Latin America,Admin,6764.5
+2024-06-01,Middle East,COGS,57966.65
+2024-06-01,Middle East,Logistics,13963.44
+2024-06-01,Middle East,Marketing,8779.15
+2024-06-01,Middle East,Admin,6991.38
+2024-07-01,North America,COGS,33675.01
+2024-07-01,North America,Logistics,8558.32
+2024-07-01,North America,Marketing,5446.84
+2024-07-01,North America,Admin,3532.9
+2024-07-01,Europe,COGS,38577.38
+2024-07-01,Europe,Logistics,8880.54
+2024-07-01,Europe,Marketing,7319.02
+2024-07-01,Europe,Admin,4680.16
+2024-07-01,Asia Pacific,COGS,38809.55
+2024-07-01,Asia Pacific,Logistics,13132.06
+2024-07-01,Asia Pacific,Marketing,8169.0
+2024-07-01,Asia Pacific,Admin,5926.68
+2024-07-01,Latin America,COGS,48701.33
+2024-07-01,Latin America,Logistics,14073.55
+2024-07-01,Latin America,Marketing,8339.61
+2024-07-01,Latin America,Admin,6230.83
+2024-07-01,Middle East,COGS,38924.26
+2024-07-01,Middle East,Logistics,9265.87
+2024-07-01,Middle East,Marketing,6984.42
+2024-07-01,Middle East,Admin,4882.21
+2024-08-01,North America,COGS,33818.7
+2024-08-01,North America,Logistics,9524.6
+2024-08-01,North America,Marketing,7192.48
+2024-08-01,North America,Admin,4486.91
+2024-08-01,Europe,COGS,33876.12
+2024-08-01,Europe,Logistics,10131.18
+2024-08-01,Europe,Marketing,6995.99
+2024-08-01,Europe,Admin,4248.01
+2024-08-01,Asia Pacific,COGS,36948.36
+2024-08-01,Asia Pacific,Logistics,9112.5
+2024-08-01,Asia Pacific,Marketing,7609.36
+2024-08-01,Asia Pacific,Admin,5062.94
+2024-08-01,Latin America,COGS,45848.36
+2024-08-01,Latin America,Logistics,12241.98
+2024-08-01,Latin America,Marketing,8295.89
+2024-08-01,Latin America,Admin,6358.05
+2024-08-01,Middle East,COGS,39479.52
+2024-08-01,Middle East,Logistics,11155.38
+2024-08-01,Middle East,Marketing,7724.77
+2024-08-01,Middle East,Admin,5395.05
+2024-09-01,North America,COGS,48746.1
+2024-09-01,North America,Logistics,13120.06
+2024-09-01,North America,Marketing,8746.0
+2024-09-01,North America,Admin,5859.75
+2024-09-01,Europe,COGS,42619.76
+2024-09-01,Europe,Logistics,13253.35
+2024-09-01,Europe,Marketing,9010.54
+2024-09-01,Europe,Admin,5324.12
+2024-09-01,Asia Pacific,COGS,31345.49
+2024-09-01,Asia Pacific,Logistics,6570.23
+2024-09-01,Asia Pacific,Marketing,5311.53
+2024-09-01,Asia Pacific,Admin,3601.88
+2024-09-01,Latin America,COGS,29028.66
+2024-09-01,Latin America,Logistics,8795.66
+2024-09-01,Latin America,Marketing,5253.77
+2024-09-01,Latin America,Admin,4501.72
+2024-09-01,Middle East,COGS,44653.4
+2024-09-01,Middle East,Logistics,11095.38
+2024-09-01,Middle East,Marketing,9567.49
+2024-09-01,Middle East,Admin,5484.65
+2024-10-01,North America,COGS,40929.35
+2024-10-01,North America,Logistics,11021.1
+2024-10-01,North America,Marketing,7783.62
+2024-10-01,North America,Admin,4525.39
+2024-10-01,Europe,COGS,46247.51
+2024-10-01,Europe,Logistics,11225.94
+2024-10-01,Europe,Marketing,9080.87
+2024-10-01,Europe,Admin,4955.84
+2024-10-01,Asia Pacific,COGS,32562.59
+2024-10-01,Asia Pacific,Logistics,7749.1
+2024-10-01,Asia Pacific,Marketing,5816.01
+2024-10-01,Asia Pacific,Admin,4744.01
+2024-10-01,Latin America,COGS,51495.71
+2024-10-01,Latin America,Logistics,14879.21
+2024-10-01,Latin America,Marketing,11619.02
+2024-10-01,Latin America,Admin,6026.65
+2024-10-01,Middle East,COGS,36715.8
+2024-10-01,Middle East,Logistics,8842.35
+2024-10-01,Middle East,Marketing,8168.91
+2024-10-01,Middle East,Admin,4957.97
+2024-11-01,North America,COGS,36577.0
+2024-11-01,North America,Logistics,9852.76
+2024-11-01,North America,Marketing,9169.82
+2024-11-01,North America,Admin,4703.65
+2024-11-01,Europe,COGS,32772.54
+2024-11-01,Europe,Logistics,9293.39
+2024-11-01,Europe,Marketing,7171.89
+2024-11-01,Europe,Admin,4651.02
+2024-11-01,Asia Pacific,COGS,28836.06
+2024-11-01,Asia Pacific,Logistics,9188.86
+2024-11-01,Asia Pacific,Marketing,6505.54
+2024-11-01,Asia Pacific,Admin,4351.47
+2024-11-01,Latin America,COGS,49494.09
+2024-11-01,Latin America,Logistics,10611.78
+2024-11-01,Latin America,Marketing,8808.0
+2024-11-01,Latin America,Admin,6189.31
+2024-11-01,Middle East,COGS,41475.19
+2024-11-01,Middle East,Logistics,9971.71
+2024-11-01,Middle East,Marketing,8123.96
+2024-11-01,Middle East,Admin,5541.36
+2024-12-01,North America,COGS,50674.22
+2024-12-01,North America,Logistics,12349.05
+2024-12-01,North America,Marketing,9974.33
+2024-12-01,North America,Admin,5729.49
+2024-12-01,Europe,COGS,45391.81
+2024-12-01,Europe,Logistics,10570.42
+2024-12-01,Europe,Marketing,8719.9
+2024-12-01,Europe,Admin,6746.42
+2024-12-01,Asia Pacific,COGS,43837.05
+2024-12-01,Asia Pacific,Logistics,12316.33
+2024-12-01,Asia Pacific,Marketing,8808.46
+2024-12-01,Asia Pacific,Admin,5548.54
+2024-12-01,Latin America,COGS,55662.9
+2024-12-01,Latin America,Logistics,14207.14
+2024-12-01,Latin America,Marketing,11642.37
+2024-12-01,Latin America,Admin,6424.57
+2024-12-01,Middle East,COGS,41382.49
+2024-12-01,Middle East,Logistics,10819.19
+2024-12-01,Middle East,Marketing,8928.94
+2024-12-01,Middle East,Admin,5388.67

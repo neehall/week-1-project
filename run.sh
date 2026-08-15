@@ -4,4 +4,4 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 source .venv/bin/activate
-streamlit run app.py "$@"
+streamlit run app/Home.py "$@"
