@@ -15,6 +15,12 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-If a `.venv` already exists in this folder, just activate it (`source .venv/bin/activate`) before running `streamlit run app.py` — running it with your system/Anaconda Python instead of the venv is why `streamlit run app.py` may fail with "command not found".
+If a `.venv` already exists in this folder, just activate it (`source .venv/bin/activate`) before running `streamlit run app.py` — running it with your system/Anaconda Python instead of the venv is why `streamlit run app.py` may fail with "command not found". Note the venv must be activated in *every new terminal window/tab*.
+
+Or use the convenience launcher, which activates the venv for you:
+
+```bash
+./run.sh
+```
 
 Place `sales_data.csv` in the same folder as `app.py` before running.
