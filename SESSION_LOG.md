@@ -71,11 +71,40 @@ cd "/Users/neehal/Desktop/Neehal/Gen AI Academy/Week 1 Project"
 
 No Google Docs integration is available in this environment (confirmed — the doc URL returned `401 Unauthorized` when fetched, since it requires authentication I don't have), and no screenshots were taken at any point in this session. Wrote this log instead, as a file the user can open and copy into the Google Doc manually.
 
+## 10. Prompt: "commit this to github"
+
+Committed and pushed `SESSION_LOG.md` (commit `62a92c1`).
+
+## 11. Prompt: "start taking screenshots of the sales dashboard(http://localhost:8501/) from now, i want to capture all the history"
+
+No screenshot/browser-automation tooling was available, so installed Playwright + headless Chromium into the scratchpad. Launched the dashboard via `./run.sh` on port 8501 (polling the port until it actually served, not a fixed `sleep`), drove headless Chromium to it, waited for the page to render, and captured a full-page screenshot — verified visually, not just "it launched."
+
+Saved reusable driver at `screenshots/capture.js` for future captures. Screenshot:
+- `screenshots/01_initial_dashboard.png` — original vertically-stacked layout (before the one-screen redesign below).
+
+## 12. Prompt: "i want to improve the layout of the dashboard, so that all the visualizations fit into 1 screen"
+
+Redesigned `app.py`'s chart layout:
+- Replaced the vertical stack (Sales Over Time → Sales by Region → Sales by Category → Top Products table → Filtered Data table) with a 2×2 grid (`st.columns`), each chart capped to a fixed height with tightened Plotly margins.
+- Changed "Top Products" from an `st.table` (unbounded height) to a compact horizontal bar chart.
+- Moved the filtered-data table and CSV download button into a collapsed `st.expander`, so it no longer pushes charts off-screen by default.
+- Added CSS to shrink Streamlit's default top padding and heading margins.
+
+**Iteration 1** — first pass used a 300px chart height. Verified with a real headless-browser screenshot at a 1440×900 viewport (common laptop resolution): the pie chart and Top Products chart were visibly clipped at the bottom edge. Caught this by comparing the page's actual content height (`document.querySelector('[data-testid="stMain"]').scrollHeight`, 1192px) against the visible viewport (900px) — a 292px overflow.
+- Screenshot: `screenshots/02_one_screen_attempt1_cutoff.png`
+
+**Iteration 2** — reduced chart height to 230px and added the CSS padding/margin trims. Re-measured: `scrollHeight` now equals `clientHeight` (900px = 900px) — zero overflow. Confirmed visually with another screenshot: all 4 charts, KPIs, and the collapsed expander are fully visible with no clipping and no scrolling required.
+- Screenshot: `screenshots/03_one_screen_final.png`
+
+Going forward, every layout/feature iteration will get: (a) an entry in this log describing what changed and why, and (b) a screenshot in `screenshots/` proving the result, named to reflect the iteration.
+
 ---
 
 ## Current state of the project
 
 - **Repo:** https://github.com/neehall/week-1-project (public)
-- **Latest commit:** `3085377` — "Add run.sh convenience launcher"
+- **Latest commit:** see `git log` — most recent work is the one-screen dashboard layout
 - **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results
+- **Layout:** all 4 charts + KPIs fit on one screen (1440×900) with no scrolling; filtered data table tucked into a collapsed expander
 - **To run locally:** `./run.sh` from the project folder
+- **Screenshots:** `screenshots/` — numbered in iteration order, each mapped to a log entry above
