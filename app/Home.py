@@ -11,6 +11,7 @@ from services import (  # noqa: E402
     capex_service,
     opex_service,
     climate_service,
+    gaming_service,
 )
 
 st.set_page_config(page_title="Analytics Hub", layout="wide", page_icon="📊")
@@ -23,41 +24,38 @@ cost_kpi = cost_service.compute_kpis(cost_service.load_data())
 capex_kpi = capex_service.compute_kpis(capex_service.load_data())
 opex_kpi = opex_service.compute_kpis(opex_service.load_data())
 climate_kpi = climate_service.compute_kpis(climate_service.load_data())
+gaming_kpi = gaming_service.compute_kpis(gaming_service.load_agent_data())
 
-k1, k2, k3, k4, k5 = st.columns(5)
+k1, k2, k3, k4, k5, k6 = st.columns(6)
 k1.metric("Total Revenue", f"${revenue_kpi['total_sales']:,.0f}")
 k2.metric("Total Cost", f"${cost_kpi['total_cost']:,.0f}")
 k3.metric("Total Capex", f"${capex_kpi['total_capex']:,.0f}")
 k4.metric("Total Opex", f"${opex_kpi['total_opex']:,.0f}")
 k5.metric("Avg AQI (all cities)", f"{climate_kpi['avg_aqi']:.0f}")
+k6.metric("Avg Agent Win Rate", f"{gaming_kpi['avg_win_rate']:.1f}%")
 
 st.divider()
 
-st.markdown("#### Finance")
-c1, c2, c3, c4 = st.columns(4)
-with c1:
-    st.markdown("**💰 Revenue**")
-    st.caption("Sales, profit, and product performance.")
-    st.page_link("pages/1_Revenue.py", label="Open", icon="➡️")
-with c2:
-    st.markdown("**🧾 Cost**")
-    st.caption("COGS, logistics, marketing, and admin cost.")
-    st.page_link("pages/2_Cost.py", label="Open", icon="➡️")
-with c3:
-    st.markdown("**🏗️ Capex**")
-    st.caption("Capital projects and asset spend.")
-    st.page_link("pages/3_Capex.py", label="Open", icon="➡️")
-with c4:
-    st.markdown("**🧮 Opex**")
-    st.caption("Recurring operating expense by department.")
-    st.page_link("pages/4_Opex.py", label="Open", icon="➡️")
+# Flat wrapping grid, not one row per category — a per-category row wastes
+# most of its width whenever a category has 1-2 dashboards, and stacking
+# rows vertically is exactly what breaks the one-screen-fit invariant as
+# more dashboards get added. Each card carries its own category tag
+# instead, so this keeps scaling as dashboards #7-9 are added.
+DASHBOARDS = [
+    ("💰", "Revenue", "Finance", "Sales, profit, and product performance.", "pages/1_Revenue.py"),
+    ("🧾", "Cost", "Finance", "COGS, logistics, marketing, and admin cost.", "pages/2_Cost.py"),
+    ("🏗️", "Capex", "Finance", "Capital projects and asset spend.", "pages/3_Capex.py"),
+    ("🧮", "Opex", "Finance", "Recurring operating expense by department.", "pages/4_Opex.py"),
+    ("🌎", "Climate", "Climate & Environment", "Real EPA AQI data — pollution spikes, seasonality, YoY change.", "pages/5_Climate.py"),
+    ("🎮", "Gaming", "Gaming", "Real Valorant stats — K/D, win rate, map performance by rank.", "pages/6_Gaming.py"),
+]
 
-st.markdown("#### Climate & Environment")
-c5, _, _, _ = st.columns(4)
-with c5:
-    st.markdown("**🌎 Climate**")
-    st.caption("Real EPA AQI data — pollution spikes, seasonality, YoY change.")
-    st.page_link("pages/5_Climate.py", label="Open", icon="➡️")
+cols = st.columns(4)
+for i, (icon, name, category, caption, path) in enumerate(DASHBOARDS):
+    with cols[i % 4]:
+        st.markdown(f"**{icon} {name}**")
+        st.caption(f"{category} — {caption}")
+        st.page_link(path, label="Open", icon="➡️")
 
 with st.expander("About this app"):
     st.markdown(
@@ -79,6 +77,7 @@ with st.expander("About this app"):
         **Data provenance:** Revenue is illustrative sample data. Cost,
         Capex, and Opex are synthetic (generated, not real). Climate is
         real US EPA AirData (public domain) — see
-        `data/fetch_climate_data.py`.
+        `data/fetch_climate_data.py`. Gaming is real Valorant competitive
+        stats scraped from blitz.gg — see `data/fetch_gaming_data.py`.
         """
     )

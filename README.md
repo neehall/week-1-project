@@ -1,8 +1,8 @@
 # Analytics Hub (Streamlit)
 
-Multiple dashboards — **Revenue**, **Cost**, **Capex**, **Opex**, **Climate**
-(more planned) — built as a modular monolith: one Streamlit app, cleanly
-separated by domain.
+Multiple dashboards — **Revenue**, **Cost**, **Capex**, **Opex**, **Climate**,
+**Gaming** (more planned) — built as a modular monolith: one Streamlit app,
+cleanly separated by domain.
 
 ```
 app/
@@ -13,12 +13,14 @@ app/
     3_Capex.py
     4_Opex.py
     5_Climate.py
+    6_Gaming.py
   services/
     revenue_service.py     # data loading + filtering + business logic
     cost_service.py
     capex_service.py
     opex_service.py
     climate_service.py
+    gaming_service.py
   common/
     styling.py             # shared page/chart styling helpers
     charts.py               # shared chart builders (heatmap, treemap, pareto, stacked area)
@@ -28,8 +30,11 @@ data/
   capex_data.csv           # synthetic
   opex_data.csv            # synthetic
   climate_aqi.csv          # REAL — US EPA AirData (public domain), 20 US metros, 2023-2024
+  gaming_agent_stats.csv   # REAL — Valorant competitive stats via blitz.gg
+  gaming_map_stats.csv     # REAL — Valorant map win rates via blitz.gg
   generate_synthetic_data.py
   fetch_climate_data.py
+  fetch_gaming_data.py
 ```
 
 Pages never read a CSV directly — they always go through their
@@ -54,6 +59,12 @@ separated.
   (public domain). No temperature column — EPA AirData doesn't publish
   one, so the dashboard focuses on pollution spikes, seasonal patterns,
   and year-over-year AQI change instead. See `data/fetch_climate_data.py`.
+- **Gaming** — **real** Valorant competitive stats scraped from blitz.gg,
+  published by [github.com/IronicNinja/valorant-stats](https://github.com/IronicNinja/valorant-stats).
+  It's an aggregate snapshot (per agent/map/rank), not individual match
+  history, so there's no calendar-time dimension — the dashboard uses
+  rank tier (Iron → Diamond) as its trend axis instead. See
+  `data/fetch_gaming_data.py`.
 
 ## Prerequisites
 
@@ -92,4 +103,10 @@ Real Climate AQI data (requires network access to aqs.epa.gov):
 
 ```bash
 python3 data/fetch_climate_data.py
+```
+
+Real Gaming (Valorant) stats (requires network access to raw.githubusercontent.com):
+
+```bash
+python3 data/fetch_gaming_data.py
 ```

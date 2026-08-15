@@ -164,17 +164,35 @@ Before building, asked 3 clarifying questions since the answers reshape all 5 bu
 
 Updated `README.md` with the new structure, the data-provenance table (which dashboards are real vs. synthetic vs. illustrative), and the `fetch_climate_data.py` usage note.
 
-Next up (on confirmation): E-sports/Gaming, Real Estate, Supply Chain/Logistics, Job Market — same process, one at a time.
+User then said to build the remaining 4 dashboards (Gaming, Real Estate, Logistics, Job Market) sequentially without stopping for approval between each — proceeded accordingly.
+
+## 16. Gaming dashboard (second of five, real Valorant stats)
+
+**Sourcing real data:** searched for public match-history/player-stat CSVs. Oracle's Elixir (pro LoL match data) returned `403 Forbidden` on fetch — likely bot-blocked/Google-Drive-hosted, not a plain curlable URL. Found `github.com/IronicNinja/valorant-stats`: real, live-scraped (from blitz.gg) Valorant competitive stats, plain `raw.githubusercontent.com` CSVs, no auth. It's an **aggregate snapshot per agent/map/rank-tier**, not individual match-by-match history — no calendar-time dimension. Rather than fabricate dates next to real numbers, used **rank tier (Iron → Diamond, Riot's public competitive-tier enum)** as the trend axis instead — same honesty approach as Climate's missing-temperature call. Wrote `data/fetch_gaming_data.py` to pull and reshape `agents_data/{map}/agents_competitive_tier={tier}.csv` (K/D, win rate, pick rate, ACS, first blood %) and `map_data/maps_competitive_tier={tier}.csv` (play rate, attack/defense win %) across 7 maps × 18 tiers into `data/gaming_agent_stats.csv` (1,513 rows) and `data/gaming_map_stats.csv` (108 rows).
+
+**Built `gaming_service.py` + `pages/6_Gaming.py`:** KPIs (Avg K/D, Avg Win Rate, Top Agent, Matches Analyzed); Overview tab (K/D by agent, win rate by agent, map attack-vs-defense win%, most-picked agents); Insights tab (win rate by rank tier for top 6 agents, K/D-vs-win-rate scatter, agent×map win-rate heatmap, map>agent pick-rate treemap).
+
+**Restructured `Home.py`'s dashboard grid**, since the per-category-row layout (one full-width row per category) was about to break: adding a 1-dashboard "Gaming" row pushed Home 37px past the one-screen fold. Replaced it with a flat wrapping 4-column grid where every card carries its own category tag inline — scales to many more dashboards without adding rows for single-item categories.
+
+**Verified, and caught two real bugs via screenshots (not just launch):**
+1. **Blank heatmap and treemap on the Insights tab.** The Map filter defaulted to `["All Maps"]` (the pre-aggregated rollup row), but `heatmap_agent_map()`/`map_pickrate_treemap()` explicitly exclude `"All Maps"` rows (they need per-map breakdowns) — so with the default filter, both got an empty dataframe and rendered blank. Fixed by defaulting the Map filter to the individual maps instead, keeping "All Maps" available as an opt-in aggregate.
+2. **Legend overflow** on the "Win Rate by Rank" line chart (6 agent names in a vertical legend overflowed the chart's right edge) — fixed with the same horizontal/top legend pattern already used on Opex.
+- Re-verified all 7 pages × Overview/Insights at 1440×900 after both fixes — all `scrollHeight === clientHeight`, zero console errors — and re-screenshotted to confirm the previously-blank charts now show real data.
+- Screenshots: `screenshots/13_home_updated.png` (Home, updated grid), `16_gaming_overview.png`, `17_gaming_insights.png`.
+
+Updated `README.md` (structure, data provenance, `fetch_gaming_data.py` usage).
+
+Next: Real Estate, Supply Chain/Logistics, Job Market — proceeding without further checkpoints per user's instruction.
 
 ---
 
 ## Current state of the project
 
 - **Repo:** https://github.com/neehall/week-1-project (public)
-- **Latest commit:** see `git log` — most recent work adds the Climate dashboard (real EPA AQI data)
-- **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results
-- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub") + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
-- **Dashboards:** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data, `data/fetch_climate_data.py`) — each with an Overview tab and an Insights tab
+- **Latest commit:** see `git log` — most recent work adds the Gaming dashboard (real Valorant stats)
+- **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results; Gaming Insights blank heatmap/treemap from a bad default filter; Gaming/Opex legend overflow
+- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub", flat wrapping dashboard grid) + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
+- **Dashboards:** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data), Gaming (**real** Valorant stats, `data/fetch_gaming_data.py`) — each with an Overview tab and an Insights tab
 - **Layout:** every tab on every dashboard fits on one screen (1440×900) with no scrolling
 - **To run locally:** `./run.sh` from the project folder (launches `app/Home.py`)
 - **Screenshots:** `screenshots/` — numbered in iteration order, each mapped to a log entry above
