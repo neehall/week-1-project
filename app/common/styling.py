@@ -11,8 +11,8 @@ def apply_page_style():
     st.markdown(
         """
         <style>
-        div.block-container {padding-top: 1.2rem; padding-bottom: 1rem;}
-        h1 {font-size: 1.9rem; margin-bottom: 0.3rem;}
+        div.block-container {padding-top: 0.9rem; padding-bottom: 1rem;}
+        h1 {font-size: 1.9rem; margin-bottom: 0.1rem;}
         [data-testid="stMetricValue"] {font-size: 1.4rem;}
         </style>
         """,

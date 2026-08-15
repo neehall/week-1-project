@@ -141,15 +141,40 @@ Rather than pile more bar charts onto the existing Overview grid (which would br
 - Re-screenshotted all 5 Overview pages too, to confirm the tab-wrapping refactor didn't break anything and to capture the Opex legend fix.
 - Screenshots: `screenshots/09_revenue_insights.png`, `10_cost_insights.png`, `11_capex_insights.png`, `12_opex_insights.png` (Insights tabs); `04_home.png`–`08_opex.png` updated in place (Overview tabs, post-refactor).
 
+## 15. Prompt: request to build 5 more dashboards (Climate, E-sports, Real Estate, Supply Chain, Job Market) — first of five, Climate
+
+Before building, asked 3 clarifying questions since the answers reshape all 5 builds:
+1. **App structure** — user chose to add these as more pages in the existing app (not a separate suite). Renamed `Home.py`'s title from "Finance Dashboards" to **"Analytics Hub"**, and restructured the landing page into labeled sections ("Finance", "Climate & Environment", ...) so it scales past 4 dashboards.
+2. **Data source** — user chose **real public data where reasonably available**, synthetic as fallback (same standard as Cost/Capex/Opex).
+3. **Build order** — user chose **one dashboard at a time with a checkpoint**, starting with Climate.
+
+**Sourcing real data:** searched for a public city-level AQI/weather CSV. Evaluated and rejected: aqicn.org's COVID19 platform (100+MB/year files, requires ToS-gated access token, not a plain public URL) and EPA's annual county summary files (too coarse — annual, not daily). Settled on **US EPA AirData's daily-AQI-by-county files** (`https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_{year}.zip`) — confirmed genuinely public (plain `curl`, no auth), ~1.6MB/year zipped, daily granularity. Downloaded 2023 + 2024 (26MB CSV each, full US), filtered to a curated list of 20 well-known metro counties (Los Angeles, Chicago, Houston, Phoenix, etc.) to keep the repo file small (774KB) — real government data, not sampled/fabricated. **No temperature column exists in this dataset** (EPA AirData is AQI-only) — flagged this explicitly rather than quietly filling it with synthetic numbers next to real ones, which would misrepresent the real data as more complete than it is. Saved the fetch+filter logic as `data/fetch_climate_data.py` (reproducible, same convention as `generate_synthetic_data.py`) and added `requests` to `requirements.txt`.
+
+**Built `climate_service.py` + `pages/5_Climate.py`:**
+- KPIs: Avg AQI, Worst City, % Unhealthy-or-worse days, YoY change (2023→2024).
+- Overview tab: AQI over time, Avg AQI by city, AQI category distribution, Top pollution spike days (real dated events, e.g. actual worst-AQI day per city).
+- Insights tab: Seasonal pattern (avg AQI by calendar month — surfaces the real summer ozone-season peak visible in the actual EPA data), Year-over-year AQI by city (grouped bar), City×Month heatmap, Category-share-by-defining-pollutant treemap.
+- Reused `common/charts.py` (heatmap/treemap) rather than adding new one-off chart code.
+
+**Verified, not just launched:**
+- Syntax-checked all new/changed files.
+- Launched via `./run.sh`; screenshotted Home, Climate Overview, and Climate Insights under headless Chromium.
+- **Caught a real one-screen-fit regression**: Climate initially overflowed by 25–28px (`stMain` scrollHeight 925–928 vs clientHeight 900), traced to an `st.caption()` line under the title that the other dashboards don't have. First attempted a CSS negative-margin fix — re-measured and it didn't actually close the gap (margin collapse doesn't work that way inside Streamlit's flex layout), so reverted that and instead moved the provenance caption into the already-collapsed "Filtered data & download" expander, where it costs no vertical space. Re-verified all 6 pages (5 existing + Climate) at 1440×900 after the change — all exactly `scrollHeight === clientHeight`, zero overflow, zero console errors.
+- Screenshots: `screenshots/13_home_updated.png`, `14_climate_overview.png`, `15_climate_insights.png`.
+
+Updated `README.md` with the new structure, the data-provenance table (which dashboards are real vs. synthetic vs. illustrative), and the `fetch_climate_data.py` usage note.
+
+Next up (on confirmation): E-sports/Gaming, Real Estate, Supply Chain/Logistics, Job Market — same process, one at a time.
+
 ---
 
 ## Current state of the project
 
 - **Repo:** https://github.com/neehall/week-1-project (public)
-- **Latest commit:** see `git log` — most recent work adds an Insights tab (trend decomposition, heatmap, treemap, Pareto) to every dashboard
+- **Latest commit:** see `git log` — most recent work adds the Climate dashboard (real EPA AQI data)
 - **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results
-- **Architecture:** modular monolith — `app/Home.py` + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
-- **Dashboards:** Revenue (real data, `sales_data.csv`), Cost/Capex/Opex (synthetic data, `data/generate_synthetic_data.py`) — each with an Overview tab and an Insights tab
+- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub") + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
+- **Dashboards:** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data, `data/fetch_climate_data.py`) — each with an Overview tab and an Insights tab
 - **Layout:** every tab on every dashboard fits on one screen (1440×900) with no scrolling
 - **To run locally:** `./run.sh` from the project folder (launches `app/Home.py`)
 - **Screenshots:** `screenshots/` — numbered in iteration order, each mapped to a log entry above
