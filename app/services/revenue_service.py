@@ -59,3 +59,29 @@ def top_products(df: pd.DataFrame, n: int = 10) -> pd.DataFrame:
         .sort_values("sales", ascending=False)
         .head(n)
     )
+
+
+# --- Insights tab ---------------------------------------------------------
+
+def profit_margin_by_category(df: pd.DataFrame) -> pd.DataFrame:
+    """Margin isn't the same story as sales volume — a category can lead on
+    revenue but lag on margin, which the Overview tab's charts can't show."""
+    g = df.groupby("category").agg(sales=("sales", "sum"), profit=("profit", "sum")).reset_index()
+    g["margin_pct"] = (g["profit"] / g["sales"] * 100).fillna(0)
+    return g.sort_values("margin_pct", ascending=False)
+
+
+def monthly_sales_by_region(df: pd.DataFrame) -> pd.DataFrame:
+    out = df.copy()
+    out["month"] = out["order_date"].dt.to_period("M").dt.to_timestamp()
+    return out.groupby(["month", "region"])["sales"].sum().reset_index()
+
+
+def sales_trend_by_category(df: pd.DataFrame) -> pd.DataFrame:
+    out = df.copy()
+    out["month"] = out["order_date"].dt.to_period("M").dt.to_timestamp()
+    return out.groupby(["month", "category"])["sales"].sum().reset_index()
+
+
+def category_segment_treemap(df: pd.DataFrame) -> pd.DataFrame:
+    return df.groupby(["category", "customer_segment"])["sales"].sum().reset_index()

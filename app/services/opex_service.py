@@ -45,3 +45,17 @@ def opex_by_department(df: pd.DataFrame) -> pd.DataFrame:
 
 def opex_by_expense_type(df: pd.DataFrame) -> pd.DataFrame:
     return df.groupby("expense_type")["amount"].sum().reset_index().sort_values("amount", ascending=False)
+
+
+# --- Insights tab ---------------------------------------------------------
+
+def opex_trend_by_expense_type(df: pd.DataFrame) -> pd.DataFrame:
+    return df.groupby(["date", "expense_type"])["amount"].sum().reset_index()
+
+
+def opex_heatmap_department_expense(df: pd.DataFrame) -> pd.DataFrame:
+    return df.groupby(["department", "expense_type"])["amount"].sum().reset_index()
+
+
+def department_expense_treemap(df: pd.DataFrame) -> pd.DataFrame:
+    return df.groupby(["department", "expense_type"])["amount"].sum().reset_index()

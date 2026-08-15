@@ -48,3 +48,24 @@ def capex_by_asset_category(df: pd.DataFrame) -> pd.DataFrame:
 
 def top_projects(df: pd.DataFrame, n: int = 10) -> pd.DataFrame:
     return df.sort_values("amount", ascending=False).head(n)[["project_name", "region", "asset_category", "amount"]]
+
+
+# --- Insights tab ---------------------------------------------------------
+
+def cumulative_capex_over_time(df: pd.DataFrame) -> pd.DataFrame:
+    """Running total spend — the question capital planning actually asks
+    ('how much have we committed so far'), not the per-month spike view."""
+    monthly = df.set_index("date").resample("MS")["amount"].sum().reset_index()
+    monthly["cumulative"] = monthly["amount"].cumsum()
+    return monthly
+
+
+def capex_heatmap_region_asset(df: pd.DataFrame) -> pd.DataFrame:
+    # Capex is a handful of discrete projects, not a steady monthly flow,
+    # so region x asset-category (not region x month) is the more
+    # legible heatmap for this dataset.
+    return df.groupby(["region", "asset_category"])["amount"].sum().reset_index()
+
+
+def region_asset_treemap(df: pd.DataFrame) -> pd.DataFrame:
+    return df.groupby(["region", "asset_category"])["amount"].sum().reset_index()

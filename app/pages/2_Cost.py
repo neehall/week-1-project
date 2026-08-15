@@ -7,6 +7,7 @@ import streamlit as st
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 from common.styling import apply_page_style, style_chart  # noqa: E402
+from common import charts  # noqa: E402
 from services import cost_service as svc  # noqa: E402
 
 st.set_page_config(page_title="Cost Dashboard", layout="wide")
@@ -37,30 +38,54 @@ k3.metric("Regions", kpi["n_regions"])
 k4.metric("Top Category", kpi["top_category"])
 
 if not df_filtered.empty:
-    row1_left, row1_right = st.columns(2)
-    with row1_left:
-        st.markdown("**Cost Over Time**")
-        fig = px.line(svc.cost_over_time(df_filtered), x="date", y="amount")
-        st.plotly_chart(style_chart(fig), use_container_width=True)
-    with row1_right:
-        st.markdown("**Cost by Region**")
-        fig = px.bar(svc.cost_by_region(df_filtered), x="region", y="amount")
-        st.plotly_chart(style_chart(fig), use_container_width=True)
+    tab_overview, tab_insights = st.tabs(["Overview", "Insights"])
 
-    row2_left, row2_right = st.columns(2)
-    with row2_left:
-        st.markdown("**Cost by Category**")
-        fig = px.pie(svc.cost_by_category(df_filtered), names="cost_category", values="amount")
-        st.plotly_chart(style_chart(fig), use_container_width=True)
-    with row2_right:
-        st.markdown("**Region x Category Breakdown**")
-        fig = px.bar(
-            svc.cost_breakdown_by_region_category(df_filtered),
-            x="region",
-            y="amount",
-            color="cost_category",
-        )
-        st.plotly_chart(style_chart(fig), use_container_width=True)
+    with tab_overview:
+        row1_left, row1_right = st.columns(2)
+        with row1_left:
+            st.markdown("**Cost Over Time**")
+            fig = px.line(svc.cost_over_time(df_filtered), x="date", y="amount")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+        with row1_right:
+            st.markdown("**Cost by Region**")
+            fig = px.bar(svc.cost_by_region(df_filtered), x="region", y="amount")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+
+        row2_left, row2_right = st.columns(2)
+        with row2_left:
+            st.markdown("**Cost by Category**")
+            fig = px.pie(svc.cost_by_category(df_filtered), names="cost_category", values="amount")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+        with row2_right:
+            st.markdown("**Region x Category Breakdown**")
+            fig = px.bar(
+                svc.cost_breakdown_by_region_category(df_filtered),
+                x="region",
+                y="amount",
+                color="cost_category",
+            )
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+
+    with tab_insights:
+        row1_left, row1_right = st.columns(2)
+        with row1_left:
+            st.markdown("**Cost Trend by Category**")
+            fig = charts.stacked_area(svc.cost_trend_by_category(df_filtered), x="date", y="amount", color="cost_category")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+        with row1_right:
+            st.markdown("**Cost Heatmap: Region x Month**")
+            fig = charts.heatmap(svc.cost_heatmap_region_month(df_filtered), x="month", y="region", z="amount")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+
+        row2_left, row2_right = st.columns(2)
+        with row2_left:
+            st.markdown("**Cost Share: Region > Category**")
+            fig = charts.treemap(svc.cost_region_category_treemap(df_filtered), path=["region", "cost_category"], values="amount")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+        with row2_right:
+            st.markdown("**Cost by Category — 80/20 (Pareto)**")
+            fig = charts.pareto(df_filtered, "cost_category", "amount")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
 else:
     st.info("No data for selected filters.")
 

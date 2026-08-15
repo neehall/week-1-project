@@ -7,6 +7,7 @@ import streamlit as st
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 from common.styling import apply_page_style, style_chart  # noqa: E402
+from common import charts  # noqa: E402
 from services import revenue_service as svc  # noqa: E402
 
 st.set_page_config(page_title="Revenue Dashboard", layout="wide")
@@ -39,26 +40,51 @@ k3.metric("Avg Discount", f"{kpi['avg_discount'] * 100:.1f}%")
 k4.metric("Total Quantity", kpi["total_quantity"])
 
 if not df_filtered.empty:
-    row1_left, row1_right = st.columns(2)
-    with row1_left:
-        st.markdown("**Sales Over Time**")
-        fig = px.line(svc.sales_over_time(df_filtered), x="order_date", y="sales")
-        st.plotly_chart(style_chart(fig), use_container_width=True)
-    with row1_right:
-        st.markdown("**Sales by Region**")
-        fig = px.bar(svc.sales_by_region(df_filtered), x="region", y="sales")
-        st.plotly_chart(style_chart(fig), use_container_width=True)
+    tab_overview, tab_insights = st.tabs(["Overview", "Insights"])
 
-    row2_left, row2_right = st.columns(2)
-    with row2_left:
-        st.markdown("**Sales by Category**")
-        fig = px.pie(svc.sales_by_category(df_filtered), names="category", values="sales")
-        st.plotly_chart(style_chart(fig), use_container_width=True)
-    with row2_right:
-        st.markdown("**Top Products**")
-        top = svc.top_products(df_filtered)
-        fig = px.bar(top.sort_values("sales"), x="sales", y="product_name", orientation="h")
-        st.plotly_chart(style_chart(fig), use_container_width=True)
+    with tab_overview:
+        row1_left, row1_right = st.columns(2)
+        with row1_left:
+            st.markdown("**Sales Over Time**")
+            fig = px.line(svc.sales_over_time(df_filtered), x="order_date", y="sales")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+        with row1_right:
+            st.markdown("**Sales by Region**")
+            fig = px.bar(svc.sales_by_region(df_filtered), x="region", y="sales")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+
+        row2_left, row2_right = st.columns(2)
+        with row2_left:
+            st.markdown("**Sales by Category**")
+            fig = px.pie(svc.sales_by_category(df_filtered), names="category", values="sales")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+        with row2_right:
+            st.markdown("**Top Products**")
+            top = svc.top_products(df_filtered)
+            fig = px.bar(top.sort_values("sales"), x="sales", y="product_name", orientation="h")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+
+    with tab_insights:
+        row1_left, row1_right = st.columns(2)
+        with row1_left:
+            st.markdown("**Profit Margin by Category**")
+            margin = svc.profit_margin_by_category(df_filtered)
+            fig = px.bar(margin, x="category", y="margin_pct", color="margin_pct", color_continuous_scale="RdYlGn")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+        with row1_right:
+            st.markdown("**Sales Trend by Category**")
+            fig = charts.stacked_area(svc.sales_trend_by_category(df_filtered), x="month", y="sales", color="category")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+
+        row2_left, row2_right = st.columns(2)
+        with row2_left:
+            st.markdown("**Sales Heatmap: Region x Month**")
+            fig = charts.heatmap(svc.monthly_sales_by_region(df_filtered), x="month", y="region", z="sales")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
+        with row2_right:
+            st.markdown("**Top Products — 80/20 (Pareto)**")
+            fig = charts.pareto(df_filtered, "product_name", "sales")
+            st.plotly_chart(style_chart(fig), use_container_width=True)
 else:
     st.info("No data for selected filters.")
 

@@ -49,3 +49,19 @@ def cost_by_category(df: pd.DataFrame) -> pd.DataFrame:
 
 def cost_breakdown_by_region_category(df: pd.DataFrame) -> pd.DataFrame:
     return df.groupby(["region", "cost_category"])["amount"].sum().reset_index()
+
+
+# --- Insights tab ---------------------------------------------------------
+
+def cost_trend_by_category(df: pd.DataFrame) -> pd.DataFrame:
+    return df.groupby(["date", "cost_category"])["amount"].sum().reset_index()
+
+
+def cost_heatmap_region_month(df: pd.DataFrame) -> pd.DataFrame:
+    out = df.copy()
+    out["month"] = out["date"].dt.to_period("M").dt.to_timestamp()
+    return out.groupby(["month", "region"])["amount"].sum().reset_index()
+
+
+def cost_region_category_treemap(df: pd.DataFrame) -> pd.DataFrame:
+    return df.groupby(["region", "cost_category"])["amount"].sum().reset_index()

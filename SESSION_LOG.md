@@ -122,15 +122,34 @@ Asked two clarifying questions before building, since "microservices" is ambiguo
 
 Updated `README.md` to document the new structure, why it's a modular monolith rather than networked microservices, and how to regenerate the synthetic data.
 
+## 14. Prompt: "add more interesting visualizations to each of the dashboards"
+
+Rather than pile more bar charts onto the existing Overview grid (which would break the one-screen fit), added a second **Insights** tab (`st.tabs`) to each dashboard with genuinely different chart types chosen for what's analytically useful in that domain, not mechanically identical across all four:
+
+- **`app/common/charts.py`** — new shared chart-builder module (`stacked_area`, `heatmap`, `treemap`, `pareto`) so the four new chart types are implemented once and reused, instead of each page reinventing them. Keeps the modular architecture consistent — a "presentation components" layer alongside the existing "data/business logic" (`services/`) and "styling" (`common/styling.py`) layers.
+- **Revenue Insights:** Profit Margin by Category (bar — margin isn't the same story as sales volume), Sales Trend by Category (stacked area), Sales Heatmap Region×Month, Top Products Pareto (80/20).
+- **Cost Insights:** Cost Trend by Category (stacked area), Cost Heatmap Region×Month, Cost Share Region>Category (treemap), Cost by Category Pareto.
+- **Capex Insights:** Cumulative Capex Over Time (running total — the question capital planning actually asks, vs. the per-month spike view on Overview), Capex Heatmap Region×Asset Category (chosen over Region×Month since Capex is ~90 discrete projects, not a steady monthly flow — a month axis would mostly be empty cells), Capex Share Region>Asset (treemap), Top Projects Pareto.
+- **Opex Insights:** Opex Trend by Expense Type (stacked area), Opex Heatmap Department×Expense Type, Opex Share Department>Expense Type (treemap), Opex by Expense Type Pareto.
+- Added the corresponding data-shaping functions to each `services/*.py` module (e.g. `profit_margin_by_category`, `cost_trend_by_category`, `cumulative_capex_over_time`) — services still own all data logic, pages still only render.
+- Also fixed the pre-existing minor legend clipping on the Opex Overview "Expense Type by Department" chart (moved legend to horizontal/top) while in that file.
+
+**Verified, not just launched:**
+- Syntax-checked all changed/new files.
+- Launched via `./run.sh`; for each of the 4 dashboard pages, used headless Chromium to click into the Insights tab (not just load the default Overview tab) and re-measured `stMain` `scrollHeight` vs `clientHeight` — all four: zero overflow, same one-screen guarantee as Overview.
+- Checked console errors on each Insights tab load — none (beyond the already-documented benign `_stcore` 404s on direct navigation).
+- Re-screenshotted all 5 Overview pages too, to confirm the tab-wrapping refactor didn't break anything and to capture the Opex legend fix.
+- Screenshots: `screenshots/09_revenue_insights.png`, `10_cost_insights.png`, `11_capex_insights.png`, `12_opex_insights.png` (Insights tabs); `04_home.png`–`08_opex.png` updated in place (Overview tabs, post-refactor).
+
 ---
 
 ## Current state of the project
 
 - **Repo:** https://github.com/neehall/week-1-project (public)
-- **Latest commit:** see `git log` — most recent work is the multi-dashboard modular-monolith restructure
+- **Latest commit:** see `git log` — most recent work adds an Insights tab (trend decomposition, heatmap, treemap, Pareto) to every dashboard
 - **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results
-- **Architecture:** modular monolith — `app/Home.py` + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/` (shared styling)
-- **Dashboards:** Revenue (real data, `sales_data.csv`), Cost/Capex/Opex (synthetic data, `data/generate_synthetic_data.py`)
-- **Layout:** every dashboard's charts + KPIs fit on one screen (1440×900) with no scrolling
+- **Architecture:** modular monolith — `app/Home.py` + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
+- **Dashboards:** Revenue (real data, `sales_data.csv`), Cost/Capex/Opex (synthetic data, `data/generate_synthetic_data.py`) — each with an Overview tab and an Insights tab
+- **Layout:** every tab on every dashboard fits on one screen (1440×900) with no scrolling
 - **To run locally:** `./run.sh` from the project folder (launches `app/Home.py`)
 - **Screenshots:** `screenshots/` — numbered in iteration order, each mapped to a log entry above
