@@ -1,8 +1,8 @@
 # Analytics Hub (Streamlit)
 
 Multiple dashboards — **Revenue**, **Cost**, **Capex**, **Opex**, **Climate**,
-**Gaming** (more planned) — built as a modular monolith: one Streamlit app,
-cleanly separated by domain.
+**Gaming**, **Real Estate** (more planned) — built as a modular monolith:
+one Streamlit app, cleanly separated by domain.
 
 ```
 app/
@@ -14,6 +14,7 @@ app/
     4_Opex.py
     5_Climate.py
     6_Gaming.py
+    7_RealEstate.py
   services/
     revenue_service.py     # data loading + filtering + business logic
     cost_service.py
@@ -21,6 +22,7 @@ app/
     opex_service.py
     climate_service.py
     gaming_service.py
+    realestate_service.py
   common/
     styling.py             # shared page/chart styling helpers
     charts.py               # shared chart builders (heatmap, treemap, pareto, stacked area)
@@ -32,9 +34,11 @@ data/
   climate_aqi.csv          # REAL — US EPA AirData (public domain), 20 US metros, 2023-2024
   gaming_agent_stats.csv   # REAL — Valorant competitive stats via blitz.gg
   gaming_map_stats.csv     # REAL — Valorant map win rates via blitz.gg
+  realestate_zhvi.csv      # REAL — Zillow Home Value Index, 20 US cities, 2020-2026
   generate_synthetic_data.py
   fetch_climate_data.py
   fetch_gaming_data.py
+  fetch_realestate_data.py
 ```
 
 Pages never read a CSV directly — they always go through their
@@ -65,6 +69,13 @@ separated.
   history, so there's no calendar-time dimension — the dashboard uses
   rank tier (Iron → Diamond) as its trend axis instead. See
   `data/fetch_gaming_data.py`.
+- **Real Estate** — **real** [Zillow Home Value Index](https://www.zillow.com/research/data/)
+  data (Zillow Research, public, no auth), 20 US cities × 5 bedroom
+  counts, monthly 2020–2026. ZHVI is a smoothed city-level value
+  estimate (33rd–67th percentile home tier), not individual listing
+  prices — so there's no exact per-listing price/address, and the map
+  plots city centroids (public coordinates), not individual properties.
+  See `data/fetch_realestate_data.py`.
 
 ## Prerequisites
 
@@ -109,4 +120,10 @@ Real Gaming (Valorant) stats (requires network access to raw.githubusercontent.c
 
 ```bash
 python3 data/fetch_gaming_data.py
+```
+
+Real Estate (Zillow ZHVI) data (requires network access to files.zillowstatic.com, ~200MB download):
+
+```bash
+python3 data/fetch_realestate_data.py
 ```

@@ -182,17 +182,33 @@ User then said to build the remaining 4 dashboards (Gaming, Real Estate, Logisti
 
 Updated `README.md` (structure, data provenance, `fetch_gaming_data.py` usage).
 
-Next: Real Estate, Supply Chain/Logistics, Job Market — proceeding without further checkpoints per user's instruction.
+## 17. Real Estate dashboard (third of five, real Zillow ZHVI data)
+
+**Sourcing real data:** Zillow Research publishes plain, public CSVs (no auth, no rate limit) at `files.zillowstatic.com/research/public_csvs/zhvi/`, including versions segmented by bedroom count (`City_zhvi_bdrmcnt_{1..5}_...csv`, ~10–72MB each) — a direct match for the user's "filters for bedrooms" ask. Wrote `data/fetch_realestate_data.py` to download all 5 bedroom-count files, filter to the same style of curated 20-city list as Climate/Gaming, melt the wide monthly columns (2000–2026) to long format, keep 2020-01 onward, and write `data/realestate_zhvi.csv` (7,795 rows, 602KB). Sanity-checked the real numbers: San Francisco priciest, Detroit most affordable, a visible COVID-era price surge in 2021–2022 — all match known reality.
+
+**Honesty note, same pattern as Climate/Gaming:** ZHVI is Zillow's smoothed, seasonally-adjusted *estimate* for the 33rd–67th percentile home tier in each city — not an individual listing price or address. So there's no true per-property "price range" filter or map point available in real data. Handled this explicitly rather than papering over it:
+- Added a price-range slider that filters on the real aggregate ZHVI value (a legitimate filter, just not a per-listing one).
+- Built the requested map using `px.scatter_geo` (built-in USA basemap, no external tile server / no token needed) with **real, publicly-known city-centroid coordinates** (not from Zillow, and clearly not per-property) sized/colored by each city's average home value.
+- Documented the distinction in the page's data-provenance caption and in `README.md`.
+
+**Built `realestate_service.py` + `pages/7_RealEstate.py`:** KPIs (Avg Home Value, YoY Change, Priciest/Most Affordable City); Overview tab (price trend, avg by city, avg by bedroom count, city map); Insights tab (YoY change by city, price trend by bedroom count as a stacked area, city×bedroom heatmap, price distribution histogram — a new chart type not used on any other dashboard yet).
+
+**Verified, not just launched:** syntax-checked all files; launched via `./run.sh`; checked all 8 pages (7 dashboards + Home) × Overview/Insights at 1440×900 under headless Chromium — all `scrollHeight === clientHeight`, zero real console errors (only the already-documented benign `_stcore` 404s, this time on the `/RealEstate` sub-path too — confirmed via the same response-inspection approach used for Cost/Gaming). Visually confirmed the map renders actual bubbles (not a blank/broken tile) and the stacked-area/heatmap/histogram all show distinct real data. Added the Real Estate card + 7th KPI to Home — confirmed it still fits at 1440×900 with room to spare for 2 more dashboards before the 4-column grid needs a new row.
+- Screenshots: `screenshots/13_home_updated.png` (Home, 7 dashboards), `18_realestate_overview.png`, `19_realestate_insights.png`.
+
+Updated `README.md` (structure, provenance, `fetch_realestate_data.py` usage, ~200MB one-time download note).
+
+Next: Supply Chain/Logistics, Job Market — proceeding without further checkpoints per user's instruction.
 
 ---
 
 ## Current state of the project
 
 - **Repo:** https://github.com/neehall/week-1-project (public)
-- **Latest commit:** see `git log` — most recent work adds the Gaming dashboard (real Valorant stats)
+- **Latest commit:** see `git log` — most recent work adds the Real Estate dashboard (real Zillow ZHVI data)
 - **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results; Gaming Insights blank heatmap/treemap from a bad default filter; Gaming/Opex legend overflow
 - **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub", flat wrapping dashboard grid) + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
-- **Dashboards:** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data), Gaming (**real** Valorant stats, `data/fetch_gaming_data.py`) — each with an Overview tab and an Insights tab
+- **Dashboards:** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data), Gaming (**real** Valorant stats), Real Estate (**real** Zillow ZHVI data, `data/fetch_realestate_data.py`) — each with an Overview tab and an Insights tab
 - **Layout:** every tab on every dashboard fits on one screen (1440×900) with no scrolling
 - **To run locally:** `./run.sh` from the project folder (launches `app/Home.py`)
 - **Screenshots:** `screenshots/` — numbered in iteration order, each mapped to a log entry above

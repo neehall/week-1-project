@@ -12,6 +12,7 @@ from services import (  # noqa: E402
     opex_service,
     climate_service,
     gaming_service,
+    realestate_service,
 )
 
 st.set_page_config(page_title="Analytics Hub", layout="wide", page_icon="📊")
@@ -25,14 +26,16 @@ capex_kpi = capex_service.compute_kpis(capex_service.load_data())
 opex_kpi = opex_service.compute_kpis(opex_service.load_data())
 climate_kpi = climate_service.compute_kpis(climate_service.load_data())
 gaming_kpi = gaming_service.compute_kpis(gaming_service.load_agent_data())
+realestate_kpi = realestate_service.compute_kpis(realestate_service.load_data())
 
-k1, k2, k3, k4, k5, k6 = st.columns(6)
+k1, k2, k3, k4, k5, k6, k7 = st.columns(7)
 k1.metric("Total Revenue", f"${revenue_kpi['total_sales']:,.0f}")
 k2.metric("Total Cost", f"${cost_kpi['total_cost']:,.0f}")
 k3.metric("Total Capex", f"${capex_kpi['total_capex']:,.0f}")
 k4.metric("Total Opex", f"${opex_kpi['total_opex']:,.0f}")
 k5.metric("Avg AQI (all cities)", f"{climate_kpi['avg_aqi']:.0f}")
 k6.metric("Avg Agent Win Rate", f"{gaming_kpi['avg_win_rate']:.1f}%")
+k7.metric("Avg Home Value", f"${realestate_kpi['avg_price']:,.0f}")
 
 st.divider()
 
@@ -48,6 +51,7 @@ DASHBOARDS = [
     ("🧮", "Opex", "Finance", "Recurring operating expense by department.", "pages/4_Opex.py"),
     ("🌎", "Climate", "Climate & Environment", "Real EPA AQI data — pollution spikes, seasonality, YoY change.", "pages/5_Climate.py"),
     ("🎮", "Gaming", "Gaming", "Real Valorant stats — K/D, win rate, map performance by rank.", "pages/6_Gaming.py"),
+    ("🏠", "Real Estate", "Real Estate", "Real Zillow home values — by city, bedrooms, and price range.", "pages/7_RealEstate.py"),
 ]
 
 cols = st.columns(4)
@@ -79,5 +83,7 @@ with st.expander("About this app"):
         real US EPA AirData (public domain) — see
         `data/fetch_climate_data.py`. Gaming is real Valorant competitive
         stats scraped from blitz.gg — see `data/fetch_gaming_data.py`.
+        Real Estate is real Zillow Home Value Index data — see
+        `data/fetch_realestate_data.py`.
         """
     )
