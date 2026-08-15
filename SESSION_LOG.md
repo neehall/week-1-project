@@ -211,17 +211,28 @@ Updated `README.md` (structure, provenance, `fetch_realestate_data.py` usage, ~2
 
 Updated `README.md` (structure, provenance, `fetch_logistics_data.py` usage).
 
-Next: Job Market — proceeding without further checkpoints per user's instruction. This will be the fifth and final dashboard of the originally requested five.
+## 19. Job Market dashboard (fifth and final of five, real Ask a Manager salary survey)
+
+**Sourcing real data:** found `github.com/kmamykin/askamanager_salary_survey` — a plain-CSV mirror of the real, large, crowd-sourced 2019 "Ask a Manager" salary survey (~31,000 real self-reported responses: job title, industry, years of experience, city/state/country, annual salary). Wrote `data/fetch_jobmarket_data.py` to download it (handling a real encoding quirk — the source isn't strict UTF-8, needed `latin-1`), clean `AnnualSalary` to numeric, filter to US/USD respondents with plausible salaries ($15k–$500k, dropping data-entry errors like a reported $15.6M salary), and keep the 20 best-represented cities → `data/jobmarket_salaries.csv` (11,485 rows). Sanity-checked: right-skewed salary distribution, salary rising with experience, NYC dominating response volume, Software/Finance/Tech topping industry pay — all plausible against reality.
+
+**Honesty note, same pattern as the other 3 real-data dashboards:** this survey has no "skills required" field — it captures title/industry/experience/location/salary, not skill listings. The user's original ask was "trending skills, salary distributions by role, demand by city" — this real data supports the latter two directly but not the first, so there is no skills-trend chart; documented explicitly in-app and in `README.md` rather than inventing a skills column. Also used "Responses" rather than "postings" throughout the UI, since this is survey respondents, not live job listings — a more accurate label for what the real data actually is.
+
+**Built `jobmarket_service.py` + `pages/9_JobMarket.py`:** KPIs (Avg Salary, Top-Paying Industry, Most Represented City, Total Responses); Overview tab (salary distribution histogram, avg salary by industry, responses by city, avg salary by experience bracket); Insights tab (salary range by city as box plots — a new chart type not used on any other dashboard, industry×experience salary heatmap, most-common-job-titles Pareto, industry>experience treemap). The source's "Industry (Clustered)" field has a long tail of near-duplicate free-text categories (2,251 unique values across the full dataset) — capped chart aggregations to the top 8–10 by count rather than plotting all of them, same pattern as "top N" used elsewhere (top products, top projects).
+
+**Verified, not just launched:** syntax-checked all files; launched via `./run.sh`; checked all 10 pages (9 dashboards + Home) × Overview/Insights at 1440×900 under headless Chromium — all `scrollHeight === clientHeight`, zero real console errors. Home's KPI row grew to 9 metrics; a single `st.columns(9)` would have made dollar-figure metrics cramped, so switched to two rows of 5 instead — re-verified it still fits with no overflow. Visually confirmed all 8 Job Market charts render distinct, sensible real data (including the new box-plot chart type).
+- Screenshots: `screenshots/13_home_updated.png` (Home, all 9 dashboards), `22_jobmarket_overview.png`, `23_jobmarket_insights.png`.
+
+Updated `README.md` (structure, provenance, `fetch_jobmarket_data.py` usage) and removed the "(more planned)" note — this completes all 5 originally requested new dashboards (Climate, Gaming, Real Estate, Logistics, Job Market).
 
 ---
 
 ## Current state of the project
 
 - **Repo:** https://github.com/neehall/week-1-project (public)
-- **Latest commit:** see `git log` — most recent work adds the Logistics dashboard (real USAID SCMS shipment data)
+- **Latest commit:** see `git log` — most recent work adds the Job Market dashboard (real Ask a Manager salary survey), completing all 5 requested new dashboards
 - **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results; Gaming Insights blank heatmap/treemap from a bad default filter; Gaming/Opex legend overflow
-- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub", flat wrapping dashboard grid, 8-column KPI row) + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
-- **Dashboards:** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data), Gaming (**real** Valorant stats), Real Estate (**real** Zillow ZHVI data), Logistics (**real** USAID SCMS data, `data/fetch_logistics_data.py`) — each with an Overview tab and an Insights tab
+- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub", flat wrapping dashboard grid, two-row KPI summary) + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
+- **Dashboards (9 total):** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data), Gaming (**real** Valorant stats), Real Estate (**real** Zillow ZHVI data), Logistics (**real** USAID SCMS data), Job Market (**real** Ask a Manager salary survey, `data/fetch_jobmarket_data.py`) — each with an Overview tab and an Insights tab
 - **Layout:** every tab on every dashboard fits on one screen (1440×900) with no scrolling
 - **To run locally:** `./run.sh` from the project folder (launches `app/Home.py`)
 - **Screenshots:** `screenshots/` — numbered in iteration order, each mapped to a log entry above

@@ -14,6 +14,7 @@ from services import (  # noqa: E402
     gaming_service,
     realestate_service,
     logistics_service,
+    jobmarket_service,
 )
 
 st.set_page_config(page_title="Analytics Hub", layout="wide", page_icon="📊")
@@ -29,16 +30,21 @@ climate_kpi = climate_service.compute_kpis(climate_service.load_data())
 gaming_kpi = gaming_service.compute_kpis(gaming_service.load_agent_data())
 realestate_kpi = realestate_service.compute_kpis(realestate_service.load_data())
 logistics_kpi = logistics_service.compute_kpis(logistics_service.load_data())
+jobmarket_kpi = jobmarket_service.compute_kpis(jobmarket_service.load_data())
 
-k1, k2, k3, k4, k5, k6, k7, k8 = st.columns(8)
+# Two rows of KPIs now that there are 9 — a single row of 9 got too
+# cramped at 1440px (dollar-figure metrics started wrapping/truncating).
+k1, k2, k3, k4, k5 = st.columns(5)
 k1.metric("Total Revenue", f"${revenue_kpi['total_sales']:,.0f}")
 k2.metric("Total Cost", f"${cost_kpi['total_cost']:,.0f}")
 k3.metric("Total Capex", f"${capex_kpi['total_capex']:,.0f}")
 k4.metric("Total Opex", f"${opex_kpi['total_opex']:,.0f}")
 k5.metric("Avg AQI", f"{climate_kpi['avg_aqi']:.0f}")
+k6, k7, k8, k9, _ = st.columns(5)
 k6.metric("Avg Win Rate", f"{gaming_kpi['avg_win_rate']:.1f}%")
 k7.metric("Avg Home Value", f"${realestate_kpi['avg_price']:,.0f}")
 k8.metric("On-Time Rate", f"{logistics_kpi['on_time_rate']:.1f}%")
+k9.metric("Avg Job Salary", f"${jobmarket_kpi['avg_salary']:,.0f}")
 
 st.divider()
 
@@ -56,6 +62,7 @@ DASHBOARDS = [
     ("🎮", "Gaming", "Gaming", "Real Valorant stats — K/D, win rate, map performance by rank.", "pages/6_Gaming.py"),
     ("🏠", "Real Estate", "Real Estate", "Real Zillow home values — by city, bedrooms, and price range.", "pages/7_RealEstate.py"),
     ("🚚", "Logistics", "Supply Chain", "Real shipment data — delivery times, on-time rates, by region.", "pages/8_Logistics.py"),
+    ("💼", "Job Market", "Careers", "Real salary survey — pay by role/industry, demand by city.", "pages/9_JobMarket.py"),
 ]
 
 cols = st.columns(4)
@@ -89,6 +96,8 @@ with st.expander("About this app"):
         stats scraped from blitz.gg — see `data/fetch_gaming_data.py`.
         Real Estate is real Zillow Home Value Index data — see
         `data/fetch_realestate_data.py`. Logistics is the real USAID SCMS
-        shipment dataset — see `data/fetch_logistics_data.py`.
+        shipment dataset — see `data/fetch_logistics_data.py`. Job Market
+        is the real "Ask a Manager" salary survey — see
+        `data/fetch_jobmarket_data.py`.
         """
     )

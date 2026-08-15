@@ -1,7 +1,7 @@
 # Analytics Hub (Streamlit)
 
 Multiple dashboards — **Revenue**, **Cost**, **Capex**, **Opex**, **Climate**,
-**Gaming**, **Real Estate**, **Logistics** (more planned) — built as a
+**Gaming**, **Real Estate**, **Logistics**, **Job Market** — built as a
 modular monolith: one Streamlit app, cleanly separated by domain.
 
 ```
@@ -16,6 +16,7 @@ app/
     6_Gaming.py
     7_RealEstate.py
     8_Logistics.py
+    9_JobMarket.py
   services/
     revenue_service.py     # data loading + filtering + business logic
     cost_service.py
@@ -25,6 +26,7 @@ app/
     gaming_service.py
     realestate_service.py
     logistics_service.py
+    jobmarket_service.py
   common/
     styling.py             # shared page/chart styling helpers
     charts.py               # shared chart builders (heatmap, treemap, pareto, stacked area)
@@ -38,11 +40,13 @@ data/
   gaming_map_stats.csv     # REAL — Valorant map win rates via blitz.gg
   realestate_zhvi.csv      # REAL — Zillow Home Value Index, 20 US cities, 2020-2026
   logistics_shipments.csv  # REAL — USAID SCMS shipment history, 2006-2015
+  jobmarket_salaries.csv   # REAL — Ask a Manager 2019 salary survey
   generate_synthetic_data.py
   fetch_climate_data.py
   fetch_gaming_data.py
   fetch_realestate_data.py
   fetch_logistics_data.py
+  fetch_jobmarket_data.py
 ```
 
 Pages never read a CSV directly — they always go through their
@@ -87,6 +91,13 @@ separated.
   vs. delayed), and freight cost — but no warehouse/inventory
   dimension, so there's no stock-levels-over-time metric. See
   `data/fetch_logistics_data.py`.
+- **Job Market** — **real** [Ask a Manager 2019 salary survey](https://github.com/kmamykin/askamanager_salary_survey)
+  (large, public, crowd-sourced self-reported survey; ~11,500 US
+  responses after cleaning/filtering here). Has real job title,
+  industry, years of experience, city, and salary — but no "skills
+  required" field, so unlike salary-by-role and demand-by-city (both
+  real), there's no skills-trend chart. "Responses" means survey
+  respondents, not live job postings. See `data/fetch_jobmarket_data.py`.
 
 ## Prerequisites
 
@@ -143,4 +154,10 @@ Real Logistics (USAID SCMS) data (requires network access to raw.githubuserconte
 
 ```bash
 python3 data/fetch_logistics_data.py
+```
+
+Real Job Market (Ask a Manager survey) data (requires network access to raw.githubusercontent.com):
+
+```bash
+python3 data/fetch_jobmarket_data.py
 ```
