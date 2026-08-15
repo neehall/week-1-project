@@ -198,17 +198,30 @@ Updated `README.md` (structure, data provenance, `fetch_gaming_data.py` usage).
 
 Updated `README.md` (structure, provenance, `fetch_realestate_data.py` usage, ~200MB one-time download note).
 
-Next: Supply Chain/Logistics, Job Market — proceeding without further checkpoints per user's instruction.
+## 18. Logistics dashboard (fourth of five, real USAID SCMS shipment data)
+
+**Sourcing real data:** found `github.com/jrcinco/supply-chain-shipment-price-data` — a plain-CSV mirror of the real USAID SCMS (Supply Chain Management System) Delivery History Dataset, originally published via USAID/data.gov: ~10,000 real health-commodity shipments to 43 countries, 2006–2015, with genuine `Scheduled Delivery Date` / `Delivered to Client Date`, `Shipment Mode` (Air/Truck/Air Charter/Ocean), `Freight Cost (USD)`, and `Weight (Kilograms)` — a direct match for "delivery times by region, on-time vs. delayed rates" from the user's original request. Wrote `data/fetch_logistics_data.py` to download it, parse both dates, derive `delay_days` and an on-time/delayed `status`, map each of the 43 countries to one of 4 regions, and coerce `Freight Cost (USD)` to numeric (real data quality issue: ~40% of freight-cost values are text placeholders like `"Freight Included in Commodity Cost"` rather than numbers — coerced to NaN and excluded from freight charts rather than silently zeroed or dropped from the whole dataset). Sanity-checked: 88.1% on-time rate, 61% Air shipments (plausible for urgent health commodities), Nigeria dominating freight cost (plausible — largest program by volume) — all consistent with reality.
+
+**Honesty note, same pattern as the other 3 real-data dashboards:** this dataset has no warehouse or inventory dimension, so there's no "stock levels over time" metric, unlike the other two things the user asked for (delivery times, on-time/delayed rates) which this data supports directly. Documented in-app and in `README.md` rather than fabricating a stock-level series to fill the gap.
+
+**Built `logistics_service.py` + `pages/8_Logistics.py`:** KPIs (On-Time Rate, Avg Delay, Avg Freight Cost, Total Shipments); Overview tab (delivery status by region, avg delay by region, shipment mode distribution, freight cost by mode); Insights tab (on-time rate by year — shows a real dip around 2010–2012, region×mode delay heatmap, region>product-group volume treemap, freight-cost-by-country Pareto, where Nigeria's real dominance is clearly visible).
+
+**Verified, not just launched:** syntax-checked all files; launched via `./run.sh`; checked all 9 pages (8 dashboards + Home) × Overview/Insights at 1440×900 under headless Chromium — all `scrollHeight === clientHeight`, zero real console errors (used a stricter check this time: inspecting actual response URLs and excluding only the documented benign `_stcore` 404s, rather than a text-substring filter that could hide a real 404 with `_stcore` incidentally in its path). Visually confirmed all 8 Overview/Insights charts render distinct real data. Added the Logistics card + 8th KPI to Home (switched the KPI row from a single `st.columns(7)` to `st.columns(8)` rather than wrapping to a second row, to keep Home's vertical space budget unchanged) — confirmed still fits at 1440×900.
+- Screenshots: `screenshots/13_home_updated.png` (Home, 8 dashboards), `20_logistics_overview.png`, `21_logistics_insights.png`.
+
+Updated `README.md` (structure, provenance, `fetch_logistics_data.py` usage).
+
+Next: Job Market — proceeding without further checkpoints per user's instruction. This will be the fifth and final dashboard of the originally requested five.
 
 ---
 
 ## Current state of the project
 
 - **Repo:** https://github.com/neehall/week-1-project (public)
-- **Latest commit:** see `git log` — most recent work adds the Real Estate dashboard (real Zillow ZHVI data)
+- **Latest commit:** see `git log` — most recent work adds the Logistics dashboard (real USAID SCMS shipment data)
 - **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results; Gaming Insights blank heatmap/treemap from a bad default filter; Gaming/Opex legend overflow
-- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub", flat wrapping dashboard grid) + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
-- **Dashboards:** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data), Gaming (**real** Valorant stats), Real Estate (**real** Zillow ZHVI data, `data/fetch_realestate_data.py`) — each with an Overview tab and an Insights tab
+- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub", flat wrapping dashboard grid, 8-column KPI row) + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
+- **Dashboards:** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data), Gaming (**real** Valorant stats), Real Estate (**real** Zillow ZHVI data), Logistics (**real** USAID SCMS data, `data/fetch_logistics_data.py`) — each with an Overview tab and an Insights tab
 - **Layout:** every tab on every dashboard fits on one screen (1440×900) with no scrolling
 - **To run locally:** `./run.sh` from the project folder (launches `app/Home.py`)
 - **Screenshots:** `screenshots/` — numbered in iteration order, each mapped to a log entry above

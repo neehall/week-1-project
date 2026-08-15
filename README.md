@@ -1,8 +1,8 @@
 # Analytics Hub (Streamlit)
 
 Multiple dashboards — **Revenue**, **Cost**, **Capex**, **Opex**, **Climate**,
-**Gaming**, **Real Estate** (more planned) — built as a modular monolith:
-one Streamlit app, cleanly separated by domain.
+**Gaming**, **Real Estate**, **Logistics** (more planned) — built as a
+modular monolith: one Streamlit app, cleanly separated by domain.
 
 ```
 app/
@@ -15,6 +15,7 @@ app/
     5_Climate.py
     6_Gaming.py
     7_RealEstate.py
+    8_Logistics.py
   services/
     revenue_service.py     # data loading + filtering + business logic
     cost_service.py
@@ -23,6 +24,7 @@ app/
     climate_service.py
     gaming_service.py
     realestate_service.py
+    logistics_service.py
   common/
     styling.py             # shared page/chart styling helpers
     charts.py               # shared chart builders (heatmap, treemap, pareto, stacked area)
@@ -35,10 +37,12 @@ data/
   gaming_agent_stats.csv   # REAL — Valorant competitive stats via blitz.gg
   gaming_map_stats.csv     # REAL — Valorant map win rates via blitz.gg
   realestate_zhvi.csv      # REAL — Zillow Home Value Index, 20 US cities, 2020-2026
+  logistics_shipments.csv  # REAL — USAID SCMS shipment history, 2006-2015
   generate_synthetic_data.py
   fetch_climate_data.py
   fetch_gaming_data.py
   fetch_realestate_data.py
+  fetch_logistics_data.py
 ```
 
 Pages never read a CSV directly — they always go through their
@@ -76,6 +80,13 @@ separated.
   prices — so there's no exact per-listing price/address, and the map
   plots city centroids (public coordinates), not individual properties.
   See `data/fetch_realestate_data.py`.
+- **Logistics** — **real** [USAID SCMS Delivery History Dataset](https://github.com/jrcinco/supply-chain-shipment-price-data)
+  (public health-commodity shipment records, 2006–2015, ~10,000
+  shipments across 43 countries). Has real shipment mode, country/
+  region, scheduled-vs-actual delivery dates (used to compute on-time
+  vs. delayed), and freight cost — but no warehouse/inventory
+  dimension, so there's no stock-levels-over-time metric. See
+  `data/fetch_logistics_data.py`.
 
 ## Prerequisites
 
@@ -126,4 +137,10 @@ Real Estate (Zillow ZHVI) data (requires network access to files.zillowstatic.co
 
 ```bash
 python3 data/fetch_realestate_data.py
+```
+
+Real Logistics (USAID SCMS) data (requires network access to raw.githubusercontent.com):
+
+```bash
+python3 data/fetch_logistics_data.py
 ```
