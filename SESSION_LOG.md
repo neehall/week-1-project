@@ -273,15 +273,35 @@ Fetched the referenced page (a Power BI custom-visuals template gallery: KPI car
 
 **Verified all 10 pages × Overview/Insights** (18 combinations) at 1440×900 after every round of fixes — final state: all `scrollHeight === clientHeight`, zero real console errors. Screenshots in `screenshots/v2/`.
 
+## 29. Prompt: "launch the v2 dashboards on streamlit"
+
+Launched `./run.sh` on the `v2` branch and gave the local URL. Verification at this point was still headless-browser-only (Chromium, no OS theme applied) — that gap mattered for the next report.
+
+## 30. Prompt: "the home page does not show data correctly and the insights tab on all the reports is not showing"
+
+Could not reproduce via direct navigation, sidebar-click navigation, or 3 different screen sizes — all showed correct data and working tabs. Confirmed only one server process was running (no stray old instance on another port). Asked the user for a screenshot rather than keep guessing blind.
+
+**The screenshot showed the real cause immediately**: the user's OS/browser was in dark mode. Streamlit auto-detects OS theme when no `.streamlit/config.toml` exists, so its own chrome (sidebar) rendered dark — but the v2 CSS in `styling.py` hard-coded a *light* background (`.stApp {background-color: ...}` with light-mode `theme.py` values) without also forcing all text to dark-mode-safe colors. Result: `st.markdown()` labels ("Revenue", "Cost", "Open", the card descriptions) and the `h1` title inherited Streamlit's dark-mode default text color (near-white) and rendered on top of the forced-light background — invisible white-on-white text. This explained both symptoms as one root cause: "data not showing" was actually the labels vanishing (the numbers, which use an explicitly-colored `stMetricValue` selector, stayed visible), and "Insights tab not showing" was the tab *label* text vanishing the same way, not the tab mechanism failing.
+
+Fixed by adding `.streamlit/config.toml` with `base = "light"` and explicit theme colors matching `theme.py`, so Streamlit's own chrome and the custom CSS always agree on one surface regardless of OS setting. Verified the fix by re-testing with Playwright's `colorScheme: 'dark'` emulation (reproducing the user's actual condition, not just the default) — confirmed all text visible, Insights tab working, before believing it fixed.
+
+## 31. Prompt: "can you put on dark mode though, looks better" (sent mid-turn, while verifying the light-mode fix)
+
+Rather than just flip `base` to `"dark"` and hope, rebuilt `theme.py`'s constants using the dataviz skill's own dark-surface steps for every slot (categorical hues, status colors — unchanged, already dark-surface-validated — sequential ramp reversed for dim→bright against a dark background, diverging pair, chart chrome/ink/gridlines), updated `.streamlit/config.toml` to `base = "dark"` with matching colors, and fixed the card box-shadow (a dark shadow on an already-dark card is invisible — switched to a light-tinted shadow for visible elevation). Also caught and fixed a chart-specific issue the palette swap alone wouldn't touch: Real Estate's `scatter_geo` map has its own `landcolor`/`bgcolor` separate from the shared chart chrome, and was about to render a plain white US landmass against the new dark page — added explicit dark `update_geos()` styling.
+
+A stray process left the port in a bad state mid-restart (Streamlit fell back to 8502) — cleaned it up and relaunched cleanly on 8501 rather than leaving two servers running.
+
+Verified with Playwright under **both** `colorScheme: 'light'` and `'dark'` OS emulation (should now render identically dark either way, since the app no longer auto-detects) across Home + 3 dashboards, then a full final sweep of all 10 pages × Overview/Insights — all `scrollHeight === clientHeight`, zero errors, dark theme confirmed consistent throughout including the previously-broken map.
+
 ---
 
 ## Current state of the project
 
 - **Repo:** https://github.com/neehall/week-1-project (public) — `main` branch unchanged; new work is on branch `v2`
-- **Latest commit on `v2`:** see `git log v2` — the design-system redesign of all 9 dashboards
-- **Bugs fixed (cumulative):** date-range partial-selection crash; `nan%` avg discount; Gaming Insights blank heatmap/treemap from a bad default filter; Gaming/Opex legend overflow; v2's dual-axis Pareto anti-pattern; v2's "undefined" chart-title text; v2's gauge text overflow; v2's Home 2-row KPI overflow
-- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub") + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout + KPI cards) + `app/common/charts.py` (shared chart builders) + `app/common/theme.py` (v2: the shared color/chrome design system) + `app/common/deltas.py` (v2: period-over-period KPI deltas)
-- **Dashboards (9 total):** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic), Climate/Gaming/Real Estate/Logistics/Job Market (**real** data, one `fetch_*.py` each) — each with an Overview tab and an Insights tab, redesigned in v2 with a shared validated color palette, KPI cards, and BI-pattern charts (donut, waterfall, gauge) where they fit the domain
+- **Latest commit on `v2`:** see `git log v2` — the design-system redesign of all 9 dashboards, now in dark theme
+- **Bugs fixed (cumulative):** date-range partial-selection crash; `nan%` avg discount; Gaming Insights blank heatmap/treemap from a bad default filter; Gaming/Opex legend overflow; v2's dual-axis Pareto anti-pattern; v2's "undefined" chart-title text; v2's gauge text overflow; v2's Home 2-row KPI overflow; v2's OS-dark-mode text-invisibility bug (root cause of "data not showing" / "Insights tab not showing"); v2's white map landmass against dark theme
+- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub") + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout + KPI cards) + `app/common/charts.py` (shared chart builders) + `app/common/theme.py` (v2: the shared color/chrome design system, now dark-mode values) + `app/common/deltas.py` (v2: period-over-period KPI deltas) + `.streamlit/config.toml` (v2: locks the app to dark theme, so it never depends on OS auto-detection again)
+- **Dashboards (9 total):** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic), Climate/Gaming/Real Estate/Logistics/Job Market (**real** data, one `fetch_*.py` each) — each with an Overview tab and an Insights tab, redesigned in v2 with a shared validated dark-mode color palette, KPI cards, and BI-pattern charts (donut, waterfall, gauge) where they fit the domain
 - **Layout:** every tab on every dashboard fits on one screen (1440×900) with no scrolling
 - **To run locally:** `./run.sh` from the project folder (launches `app/Home.py`); `git checkout v2` for the redesign, `git checkout main` for the original
-- **Screenshots:** `screenshots/` (v1 history) and `screenshots/v2/` (v2 redesign) — each mapped to a log entry above
+- **Screenshots:** `screenshots/` (v1 history) and `screenshots/v2/` (v2 redesign, dark theme) — each mapped to a log entry above

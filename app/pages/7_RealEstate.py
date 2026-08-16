@@ -71,6 +71,13 @@ if not df_filtered.empty:
                 map_data, lat="lat", lon="lon", size="zhvi", color="zhvi",
                 hover_name="city", scope="usa", color_continuous_scale=theme.SEQUENTIAL_BLUE,
             )
+            # Plotly's geo map has its own landcolor/bgcolor, separate from
+            # the chart chrome apply_chart_chrome() sets — without this it
+            # renders a plain white landmass that clashes with dark mode.
+            fig.update_geos(
+                bgcolor=theme.SURFACE, landcolor=theme.GRIDLINE,
+                subunitcolor=theme.BASELINE, showsubunits=True,
+            )
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
     with tab_insights:

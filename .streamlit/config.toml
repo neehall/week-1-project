@@ -1,0 +1,12 @@
+# Locks the app to dark theme regardless of the viewer's OS/browser
+# preference, so Streamlit's own chrome (sidebar, default text) and
+# the v2 design system (app/common/theme.py) always agree on the same
+# surface — avoiding the light-on-light/dark-on-dark mismatch that
+# happens when Streamlit auto-detects OS dark mode but custom CSS
+# assumes a fixed theme. See SESSION_LOG.md.
+[theme]
+base = "dark"
+backgroundColor = "#0d0d0d"
+secondaryBackgroundColor = "#1a1a19"
+textColor = "#ffffff"
+primaryColor = "#3987e5"

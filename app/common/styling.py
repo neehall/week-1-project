@@ -35,7 +35,7 @@ def apply_page_style():
             border: 1px solid {theme.GRIDLINE};
             border-radius: 8px;
             padding: 0.4rem 0.9rem 0.35rem 0.9rem;
-            box-shadow: 0 1px 2px rgba(11,11,11,0.06);
+            box-shadow: 0 1px 2px {theme.CARD_SHADOW};
         }}
         [data-testid="stMetricValue"] {{font-size: 1.4rem; color: {theme.INK_PRIMARY};}}
         [data-testid="stMetricLabel"] {{color: {theme.INK_SECONDARY};}}
