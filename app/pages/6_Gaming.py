@@ -5,8 +5,8 @@ import plotly.express as px
 import streamlit as st
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-from common.styling import apply_page_style, style_chart  # noqa: E402
-from common import charts  # noqa: E402
+from common.styling import apply_page_style, style_chart, kpi_metric  # noqa: E402
+from common import charts, theme  # noqa: E402
 from services import gaming_service as svc  # noqa: E402
 
 st.set_page_config(page_title="Gaming Dashboard", layout="wide")
@@ -30,10 +30,10 @@ map_filtered = svc.filter_map_data(map_df, ranks)
 
 kpi = svc.compute_kpis(agent_filtered)
 k1, k2, k3, k4 = st.columns(4)
-k1.metric("Avg K/D", f"{kpi['avg_kd']:.2f}")
-k2.metric("Avg Win Rate", f"{kpi['avg_win_rate']:.1f}%")
-k3.metric("Top Agent (win rate)", kpi["top_agent"])
-k4.metric("Matches Analyzed", f"{kpi['total_matches']:,}")
+kpi_metric(k1, "Avg K/D", f"{kpi['avg_kd']:.2f}", icon="🎯")
+kpi_metric(k2, "Avg Win Rate", f"{kpi['avg_win_rate']:.1f}%", icon="🏆")
+kpi_metric(k3, "Top Agent (win rate)", kpi["top_agent"], icon="⭐")
+kpi_metric(k4, "Matches Analyzed", f"{kpi['total_matches']:,}", icon="🎮")
 
 if not agent_filtered.empty:
     tab_overview, tab_insights = st.tabs(["Overview", "Insights"])
@@ -42,23 +42,22 @@ if not agent_filtered.empty:
         row1_left, row1_right = st.columns(2)
         with row1_left:
             st.markdown("**K/D by Agent**")
-            fig = px.bar(svc.kd_by_agent(agent_filtered), x="agent", y="kd")
+            fig = px.bar(svc.kd_by_agent(agent_filtered), x="agent", y="kd", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row1_right:
             st.markdown("**Win Rate by Agent**")
-            fig = px.bar(svc.win_rate_by_agent(agent_filtered), x="agent", y="win_rate")
+            fig = px.bar(svc.win_rate_by_agent(agent_filtered), x="agent", y="win_rate", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
         row2_left, row2_right = st.columns(2)
         with row2_left:
-            st.markdown("**Map Performance: Attack vs Defense Win %**")
-            mw = svc.map_win_rates(map_filtered).melt(id_vars="map", var_name="side", value_name="win_pct")
-            fig = px.bar(mw, x="map", y="win_pct", color="side", barmode="group")
+            st.markdown("**Avg Win Rate vs 50% Baseline**")
+            fig = charts.gauge(kpi["avg_win_rate"], max_value=100, target=50, suffix="%")
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row2_right:
-            st.markdown("**Most Picked Agents**")
-            top = svc.pick_rate_by_agent(agent_filtered)
-            fig = px.bar(top.sort_values("pick_rate"), x="pick_rate", y="agent", orientation="h")
+            st.markdown("**Map Performance: Attack vs Defense Win %**")
+            mw = svc.map_win_rates(map_filtered).melt(id_vars="map", var_name="side", value_name="win_pct")
+            fig = px.bar(mw, x="map", y="win_pct", color="side", barmode="group", color_discrete_sequence=theme.CATEGORICAL)
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
     with tab_insights:
@@ -69,6 +68,7 @@ if not agent_filtered.empty:
                 svc.win_rate_by_rank(agent_filtered),
                 x="rank", y="win_rate", color="agent",
                 category_orders={"rank": svc.RANK_ORDER},
+                color_discrete_sequence=theme.CATEGORICAL,
             )
             fig.update_layout(legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0))
             st.plotly_chart(style_chart(fig), use_container_width=True)

@@ -6,8 +6,8 @@ import plotly.express as px
 import streamlit as st
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-from common.styling import apply_page_style, style_chart  # noqa: E402
-from common import charts  # noqa: E402
+from common.styling import apply_page_style, style_chart, kpi_metric  # noqa: E402
+from common import charts, theme, deltas  # noqa: E402
 from services import realestate_service as svc  # noqa: E402
 
 st.set_page_config(page_title="Real Estate Dashboard", layout="wide")
@@ -31,13 +31,19 @@ start_date, end_date = pd.to_datetime(date_range[0]), pd.to_datetime(date_range[
 df_filtered = svc.filter_data(df, start_date, end_date, cities, bedrooms)
 df_filtered = df_filtered[df_filtered["zhvi"].between(price_range[0], price_range[1])]
 
+prev_start, prev_end = deltas.previous_period(start_date, end_date)
+df_prev = svc.filter_data(df, prev_start, prev_end, cities, bedrooms)
+df_prev = df_prev[df_prev["zhvi"].between(price_range[0], price_range[1])]
+kpi_prev = svc.compute_kpis(df_prev)
+
 kpi = svc.compute_kpis(df_filtered)
 k1, k2, k3, k4 = st.columns(4)
-k1.metric("Avg Home Value", f"${kpi['avg_price']:,.0f}")
+kpi_metric(k1, "Avg Home Value", f"${kpi['avg_price']:,.0f}", icon="🏠",
+           delta=deltas.delta_str(deltas.pct_change(kpi["avg_price"], kpi_prev["avg_price"])))
 yoy = kpi["yoy_change_pct"]
-k2.metric("YoY Change", f"{yoy:+.1f}%" if yoy is not None else "N/A")
-k3.metric("Priciest City", kpi["priciest_city"])
-k4.metric("Most Affordable City", kpi["cheapest_city"])
+kpi_metric(k2, "YoY Change", f"{yoy:+.1f}%" if yoy is not None else "N/A", icon="📊")
+kpi_metric(k3, "Priciest City", kpi["priciest_city"], icon="💎")
+kpi_metric(k4, "Most Affordable City", kpi["cheapest_city"], icon="💵")
 
 if not df_filtered.empty:
     tab_overview, tab_insights = st.tabs(["Overview", "Insights"])
@@ -46,24 +52,24 @@ if not df_filtered.empty:
         row1_left, row1_right = st.columns(2)
         with row1_left:
             st.markdown("**Home Value Trend Over Time**")
-            fig = px.line(svc.price_trend(df_filtered), x="date", y="zhvi")
+            fig = px.line(svc.price_trend(df_filtered), x="date", y="zhvi", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row1_right:
             st.markdown("**Avg Home Value by City**")
-            fig = px.bar(svc.avg_price_by_city(df_filtered), x="city", y="zhvi")
+            fig = px.bar(svc.avg_price_by_city(df_filtered), x="city", y="zhvi", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
         row2_left, row2_right = st.columns(2)
         with row2_left:
             st.markdown("**Avg Home Value by Bedrooms**")
-            fig = px.bar(svc.avg_price_by_bedrooms(df_filtered), x="bedrooms", y="zhvi")
+            fig = px.bar(svc.avg_price_by_bedrooms(df_filtered), x="bedrooms", y="zhvi", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row2_right:
             st.markdown("**Home Value by City (Map)**")
             map_data = svc.city_map_data(df_filtered)
             fig = px.scatter_geo(
                 map_data, lat="lat", lon="lon", size="zhvi", color="zhvi",
-                hover_name="city", scope="usa", color_continuous_scale="Blues",
+                hover_name="city", scope="usa", color_continuous_scale=theme.SEQUENTIAL_BLUE,
             )
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
@@ -71,7 +77,7 @@ if not df_filtered.empty:
         row1_left, row1_right = st.columns(2)
         with row1_left:
             st.markdown("**YoY Price Change by City**")
-            fig = px.bar(svc.yoy_change_by_city(df_filtered), x="city", y="yoy_pct")
+            fig = px.bar(svc.yoy_change_by_city(df_filtered), x="city", y="yoy_pct", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row1_right:
             st.markdown("**Price Trend by Bedroom Count**")
@@ -85,7 +91,7 @@ if not df_filtered.empty:
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row2_right:
             st.markdown("**Price Distribution**")
-            fig = px.histogram(df_filtered, x="zhvi", nbins=30)
+            fig = px.histogram(df_filtered, x="zhvi", nbins=30, color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
 else:
     st.info("No data for selected filters.")

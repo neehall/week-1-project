@@ -240,15 +240,48 @@ Added `BUILD_WRITEUP.md` — distinct from this file (`SESSION_LOG.md`, the chro
 
 Removed `BUILD_WRITEUP.md` from the repo and removed its link from `README.md`. Its content was delivered directly in the chat response instead of as a repo file.
 
+## 24. Prompt: "can you put the content in a text file for me to download" / "also add to the file the initial difficulty in setting up the environment..." / "also add in problems from the problem tab..." / "make the prompts used section easier to understand"
+
+Saved the write-up as a local, gitignored `BUILD_WRITEUP.txt` (not committed, per the prior instruction), then iteratively expanded it on request: an "Initial Environment Setup — Difficulties" section, an "Errors Encountered and How They Were Fixed" section (error → cause → fix format), and a reorganization of the prompts log from a flat 33-item list into 6 named phases. Lives only on disk, not in this log's own history — see the file itself for its content.
+
+## 25. Prompt: "are all the python libraries, venv environments setup correctly... also github integration with vscode and claude is working correctly and no future setup issues anticipated?"
+
+Actually verified rather than assumed: `pip check` (no conflicts), every `requirements.txt` package satisfied, a full relaunch + headless re-screenshot of all 9 dashboards (confirmed no regressions from the file reorganization). For git/GitHub: confirmed the credential helper is `osxkeychain` (not dependent on `gh`), verified with a real `git push --dry-run`. **Found one real latent gap**: the `gh` CLI only existed in a temporary Claude Code session folder (`/private/tmp/...`), not on `PATH` in a plain terminal — fixed by copying it to `~/bin/gh` and adding `~/bin` to `PATH` in `.bash_profile`, then verified in a simulated fresh terminal that `gh` is found and still authenticated (its token lives in the keychain, independent of the binary's location).
+
+## 26. Prompt: "is there anything in vscode we should cleanup"
+
+Checked for stale `.vscode/` config (none existed) and the global VSCode `settings.json` (minimal, harmless). Found a real gap worth closing proactively: no interpreter pinned to `.venv`, risking the same Anaconda-vs-venv confusion inside the editor. Added `.vscode/settings.json` (`python.defaultInterpreterPath` → `.venv/bin/python3`) and gitignored it as machine-specific.
+
+## 27. Prompt: "i want to create a new version of all the dashboards without overwriting the existing dashboards, how do i do this"
+
+Asked which mechanism the user meant (git branch / side-by-side pages in one app / a full separate project copy) — user chose a git branch. Created and pushed branch `v2` off `main` (`git checkout -b v2`, `git push -u origin v2`); explained the day-to-day workflow (switch with `git checkout`, compare with `git diff main v2`, merge or PR when ready). `main` stays untouched until an explicit merge.
+
+## 28. Prompt: "on v2 i want to create the next version of all the 9 dashboards. use the best templates from zoomcharts.com/.../dashboard-and-report-examples/"
+
+Fetched the referenced page (a Power BI custom-visuals template gallery: KPI cards, donut/pie, combo, waterfall, gauge, treemap, heatmap patterns across finance/HR/sales/etc. dashboards) for design direction, then **loaded this workspace's `dataviz` skill before touching any chart code or colors**, per its own trigger condition. Used its already-validated reference palette unchanged (categorical hues in fixed order, one sequential blue ramp, a reserved status palette, a diverging pair) rather than inventing new colors, and used its anti-patterns list to catch a real issue already living in v1: the Pareto chart's dual-axis (two different y-scales in one plot) — redesigned it to share one 0–100% axis (bars = % of total, line = cumulative %, both already the same unit).
+
+**Built a shared v2 design system**: `app/common/theme.py` (the palette + chart chrome), extended `app/common/charts.py` (palette-aware `heatmap`/`treemap`/`stacked_area`, the fixed `pareto`, plus new `gauge()` and `waterfall()` builders), extended `app/common/styling.py` (KPI cards and chart containers as bordered/elevated cards, page-plane background, `kpi_metric()` helper for icon-prefixed metrics), and `app/common/deltas.py` (one shared period-over-period % helper driving `st.metric`'s built-in trend arrows, instead of six copies of the same date arithmetic).
+
+**Built Revenue as the flagship redesign first** (not all 9 at once) to catch problems early — and it did: a headless screenshot caught the literal string **"undefined"** rendering on every chart (`theme.apply_chart_chrome()` was setting `title_font` with no `title.text`, which this Plotly.js version renders as literal "undefined" instead of nothing) and a 31px one-screen-fit overflow from the new KPI/chart card padding. Fixed both (removed the stray `title_font`; trimmed `CHART_HEIGHT` from 230→205), re-verified `scrollHeight === clientHeight`, confirmed clean.
+
+**Rolled the same system out to the remaining 8 dashboards + Home**, each getting: KPI cards with icons (and period-over-period deltas where the KPI is a period total), pie→donut conversions, explicit `color_discrete_sequence`/`color_discrete_map` on every direct `px.*` call using a `color=` dimension (Plotly Express doesn't retroactively apply a layout-level `colorway` to traces it already colored at creation time — this has to be set per chart, not just once in the shared chrome), and one new BI-pattern chart per domain where it genuinely fit: waterfall bridges (Revenue by region, Cost by category), gauges against a real target (Climate: EPA's actual 100 AQI "Unhealthy for Sensitive Groups" threshold; Gaming: the sport's actual 50% win-rate baseline; Logistics: a 90% on-time industry target).
+
+**Two more real bugs caught by screenshots, not assumed away:**
+- The gauge's number+delta text overflowed its compact 205px-tall card — fixed by dropping the redundant `+delta` mode (the target already shows as a threshold line on the gauge itself) and setting an explicit smaller number font.
+- Home overflowed 13px once it grew to 2 rows of KPI cards — fixed by trimming card padding and top page padding further, re-verified across all 10 pages.
+- **A design-system self-check, not a bug**: Logistics' "Delivery Status by Region" (On Time / Delayed) was initially colored with the generic categorical sequence — caught that this is actually a *status*, not an arbitrary category, and switched it to the palette's reserved status colors (green/red) via `color_discrete_map`, matching the skill's own rule that status color is reserved and never doubles as a series color.
+
+**Verified all 10 pages × Overview/Insights** (18 combinations) at 1440×900 after every round of fixes — final state: all `scrollHeight === clientHeight`, zero real console errors. Screenshots in `screenshots/v2/`.
+
 ---
 
 ## Current state of the project
 
-- **Repo:** https://github.com/neehall/week-1-project (public)
-- **Latest commit:** see `git log` — most recent work adds `BUILD_WRITEUP.md`
-- **Bugs fixed:** date-range partial-selection crash; `nan%` avg discount on empty filter results; Gaming Insights blank heatmap/treemap from a bad default filter; Gaming/Opex legend overflow
-- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub", flat wrapping dashboard grid, two-row KPI summary) + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout) + `app/common/charts.py` (shared chart builders)
-- **Dashboards (9 total):** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic, `data/generate_synthetic_data.py`), Climate (**real** EPA AQI data), Gaming (**real** Valorant stats), Real Estate (**real** Zillow ZHVI data), Logistics (**real** USAID SCMS data), Job Market (**real** Ask a Manager salary survey, `data/fetch_jobmarket_data.py`) — each with an Overview tab and an Insights tab
+- **Repo:** https://github.com/neehall/week-1-project (public) — `main` branch unchanged; new work is on branch `v2`
+- **Latest commit on `v2`:** see `git log v2` — the design-system redesign of all 9 dashboards
+- **Bugs fixed (cumulative):** date-range partial-selection crash; `nan%` avg discount; Gaming Insights blank heatmap/treemap from a bad default filter; Gaming/Opex legend overflow; v2's dual-axis Pareto anti-pattern; v2's "undefined" chart-title text; v2's gauge text overflow; v2's Home 2-row KPI overflow
+- **Architecture:** modular monolith — `app/Home.py` ("Analytics Hub") + `app/pages/` (presentation) + `app/services/` (data/business logic per domain) + `app/common/styling.py` (shared layout + KPI cards) + `app/common/charts.py` (shared chart builders) + `app/common/theme.py` (v2: the shared color/chrome design system) + `app/common/deltas.py` (v2: period-over-period KPI deltas)
+- **Dashboards (9 total):** Revenue (illustrative sample data), Cost/Capex/Opex (synthetic), Climate/Gaming/Real Estate/Logistics/Job Market (**real** data, one `fetch_*.py` each) — each with an Overview tab and an Insights tab, redesigned in v2 with a shared validated color palette, KPI cards, and BI-pattern charts (donut, waterfall, gauge) where they fit the domain
 - **Layout:** every tab on every dashboard fits on one screen (1440×900) with no scrolling
-- **To run locally:** `./run.sh` from the project folder (launches `app/Home.py`)
-- **Screenshots:** `screenshots/` — numbered in iteration order, each mapped to a log entry above
+- **To run locally:** `./run.sh` from the project folder (launches `app/Home.py`); `git checkout v2` for the redesign, `git checkout main` for the original
+- **Screenshots:** `screenshots/` (v1 history) and `screenshots/v2/` (v2 redesign) — each mapped to a log entry above

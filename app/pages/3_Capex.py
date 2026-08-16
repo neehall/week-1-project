@@ -6,8 +6,8 @@ import plotly.express as px
 import streamlit as st
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-from common.styling import apply_page_style, style_chart  # noqa: E402
-from common import charts  # noqa: E402
+from common.styling import apply_page_style, style_chart, kpi_metric  # noqa: E402
+from common import charts, theme, deltas  # noqa: E402
 from services import capex_service as svc  # noqa: E402
 
 st.set_page_config(page_title="Capex Dashboard", layout="wide")
@@ -30,12 +30,17 @@ if len(date_range) != 2:
 start_date, end_date = pd.to_datetime(date_range[0]), pd.to_datetime(date_range[1])
 df_filtered = svc.filter_data(df, start_date, end_date, regions, asset_categories)
 
+prev_start, prev_end = deltas.previous_period(start_date, end_date)
+df_prev = svc.filter_data(df, prev_start, prev_end, regions, asset_categories)
+kpi_prev = svc.compute_kpis(df_prev)
+
 kpi = svc.compute_kpis(df_filtered)
 k1, k2, k3, k4 = st.columns(4)
-k1.metric("Total Capex", f"${kpi['total_capex']:,.2f}")
-k2.metric("Projects", kpi["n_projects"])
-k3.metric("Avg Project Size", f"${kpi['avg_project_size']:,.2f}")
-k4.metric("Largest Project", f"${kpi['largest_project']:,.2f}")
+kpi_metric(k1, "Total Capex", f"${kpi['total_capex']:,.2f}", icon="🏗️",
+           delta=deltas.delta_str(deltas.pct_change(kpi["total_capex"], kpi_prev["total_capex"])), delta_color="inverse")
+kpi_metric(k2, "Projects", str(kpi["n_projects"]), icon="📁")
+kpi_metric(k3, "Avg Project Size", f"${kpi['avg_project_size']:,.2f}", icon="📐")
+kpi_metric(k4, "Largest Project", f"${kpi['largest_project']:,.2f}", icon="🏆")
 
 if not df_filtered.empty:
     tab_overview, tab_insights = st.tabs(["Overview", "Insights"])
@@ -44,29 +49,29 @@ if not df_filtered.empty:
         row1_left, row1_right = st.columns(2)
         with row1_left:
             st.markdown("**Capex Over Time**")
-            fig = px.bar(svc.capex_over_time(df_filtered), x="date", y="amount")
+            fig = px.bar(svc.capex_over_time(df_filtered), x="date", y="amount", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row1_right:
             st.markdown("**Capex by Region**")
-            fig = px.bar(svc.capex_by_region(df_filtered), x="region", y="amount")
+            fig = px.bar(svc.capex_by_region(df_filtered), x="region", y="amount", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
         row2_left, row2_right = st.columns(2)
         with row2_left:
             st.markdown("**Capex by Asset Category**")
-            fig = px.pie(svc.capex_by_asset_category(df_filtered), names="asset_category", values="amount")
+            fig = px.pie(svc.capex_by_asset_category(df_filtered), names="asset_category", values="amount", hole=0.55, color_discrete_sequence=theme.CATEGORICAL)
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row2_right:
             st.markdown("**Top Projects**")
             top = svc.top_projects(df_filtered)
-            fig = px.bar(top.sort_values("amount"), x="amount", y="project_name", orientation="h")
+            fig = px.bar(top.sort_values("amount"), x="amount", y="project_name", orientation="h", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
     with tab_insights:
         row1_left, row1_right = st.columns(2)
         with row1_left:
             st.markdown("**Cumulative Capex Over Time**")
-            fig = px.area(svc.cumulative_capex_over_time(df_filtered), x="date", y="cumulative")
+            fig = px.area(svc.cumulative_capex_over_time(df_filtered), x="date", y="cumulative", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row1_right:
             st.markdown("**Capex Heatmap: Region x Asset Category**")

@@ -6,9 +6,11 @@ import plotly.express as px
 import streamlit as st
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-from common.styling import apply_page_style, style_chart  # noqa: E402
-from common import charts  # noqa: E402
+from common.styling import apply_page_style, style_chart, kpi_metric  # noqa: E402
+from common import charts, theme  # noqa: E402
 from services import logistics_service as svc  # noqa: E402
+
+ON_TIME_TARGET = 90  # a common industry on-time-delivery target
 
 st.set_page_config(page_title="Logistics Dashboard", layout="wide")
 apply_page_style()
@@ -30,10 +32,10 @@ df_filtered = svc.filter_data(df, start_date, end_date, regions, modes)
 
 kpi = svc.compute_kpis(df_filtered)
 k1, k2, k3, k4 = st.columns(4)
-k1.metric("On-Time Rate", f"{kpi['on_time_rate']:.1f}%")
-k2.metric("Avg Delay", f"{kpi['avg_delay']:+.1f} days")
-k3.metric("Avg Freight Cost", f"${kpi['avg_freight']:,.0f}")
-k4.metric("Total Shipments", f"{kpi['total_shipments']:,}")
+kpi_metric(k1, "On-Time Rate", f"{kpi['on_time_rate']:.1f}%", icon="✅")
+kpi_metric(k2, "Avg Delay", f"{kpi['avg_delay']:+.1f} days", icon="⏱️")
+kpi_metric(k3, "Avg Freight Cost", f"${kpi['avg_freight']:,.0f}", icon="🚚")
+kpi_metric(k4, "Total Shipments", f"{kpi['total_shipments']:,}", icon="📦")
 
 if not df_filtered.empty:
     tab_overview, tab_insights = st.tabs(["Overview", "Insights"])
@@ -42,28 +44,34 @@ if not df_filtered.empty:
         row1_left, row1_right = st.columns(2)
         with row1_left:
             st.markdown("**Delivery Status by Region**")
-            fig = px.bar(svc.status_by_region(df_filtered), x="region", y="shipments", color="status", barmode="stack")
+            # On Time / Delayed is a status, not an arbitrary category —
+            # uses the reserved status palette (good/critical), not the
+            # categorical sequence, so it reads as state at a glance.
+            fig = px.bar(
+                svc.status_by_region(df_filtered), x="region", y="shipments", color="status", barmode="stack",
+                color_discrete_map={"On Time": theme.STATUS["good"], "Delayed": theme.STATUS["critical"]},
+            )
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row1_right:
             st.markdown("**Avg Delay by Region**")
-            fig = px.bar(svc.avg_delay_by_region(df_filtered), x="region", y="delay_days")
+            fig = px.bar(svc.avg_delay_by_region(df_filtered), x="region", y="delay_days", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
         row2_left, row2_right = st.columns(2)
         with row2_left:
             st.markdown("**Shipment Mode Distribution**")
-            fig = px.pie(svc.mode_distribution(df_filtered), names="shipment_mode", values="shipments")
+            fig = px.pie(svc.mode_distribution(df_filtered), names="shipment_mode", values="shipments", hole=0.55, color_discrete_sequence=theme.CATEGORICAL)
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row2_right:
-            st.markdown("**Avg Freight Cost by Mode**")
-            fig = px.bar(svc.freight_by_mode(df_filtered), x="shipment_mode", y="freight_cost_usd")
+            st.markdown(f"**On-Time Rate vs {ON_TIME_TARGET}% Target**")
+            fig = charts.gauge(kpi["on_time_rate"], max_value=100, target=ON_TIME_TARGET, suffix="%")
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
     with tab_insights:
         row1_left, row1_right = st.columns(2)
         with row1_left:
             st.markdown("**On-Time Rate by Year**")
-            fig = px.line(svc.on_time_rate_by_year(df_filtered), x="year", y="on_time_rate", markers=True)
+            fig = px.line(svc.on_time_rate_by_year(df_filtered), x="year", y="on_time_rate", markers=True, color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row1_right:
             st.markdown("**Delay Heatmap: Region x Mode**")

@@ -5,8 +5,8 @@ import plotly.express as px
 import streamlit as st
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-from common.styling import apply_page_style, style_chart  # noqa: E402
-from common import charts  # noqa: E402
+from common.styling import apply_page_style, style_chart, kpi_metric  # noqa: E402
+from common import charts, theme  # noqa: E402
 from services import jobmarket_service as svc  # noqa: E402
 
 st.set_page_config(page_title="Job Market Dashboard", layout="wide")
@@ -25,10 +25,10 @@ df_filtered = svc.filter_data(df, cities, industries, experience)
 
 kpi = svc.compute_kpis(df_filtered)
 k1, k2, k3, k4 = st.columns(4)
-k1.metric("Avg Salary", f"${kpi['avg_salary']:,.0f}")
-k2.metric("Top-Paying Industry", kpi["top_industry"])
-k3.metric("Most Represented City", kpi["top_city"])
-k4.metric("Total Responses", f"{kpi['total_responses']:,}")
+kpi_metric(k1, "Avg Salary", f"${kpi['avg_salary']:,.0f}", icon="💼")
+kpi_metric(k2, "Top-Paying Industry", kpi["top_industry"], icon="🏆")
+kpi_metric(k3, "Most Represented City", kpi["top_city"], icon="📍")
+kpi_metric(k4, "Total Responses", f"{kpi['total_responses']:,}", icon="🗳️")
 
 if not df_filtered.empty:
     tab_overview, tab_insights = st.tabs(["Overview", "Insights"])
@@ -37,28 +37,28 @@ if not df_filtered.empty:
         row1_left, row1_right = st.columns(2)
         with row1_left:
             st.markdown("**Salary Distribution**")
-            fig = px.histogram(df_filtered, x="salary", nbins=30)
+            fig = px.histogram(df_filtered, x="salary", nbins=30, color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row1_right:
             st.markdown("**Avg Salary by Industry**")
-            fig = px.bar(svc.salary_by_industry(df_filtered), x="industry", y="salary")
+            fig = px.bar(svc.salary_by_industry(df_filtered), x="industry", y="salary", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
         row2_left, row2_right = st.columns(2)
         with row2_left:
             st.markdown("**Responses by City (Demand)**")
-            fig = px.bar(svc.responses_by_city(df_filtered), x="city", y="responses")
+            fig = px.bar(svc.responses_by_city(df_filtered), x="city", y="responses", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row2_right:
             st.markdown("**Avg Salary by Experience**")
-            fig = px.bar(svc.salary_by_experience(df_filtered), x="experience", y="salary")
+            fig = px.bar(svc.salary_by_experience(df_filtered), x="experience", y="salary", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
 
     with tab_insights:
         row1_left, row1_right = st.columns(2)
         with row1_left:
             st.markdown("**Salary Range by City**")
-            fig = px.box(svc.salary_distribution_by_city(df_filtered), x="city", y="salary")
+            fig = px.box(svc.salary_distribution_by_city(df_filtered), x="city", y="salary", color_discrete_sequence=[theme.CATEGORICAL[0]])
             st.plotly_chart(style_chart(fig), use_container_width=True)
         with row1_right:
             st.markdown("**Salary Heatmap: Industry x Experience**")
